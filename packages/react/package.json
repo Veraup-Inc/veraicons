@@ -1,7 +1,7 @@
 {
   "name": "veraicons",
-  "version": "1.1.0",
-  "description": "VeraUp Icons — 317 icônes, 9 styles, composants React/Next.js.",
+  "version": "1.1.1",
+  "description": "VeraUp Icons — 368 icônes, 10 styles, composants React/Next.js.",
   "license": "UNLICENSED",
   "type": "module",
   "main": "dist/index.js",

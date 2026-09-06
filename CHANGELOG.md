@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1 — 2026-09-06
+- React : `VeraIconVariant` omettait `duotone-standard`, le 10ᵉ style était donc
+  rejeté à la compilation TypeScript alors qu'il fonctionnait à l'exécution.
+  `src/types.ts`, la description du package et son README sont désormais générés,
+  pour qu'ils ne puissent plus diverger de la liste des styles.
+- Utiliser cette version plutôt que la 1.1.0.
+
 ## 1.1.0 — 2026-09-06
 - 51 icônes de plus (368 au total) couvrant le vocabulaire d'une app d'emploi du temps :
   18 dessins inédits (`timeline`, `day-review`, `week-review`, `planned-actual`, `overlap`,

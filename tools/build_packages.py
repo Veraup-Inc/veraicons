@@ -96,6 +96,34 @@ for n in sorted(ICONS):
          "    <svg ref={ref} xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width={size} height={size} color={color}","         dangerouslySetInnerHTML={{ __html: bodies[variant] ?? bodies['stroke-rounded'] }} {...rest} />","  )",");",f"{comp}.displayName = '{comp}';",""]
     open(f"{rp}/src/icons/{comp}.tsx","w").write("\n".join(src)); idx.append(f"export {{ {comp} }} from './icons/{comp}.js';")
 open(f"{rp}/src/index.ts","w").write("export * from './types.js';\n"+"\n".join(idx)+"\n")
+open(f"{rp}/src/types.ts","w").write("\n".join([
+ "// Généré par tools/build_packages.py, ne pas modifier à la main.",
+ "import type { SVGProps } from 'react';","export type VeraIconVariant ="]
+ +[f"  | '{vn}'" for vn in VARIANTS]
+ +[";","export interface VeraIconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {",
+   "  variant?: VeraIconVariant;","  size?: number | string;","  color?: string;","}",""]))
+rpkg=json.load(open(f"{rp}/package.json"))
+rpkg["description"]=f"VeraUp Icons — {len(ICONS)} icônes, {len(VARIANTS)} styles, composants React/Next.js."
+json.dump(rpkg,open(f"{rp}/package.json","w"),indent=2,ensure_ascii=False); open(f"{rp}/package.json","a").write("\n")
+open(f"{rp}/README.md","w").write(f"""# veraicons
+
+```bash
+npm i veraicons        # ou : pnpm add veraicons · yarn add veraicons
+```
+
+```tsx
+import {{ Home, Wallet, Church }} from 'veraicons';
+
+<Home />                                  // stroke-rounded par défaut
+<Wallet variant="solid-rounded" size={{28}} color="#0F766E" />
+<Church variant="duotone-rounded" />
+```
+`variant` : {' · '.join(VARIANTS)}.
+La couleur suit `currentColor`, donc `className="text-teal-600"` fonctionne aussi.
+
+{len(ICONS)} icônes, dont {len(ALIASES)} alias (`add` → `plus`, `delete` → `trash`…).
+Catalogue : https://veraup-inc.github.io/veraicons/
+""")
 # 4. web css
 web=f"{ROOT}/packages/web"; os.makedirs(f"{web}/fonts",exist_ok=True)
 css=[]
