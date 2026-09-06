@@ -18,6 +18,10 @@ Icon(VeraUpStrokeRounded.home)
 Icon(VeraUpSolidRounded.wallet, color: Colors.teal)
 VeraIcon.tone('church', tone: VeraIconTone.duotone, size: 28)
 ```
+Le package n'est pas sur pub.dev : `ref` pointe sur un tag, donc la version est figée
+et `flutter pub upgrade` ne la bougera pas. Pour passer à une nouvelle version,
+relancer la commande ci-dessus avec le nouveau tag — ou éditer `ref:` dans
+`pubspec.yaml` puis `flutter pub get`.
 
 ## React / Next.js
 ```bash

@@ -102,6 +102,9 @@ open(f"{pkg}/README.md","w").write(f"""# veraicons
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \\
   --git-path=packages/flutter/veraicons --git-ref=v{ver}
 ```
+Le package n'est pas sur pub.dev : `ref` pointe sur un tag, la version est donc figée
+et `flutter pub upgrade` ne la bougera pas. Pour monter de version, relancer la commande
+avec le nouveau tag — ou éditer `ref:` dans `pubspec.yaml` puis `flutter pub get`.
 
 ## Styles monochromes (police d'icônes — `Icon()` standard)
 ```dart
