@@ -1,4 +1,4 @@
-/// stroke-rounded — généré, ne pas modifier à la main.
+/// stroke-rounded — généré par tools/build_packages.py, ne pas modifier à la main.
 import 'package:flutter/widgets.dart';
 
 class VeraUpStrokeRounded {
@@ -324,7 +324,6 @@ class VeraUpStrokeRounded {
   static const IconData wrench = IconData(0xf102, fontFamily: _family, fontPackage: _package);
   static const IconData zoomIn = IconData(0xf101, fontFamily: _family, fontPackage: _package);
 
-  /// Accès dynamique par nom (ex. depuis une config).
   static const Map<String, IconData> byName = {
     'activity': activity,
     'agenda': agenda,

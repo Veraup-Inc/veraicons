@@ -1,6 +1,5 @@
 {
  "name": "VeraUp Icons",
- "version": "1.0.0",
  "grid": 24,
  "stroke": 1.5,
  "variants": [
@@ -17,955 +16,1272 @@
  "count": 317,
  "icons": {
   "dashboard": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61916
   },
   "home": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61871
   },
   "menu": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61834
   },
   "menu-compact": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61835
   },
   "grid": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61879
   },
   "more-horizontal": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61825
   },
   "more-vertical": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61824
   },
   "sidebar": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61761
   },
   "layout": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61852
   },
   "list": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61845
   },
   "list-check": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61846
   },
   "filter": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61894
   },
   "sort": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61755
   },
   "search": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61772
   },
   "zoom-in": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61697
   },
   "settings": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61769
   },
   "cog": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61930
   },
   "expand": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61904
   },
   "fullscreen": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61888
   },
   "drag": {
-   "category": "navigation"
+   "category": "navigation",
+   "codepoint": 61908
   },
   "arrow-up": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62001
   },
   "arrow-down": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62005
   },
   "arrow-left": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62004
   },
   "arrow-right": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62003
   },
   "arrow-up-right": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62002
   },
   "arrow-down-left": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 62006
   },
   "chevron-up": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61948
   },
   "chevron-down": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61951
   },
   "chevron-left": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61950
   },
   "chevron-right": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61949
   },
   "chevrons-right": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61946
   },
   "chevrons-left": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61947
   },
   "refresh": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61783
   },
   "undo": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61719
   },
   "redo": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61784
   },
   "swap": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61741
   },
   "repeat": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61781
   },
   "external-link": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61902
   },
   "corner-down-right": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61922
   },
   "shuffle": {
-   "category": "arrows"
+   "category": "arrows",
+   "codepoint": 61762
   },
   "plus": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61800
   },
   "minus": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61829
   },
   "close": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61936
   },
   "check": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61953
   },
   "check-double": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61955
   },
   "plus-circle": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61802
   },
   "minus-circle": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61830
   },
   "close-circle": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61937
   },
   "check-circle": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61956
   },
   "plus-square": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61801
   },
   "check-square": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61954
   },
   "square": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61751
   },
   "circle": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61942
   },
   "edit": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61905
   },
   "pencil": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61813
   },
   "trash": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61723
   },
   "copy": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61923
   },
   "duplicate": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61906
   },
   "share": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61768
   },
   "download": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61909
   },
   "upload": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61717
   },
   "export": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61903
   },
   "link": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61847
   },
   "attachment": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61999
   },
   "bookmark": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61982
   },
   "star": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61748
   },
   "heart": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61874
   },
   "flag": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61892
   },
   "pin": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61807
   },
   "tag": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61737
   },
   "lock": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61843
   },
   "unlock": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61718
   },
   "eye": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61900
   },
   "eye-off": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61901
   },
   "clipboard": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61940
   },
   "clipboard-check": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61941
   },
   "send": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61771
   },
   "printer": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61794
   },
   "archive": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 62007
   },
   "broom": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61979
   },
   "clock": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61938
   },
   "clock-check": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61939
   },
   "alarm": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 62010
   },
   "stopwatch": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61745
   },
   "timer": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61727
   },
   "hourglass": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61870
   },
   "calendar": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61968
   },
   "calendar-day": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61973
   },
   "calendar-week": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61969
   },
   "calendar-check": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61974
   },
   "calendar-plus": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61972
   },
   "calendar-alert": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61975
   },
   "calendar-repeat": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61971
   },
   "calendar-user": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61970
   },
   "agenda": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 62012
   },
   "task": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61732
   },
   "task-add": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61734
   },
   "task-list": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61733
   },
   "postpone": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61797
   },
   "bell": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61988
   },
   "bell-off": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61990
   },
   "bell-ring": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61989
   },
   "target": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61735
   },
   "goal": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61882
   },
   "priority": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61793
   },
   "sunrise": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61742
   },
   "sun-alt": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61743
   },
   "moon": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61826
   },
   "history": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61872
   },
   "trend": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61721
   },
   "trend-down": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61722
   },
   "balance": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61997
   },
   "pie-chart": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61808
   },
   "chart-bar": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61962
   },
   "chart-line": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61961
   },
   "activity": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 62013
   },
   "pause": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61814
   },
   "play": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61805
   },
   "stop": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61746
   },
   "record": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61785
   },
   "skip-forward": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61758
   },
   "skip-back": {
-   "category": "time"
+   "category": "time",
+   "codepoint": 61759
   },
   "user": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61710
   },
   "user-circle": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61715
   },
   "user-square": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61711
   },
   "user-plus": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61713
   },
   "user-check": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61716
   },
   "user-remove": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61712
   },
   "users": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61709
   },
   "user-group": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61714
   },
   "id-card": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61868
   },
   "contact": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61925
   },
   "building": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61977
   },
   "office": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61816
   },
   "store": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61744
   },
   "briefcase": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61980
   },
   "handshake": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61876
   },
   "crown": {
-   "category": "people"
+   "category": "people",
+   "codepoint": 61917
   },
   "mail": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61841
   },
   "mail-open": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61842
   },
   "chat": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61958
   },
   "chat-lines": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61959
   },
   "chats": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61957
   },
   "phone": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61810
   },
   "phone-off": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61811
   },
   "video": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61707
   },
   "mic": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61831
   },
   "mic-off": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61832
   },
   "at": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 62000
   },
   "notification": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61817
   },
   "megaphone": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61836
   },
   "inbox": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61864
   },
   "comment-question": {
-   "category": "communication"
+   "category": "communication",
+   "codepoint": 61927
   },
   "wallet": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61704
   },
   "wallet-alt": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61705
   },
   "credit-card": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61919
   },
   "credit-card-check": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61920
   },
   "coins": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61928
   },
   "coin": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61929
   },
   "dollar": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61911
   },
   "banknote": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61995
   },
   "receipt": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61786
   },
   "invoice": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61862
   },
   "percent": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61812
   },
   "discount": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61912
   },
   "bank": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61996
   },
   "transfer": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61724
   },
   "cash-out": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61964
   },
   "mobile-money": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61828
   },
   "cart": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61965
   },
   "shopping-bag": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61764
   },
   "gift": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61885
   },
   "ticket": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61728
   },
   "safe": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61774
   },
   "chart-pie": {
-   "category": "finance"
+   "category": "finance",
+   "codepoint": 61960
   },
   "graduation": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61881
   },
   "book": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61983
   },
   "book-open": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61984
   },
   "library": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61849
   },
   "certificate": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61963
   },
   "lightbulb": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61848
   },
   "idea": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61867
   },
   "code": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61931
   },
   "code-square": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61932
   },
   "terminal": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61731
   },
   "rocket": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61776
   },
   "layers": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61853
   },
   "puzzle": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61790
   },
   "presentation": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61795
   },
   "lesson": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61851
   },
   "trophy": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61720
   },
   "medal": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61838
   },
   "sparkle": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61754
   },
   "ai": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 62011
   },
   "cpu": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61921
   },
   "laptop": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61854
   },
   "monitor": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61827
   },
   "smartphone": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61757
   },
   "tablet": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61738
   },
   "keyboard": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61859
   },
   "database": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61915
   },
   "server": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61770
   },
   "cloud": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61933
   },
   "cloud-upload": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61934
   },
   "cloud-download": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61935
   },
   "restore": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61780
   },
   "bug": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61978
   },
   "git-branch": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61884
   },
   "robot": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61777
   },
   "wrench": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61698
   },
   "plug": {
-   "category": "learning"
+   "category": "learning",
+   "codepoint": 61803
   },
   "music-note": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61823
   },
   "music-notes": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61822
   },
   "playlist": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61804
   },
   "headphones": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61875
   },
   "speaker": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61753
   },
   "volume": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61706
   },
   "mute": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61821
   },
   "piano": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61809
   },
   "guitar": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61878
   },
   "drum": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61907
   },
   "metronome": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61833
   },
   "church": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61943
   },
   "cross": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61918
   },
   "bible": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61987
   },
   "sheet-music": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61767
   },
   "choir": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61945
   },
   "rehearsal": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61782
   },
   "hands-praying": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61877
   },
   "radio": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61788
   },
   "podcast": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61799
   },
   "meditation": {
-   "category": "music"
+   "category": "music",
+   "codepoint": 61837
   },
   "house-users": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61869
   },
   "key": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61860
   },
   "door": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61910
   },
   "bed": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61991
   },
   "sofa": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61756
   },
   "kitchen": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61857
   },
   "shopping-list": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61763
   },
   "split-expense": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61752
   },
   "rules": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61775
   },
   "chores": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61944
   },
   "washing-machine": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61703
   },
   "lamp": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61856
   },
   "thermometer": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61730
   },
   "plant": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61806
   },
   "wifi": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61700
   },
   "wifi-off": {
-   "category": "home"
+   "category": "home",
+   "codepoint": 61701
   },
   "gamepad": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61887
   },
   "grid-game": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61880
   },
   "word-grid": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61699
   },
   "dice": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61913
   },
   "bolt": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61985
   },
   "gem": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61886
   },
   "podium": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61798
   },
   "ranking": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61787
   },
   "battle-pass": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61992
   },
   "reward": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61779
   },
   "confetti": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61926
   },
   "friends": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61889
   },
   "chest": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61952
   },
   "sword": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61740
   },
   "shield": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61765
   },
   "shield-check": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61766
   },
   "level": {
-   "category": "games"
+   "category": "games",
+   "codepoint": 61850
   },
   "nfc": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61818
   },
   "contactless": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61924
   },
   "tap": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61736
   },
   "qr-code": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61789
   },
   "scan": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61773
   },
   "business-card": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61976
   },
   "profile-share": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61791
   },
   "globe": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61883
   },
   "ring": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61778
   },
   "bracelet": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61981
   },
   "keychain": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61858
   },
   "stand": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61750
   },
   "network": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61819
   },
   "signal": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61760
   },
   "bluetooth": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61986
   },
   "map-pin": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61840
   },
   "map": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61839
   },
   "navigation": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61820
   },
   "car": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61966
   },
   "steering-wheel": {
-   "category": "networking"
+   "category": "networking",
+   "codepoint": 61747
   },
   "file": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61896
   },
   "file-text": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61897
   },
   "file-plus": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61898
   },
   "file-pdf": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61899
   },
   "folder": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61890
   },
   "folder-open": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61891
   },
   "image": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61866
   },
   "camera": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61967
   },
   "film": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61895
   },
   "video-camera": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61708
   },
   "widget": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61702
   },
   "palette": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61815
   },
   "design": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61914
   },
   "kanban": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61861
   },
   "table": {
-   "category": "files"
+   "category": "files",
+   "codepoint": 61739
   },
   "info-circle": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61863
   },
   "alert-circle": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 62009
   },
   "alert-triangle": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 62008
   },
   "help-circle": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61873
   },
   "badge-check": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61998
   },
   "loading": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61844
   },
   "battery": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61993
   },
   "battery-full": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61994
   },
   "power": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61796
   },
   "privacy": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61792
   },
   "fingerprint": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61893
   },
   "toggle-on": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61725
   },
   "toggle-off": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61726
   },
   "star-half": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61749
   },
   "thumbs-up": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61729
   },
   "languages": {
-   "category": "status"
+   "category": "status",
+   "codepoint": 61855
   },
   "import": {
-   "category": "actions"
+   "category": "actions",
+   "codepoint": 61865
   }
  }
 }

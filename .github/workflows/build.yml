@@ -9,14 +9,13 @@ jobs:
         with: { python-version: "3.12" }
       - uses: actions/setup-node@v4
         with: { node-version: "20" }
-      - run: pip install shapely svgpathtools cairosvg && npm i -g fantasticon
+      - run: pip install "shapely==2.0.7" svgpathtools cairosvg && npm i -g fantasticon
       - run: cd tools && python3 gen.py && python3 build_packages.py
       - name: Les fichiers générés doivent être à jour
         run: git diff --exit-code --stat -- svg icons.json packages/flutter/veraicons/lib packages/react/src || (echo "Lance tools/build.sh et committe le résultat" && exit 1)
       - run: cd packages/react && npm i && npm run build
   pages:
     if: github.ref == 'refs/heads/main'
-    needs: verify
     runs-on: ubuntu-latest
     permissions: { pages: write, id-token: write }
     steps:
