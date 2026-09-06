@@ -1,11 +1,11 @@
 # veraicons
 
-368 icônes en 10 styles, une seule source par icône. Grille 24 px, trait 1,5 px.
+554 icônes en 10 styles, une seule source par icône. Grille 24 px, trait 1,5 px.
 
 ## Installation
 ```bash
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
-  --git-path=packages/flutter/veraicons --git-ref=v1.1.2
+  --git-path=packages/flutter/veraicons --git-ref=v1.2.0
 ```
 Le package n'est pas sur pub.dev : `ref` pointe sur un tag, la version est donc figée
 et `flutter pub upgrade` ne la bougera pas. Pour monter de version, relancer la commande
@@ -30,6 +30,6 @@ VeraIcon.tone('life-season', tone: VeraIconTone.bulk)
 Tons disponibles : duotone, duotoneStandard, twotone, bulk.
 
 ## Noms
-368 noms, dont 33 alias (`add` → `plus`, `delete` → `trash`…).
+554 noms, dont 33 alias (`add` → `plus`, `delete` → `trash`…).
 Liste complète : `VeraIcon.names` ou `VeraUpStrokeRounded.byName`.
 Catalogue : https://veraup-inc.github.io/veraicons/

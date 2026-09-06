@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0 — 2026-09-06
+- 186 icônes de plus (554 au total) : le catalogue de catégories de Priovely, pour
+  qu'une application n'ait plus besoin d'une seconde police d'icônes.
+  - 180 dessins du catalogue, en 11 catégories neuves : `work`, `science`, `care`,
+    `sport`, `household`, `food`, `bonds`, `spirit`, `hobbies`, `travel`, `paperwork`.
+  - 6 dessins pour la coquille, là où il fallait jusqu'ici se rabattre sur un voisin :
+    `circle-dashed` (statut vide, ≠ `circle`), `cloud-off`, `logout` (≠ `power`),
+    `arrow-to-line-up` / `arrow-to-line-down` (bloc continué, ≠ `arrow-up`),
+    `crosshair` (« Maintenant », ≠ `scan`).
+- `chart-line` était déjà pris par le glyphe encadré : le dessin du catalogue
+  (courbe sur axes, sans cadre) prend le nom **`chart-line-up`**.
+- Correction : `throw` est un mot réservé Dart et aurait cassé la compilation du
+  package Flutter. La liste des mots réservés du générateur était incomplète, elle
+  couvre désormais toute la spécification Dart.
+- Correction : une icône ne pouvait pas s'appeler `cat`, le nom entrait en collision
+  avec le paramètre `cat` de la fonction `add` du générateur.
+
 ## 1.1.2 — 2026-09-06
 - Flutter : installation en une commande, `flutter pub add … --git-url`, au lieu du
   bloc YAML. Le package reste distribué par git et non par pub.dev.

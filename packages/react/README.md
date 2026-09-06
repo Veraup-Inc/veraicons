@@ -14,5 +14,5 @@ import { Home, Wallet, Church } from 'veraicons';
 `variant` : stroke-rounded · stroke-sharp · stroke-standard · solid-rounded · solid-sharp · solid-standard · duotone-rounded · duotone-standard · twotone-rounded · bulk-rounded.
 La couleur suit `currentColor`, donc `className="text-teal-600"` fonctionne aussi.
 
-368 icônes, dont 33 alias (`add` → `plus`, `delete` → `trash`…).
+554 icônes, dont 33 alias (`add` → `plus`, `delete` → `trash`…).
 Catalogue : https://veraup-inc.github.io/veraicons/

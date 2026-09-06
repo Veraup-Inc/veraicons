@@ -1,6 +1,6 @@
 # VeraUp Icons
 
-Bibliothèque d'icônes officielle de VeraUp Inc. — **368 icônes, 10 styles**, une seule source par icône.
+Bibliothèque d'icônes officielle de VeraUp Inc. — **554 icônes, 10 styles**, une seule source par icône.
 
 Styles : `stroke-rounded` · `stroke-sharp` · `stroke-standard` · `solid-rounded` · `solid-sharp` · `solid-standard` · `duotone-rounded` · `duotone-standard` · `twotone-rounded` · `bulk-rounded`.
 Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) (source : `docs/index.html`, GitHub Pages).
@@ -9,7 +9,7 @@ Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [
 ## Flutter
 ```bash
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
-  --git-path=packages/flutter/veraicons --git-ref=v1.1.2
+  --git-path=packages/flutter/veraicons --git-ref=v1.2.0
 ```
 ```dart
 import 'package:veraicons/veraicons.dart';
@@ -35,18 +35,24 @@ Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.2/packages/web/veraup-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/packages/web/veraup-icons.css">
 <i class="vi-stroke-rounded vi-home"></i>
 <i class="vi-solid-rounded vi-wallet" style="color:#0F766E;font-size:28px"></i>
 ```
 Un SVG isolé :
 ```html
-<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.2/svg/duotone-rounded/nfc.svg" width="24">
+<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/svg/duotone-rounded/nfc.svg" width="24">
 ```
 Ou un sprite, pour n'appeler qu'un seul fichier :
 ```html
-<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.2/sprites/stroke-rounded.svg#timeline"/></svg>
+<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/sprites/stroke-rounded.svg#timeline"/></svg>
 ```
+
+## Catalogue de catégories
+186 icônes couvrent le catalogue que les gens parcourent pour choisir eux-mêmes le
+dessin de leurs catégories : métiers, études, santé, sport, maison, repas, proches,
+spiritualité, loisirs, transport, administratif. Elles visent l'objet du quotidien
+(une dent, un microscope, une crevette, une mosquée) plutôt que le concept d'interface.
 
 ## Noms et alias
 33 icônes sont des **alias** : un nom métier qui rend le même dessin qu'un glyphe existant

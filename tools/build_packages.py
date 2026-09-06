@@ -11,7 +11,12 @@ CATS=[("navigation","Navigation"),("actions","Actions"),("arrows","Flèches"),("
       ("time","Temps et planification"),("life","Domaines de vie"),("communication","Communication"),("people","Personnes"),
       ("files","Fichiers et médias"),("status","États"),("finance","Finance et paiements"),
       ("learning","Apprentissage et tech"),("music","Musique et louange"),("networking","Réseau et NFC"),
-      ("home","Habitat et colocation"),("games","Jeux")]
+      ("home","Habitat et colocation"),("games","Jeux"),
+      # Catalogue Priovely — dessins choisis par les gens pour leurs catégories
+      ("work","Métiers et travail"),("science","Études et savoir"),("care","Santé et bien-être"),
+      ("sport","Sport et mouvement"),("household","Maison et quotidien"),("food","Repas et cuisine"),
+      ("bonds","Proches et liens"),("spirit","Esprit et foi"),("hobbies","Loisirs et création"),
+      ("travel","Transport et voyage"),("paperwork","Argent et administratif")]
 
 # 0. codepoints figés : tools/codepoints.json est la source de vérité, pour qu'ajouter
 #    une icône ne renumérote pas les polices déjà publiées.
@@ -44,9 +49,13 @@ for vn in MONO: shutil.copy(f"{ROOT}/fonts/{vn}/{fam[vn]}.ttf",f"{pkg}/fonts/{fa
 TONES=[vn for vn in VARIANTS if VARIANTS[vn]["mode"] in ("duotone","twotone","bulk")]
 shutil.rmtree(f"{pkg}/assets",ignore_errors=True)
 for vn in TONES: shutil.copytree(f"{ROOT}/svg/{vn}",f"{pkg}/assets/{vn}")
+DART_RESERVED={"assert","break","case","catch","class","const","continue","default","do","else","enum",
+ "extends","false","final","finally","for","if","in","is","new","null","rethrow","return","super","switch",
+ "this","throw","true","try","var","void","while","with"}
 def camel(n):
     parts=n.split("-"); s=parts[0]+"".join(p.title() for p in parts[1:])
-    return s+"_" if s in {"import","export","class","switch","new","in","is","do","for","if","default","break","continue","this","null","true","false","var","final","const","void","return","assert","enum","extends","super","with","part","show","hide"} else s
+    # Mots réservés Dart : interdits comme identifiants, il faut les suffixer.
+    return s+"_" if s in DART_RESERVED else s
 for vn in MONO:
     cls="VeraUp"+"".join(w.title() for w in vn.split("-"))
     L=[f"/// {vn} — généré par tools/build_packages.py, ne pas modifier à la main.","import 'package:flutter/widgets.dart';","",f"class {cls} {{",f"  {cls}._();",f"  static const String _family = '{fam[vn]}';","  static const String _package = 'veraicons';",""]
