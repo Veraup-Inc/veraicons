@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.2 — 2026-09-06
+- Flutter : installation en une commande, `flutter pub add … --git-url`, au lieu du
+  bloc YAML. Le package reste distribué par git et non par pub.dev.
+- Le README du package Flutter est généré ; au tag v1.1.1 il annonçait encore
+  317 icônes, 9 styles et `ref: v1.0.0`. Installer **v1.1.2** plutôt que v1.1.1.
+- pubspec : `repository`, `issue_tracker`, `documentation`, `topics` ; `LICENSE` et
+  `CHANGELOG.md` embarqués dans le package.
+
 ## 1.1.1 — 2026-09-06
 - React : `VeraIconVariant` omettait `duotone-standard`, le 10ᵉ style était donc
   rejeté à la compilation TypeScript alors qu'il fonctionnait à l'exécution.
