@@ -72,14 +72,60 @@ V+=["    };","    final c = color ?? IconTheme.of(context).color ?? const Color(
     "      'assets/$dir/$name.svg',","      package: 'veraicons',","      width: size,","      height: size,",
     "      colorFilter: ColorFilter.mode(c, BlendMode.srcIn),","    );","  }","}",""]
 open(f"{pkg}/lib/src/vera_icon.dart","w").write("\n".join(V))
-ver=re.search(r"^version:\s*(\S+)",open(f"{pkg}/pubspec.yaml").read(),re.M).group(1)
+old=open(f"{pkg}/pubspec.yaml").read()
+ver=re.search(r"^version:\s*(\S+)",old,re.M).group(1)
+# `publish_to: none` verrouille la publication sur pub.dev. Le retirer ouvre
+# `flutter pub add veraicons` sans arguments — mais pub.dev redistribue
+# publiquement, ce que la LICENSE actuelle interdit. Voir README.
 P=[f"name: veraicons",
    f"description: VeraUp Icons — {len(ICONS)} symboles en {len(VARIANTS)} styles (stroke, solid, duotone, twotone, bulk). Bibliothèque officielle VeraUp Inc.",
-   f"version: {ver}","publish_to: none","environment:",'  sdk: ">=3.0.0 <4.0.0"','  flutter: ">=3.10.0"',
+   f"version: {ver}"]
+if "publish_to: none" in old: P+=["publish_to: none"]
+P+=["repository: https://github.com/Veraup-Inc/veraicons",
+   "issue_tracker: https://github.com/Veraup-Inc/veraicons/issues",
+   "documentation: https://veraup-inc.github.io/veraicons/",
+   "topics: [icons, ui, svg, icon-font]",
+   "environment:",'  sdk: ">=3.0.0 <4.0.0"','  flutter: ">=3.10.0"',
    "dependencies:","  flutter:","    sdk: flutter","  flutter_svg: ^2.0.10","flutter:","  assets:"]
 P+=[f"    - assets/{vn}/" for vn in TONES]+["  fonts:"]
 for vn in MONO: P+=[f"    - family: {fam[vn]}","      fonts:",f"        - asset: fonts/{fam[vn]}.ttf"]
 open(f"{pkg}/pubspec.yaml","w").write("\n".join(P)+"\n")
+for f in ("LICENSE","CHANGELOG.md"): shutil.copy(f"{ROOT}/{f}",f"{pkg}/{f}")
+cls_list=", ".join("`VeraUp"+"".join(w.title() for w in vn.split("-"))+"`" for vn in MONO)
+tone_list=", ".join(dcamel(vn.split("-")[0] if vn.endswith("-rounded") else vn) for vn in TONES)
+open(f"{pkg}/README.md","w").write(f"""# veraicons
+
+{len(ICONS)} icônes en {len(VARIANTS)} styles, une seule source par icône. Grille 24 px, trait 1,5 px.
+
+## Installation
+```bash
+flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \\
+  --git-path=packages/flutter/veraicons --git-ref=v{ver}
+```
+
+## Styles monochromes (police d'icônes — `Icon()` standard)
+```dart
+import 'package:veraicons/veraicons.dart';
+
+Icon(VeraUpStrokeRounded.home)
+Icon(VeraUpSolidRounded.wallet, color: Colors.teal)
+Icon(VeraUpStrokeSharp.timeline)
+```
+Classes : {cls_list}. Mêmes noms et mêmes codepoints dans les {len(MONO)} polices,
+donc on change de style sans toucher au nom.
+
+## Styles deux tons
+```dart
+VeraIcon.tone('home', tone: VeraIconTone.duotone, size: 28, color: Colors.teal)
+VeraIcon.tone('life-season', tone: VeraIconTone.bulk)
+```
+Tons disponibles : {tone_list}.
+
+## Noms
+{len(ICONS)} noms, dont {len(ALIASES)} alias (`add` → `plus`, `delete` → `trash`…).
+Liste complète : `VeraIcon.names` ou `VeraUpStrokeRounded.byName`.
+Catalogue : https://veraup-inc.github.io/veraicons/
+""")
 # 3. react
 rp=f"{ROOT}/packages/react"; shutil.rmtree(f"{rp}/src/icons",ignore_errors=True); os.makedirs(f"{rp}/src/icons")
 def pascal(n): return "".join(p.title() for p in n.split("-"))

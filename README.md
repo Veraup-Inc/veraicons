@@ -7,13 +7,9 @@ Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [
 
 
 ## Flutter
-```yaml
-dependencies:
-  veraicons:
-    git:
-      url: https://github.com/Veraup-Inc/veraicons.git
-      path: packages/flutter/veraicons
-      ref: v1.1.1
+```bash
+flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
+  --git-path=packages/flutter/veraicons --git-ref=v1.1.1
 ```
 ```dart
 import 'package:veraicons/veraicons.dart';
