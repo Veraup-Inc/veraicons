@@ -13,7 +13,7 @@ dependencies:
     git:
       url: https://github.com/Veraup-Inc/veraicons.git
       path: packages/flutter/veraicons
-      ref: v1.0.0
+      ref: v1.1.0
 ```
 ```dart
 import 'package:veraicons/veraicons.dart';
@@ -35,7 +35,7 @@ Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.0.0/packages/web/veraup-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.0/packages/web/veraup-icons.css">
 <i class="vi-stroke-rounded vi-home"></i>
 <i class="vi-solid-rounded vi-wallet" style="color:#0F766E;font-size:28px"></i>
 ```
