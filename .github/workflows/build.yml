@@ -20,8 +20,12 @@ jobs:
         run: |
           git diff --exit-code --stat -- \
             svg/stroke-rounded svg/stroke-sharp svg/stroke-standard \
-            svg/duotone-rounded svg/twotone-rounded svg/bulk-rounded \
-            icons.json packages/flutter/veraicons/lib \
+            svg/duotone-rounded svg/duotone-standard svg/twotone-rounded svg/bulk-rounded \
+            sprites/stroke-rounded.svg sprites/stroke-sharp.svg sprites/stroke-standard.svg \
+            sprites/duotone-rounded.svg sprites/duotone-standard.svg \
+            sprites/twotone-rounded.svg sprites/bulk-rounded.svg \
+            icons.json tokens.json tools/codepoints.json \
+            packages/flutter/veraicons/lib packages/flutter/veraicons/pubspec.yaml \
             || (echo "Lance tools/build.sh et committe le résultat" && exit 1)
       - run: cd packages/react && npm i && npm run build
   pages:

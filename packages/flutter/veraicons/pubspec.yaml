@@ -1,6 +1,6 @@
 name: veraicons
-description: VeraUp Icons — 317 symboles en 9 styles (stroke, solid, duotone, twotone, bulk). Bibliothèque officielle VeraUp Inc.
-version: 1.0.0
+description: VeraUp Icons — 368 symboles en 10 styles (stroke, solid, duotone, twotone, bulk). Bibliothèque officielle VeraUp Inc.
+version: 1.1.0
 publish_to: none
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -12,6 +12,7 @@ dependencies:
 flutter:
   assets:
     - assets/duotone-rounded/
+    - assets/duotone-standard/
     - assets/twotone-rounded/
     - assets/bulk-rounded/
   fonts:

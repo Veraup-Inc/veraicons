@@ -16,6 +16,7 @@ VARIANTS = {
  "solid-sharp":     dict(mode="solid",  cap="butt",   join="miter", rr=0.0),
  "solid-standard":  dict(mode="solid",  cap="square", join="round", rr=0.5),
  "duotone-rounded": dict(mode="duotone",cap="round",  join="round", rr=1.0),
+ "duotone-standard":dict(mode="duotone",cap="square", join="round", rr=0.5),
  "twotone-rounded": dict(mode="twotone",cap="round",  join="round", rr=1.0),
  "bulk-rounded":    dict(mode="bulk",   cap="round",  join="round", rr=1.0),
 }
@@ -71,32 +72,7 @@ def main(root=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")):
         d = os.path.join(root, "svg", vname); os.makedirs(d, exist_ok=True)
         for name, icon in ICONS.items():
             open(os.path.join(d, f"{name}.svg"), "w").write(render(name, icon, vname))
-    # contact sheet
-    rows = []
-    for name, icon in ICONS.items():
-        cells = "".join(f'<td>{render(name, icon, v)}</td>' for v in VARIANTS)
-        rows.append(f'<tr><th>{name}</th>{cells}</tr>')
-    head = "".join(f"<th>{v.replace('-rounded','').replace('-',' ')}</th>" for v in VARIANTS)
-    html = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><title>VeraUp Icons — planche d'essai</title>
-<style>
-:root{{color-scheme:light}}
-body{{margin:0;padding:40px 48px;font:15px/1.4 "Inter",system-ui,sans-serif;color:#0F1D2E;background:#FBFAF7}}
-h1{{font-size:26px;margin:0 0 4px;letter-spacing:-.02em}}
-p.lead{{margin:0 0 28px;color:#5A6472;max-width:70ch}}
-table{{border-collapse:separate;border-spacing:0 6px}}
-th{{font-weight:600;font-size:12px;color:#5A6472;text-align:left;padding:0 10px 6px}}
-tr th:first-child{{text-align:right;padding-right:18px;font-size:13px;color:#0F1D2E}}
-td{{background:#fff;border:1px solid #E7E4DD;padding:14px 18px;width:36px;text-align:center}}
-td:nth-child(2){{border-radius:12px 0 0 12px}} td:last-child{{border-radius:0 12px 12px 0}}
-td svg{{width:36px;height:36px;color:#0F1D2E;display:block;margin:auto}}
-.legend{{margin-top:26px;font-size:13px;color:#5A6472}}
-</style>
-<h1>VeraUp Icons — planche d'essai</h1>
-<p class="lead">{len(ICONS)} symboles × 9 styles, tous dérivés d'une seule source par icône. Grille 24, trait 1,5. La couleur suit <code>currentColor</code>.</p>
-<table><tr><th></th>{head}</tr>{''.join(rows)}</table>
-<div class="legend">Stroke (arrondi · vif · standard) — Solid (arrondi · vif · standard) — Duotone — Twotone — Bulk</div>
-</html>"""
-    pass  # le catalogue est produit par build_packages.py (docs/index.html)
+    # le catalogue docs/index.html est produit par build_packages.py
     print("icons", len(ICONS), "variants", len(VARIANTS))
 
 if __name__ == "__main__":

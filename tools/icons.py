@@ -446,3 +446,61 @@ ICONS["export"] = I([ln("M12 3.5v10.5"), ln("M8 7.5l4-4 4 4"), p("M4 13v4.5a3 3 
 ICONS["import"] = I([ln("M12 14V3.5"), ln("M8 10l4 4 4-4"), p("M4 13v4.5a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V13", sw=1.5)], [], cat="actions")
 ICONS["handshake"] = I([p("M2.5 7.5h4l5 5a1.8 1.8 0 0 0 2.6-2.6L12.5 8l1-1h8", sw=1.8), p("M6.5 7.5v7l4 4a1.8 1.8 0 0 0 2.6-2.6", sw=1.8), p("M12.5 15.5l1 1a1.8 1.8 0 0 0 2.6-2.6L14 12", sw=1.8), p("M17.5 7.5v6l-1.5 1.5", sw=1.8)], [], cat="people")
 ICONS["star-half"] = I([p("M12 3.4L9.47 9.12 3.25 9.76 7.91 13.93 6.59 20.04 12 16.9", sw=1.5), p("M12 3.4l2.53 5.72 6.22.64-4.66 4.17 1.32 6.11L12 16.9z")], [], cat="status")
+
+# ---------------- 15 Planification & suivi du temps ----------------
+# Vocabulaire d'une app d'emploi du temps : blocs, revues, états d'une plage horaire.
+add("planning",
+ timeline=I([c(4,7,1.5),c(4,17,1.5),ln("M4 3v2.5",2),ln("M4 8.5v7",2),ln("M4 18.5v2.5",2),rr(8,3.5,13,7,2.5),rr(8,13.5,9,7,2.5)]),
+ day_review=I([rr(4,3,16,18,4)],[p("M8 7.6h8M8 11.4h5M8.3 16.3l2.2 2.1 5.1-5.1")]),
+ week_review=I([rr(3,4.5,18,16.5,4)],[p("M3 9.5h18"),p("M8 2.5v4M16 2.5v4"),p("M7 17l3.2-3.4 2.6 2.2 4.2-4.6")]),
+ planned_actual=I([rr(2.5,3.5,13,6.5,2.2,sw=1.5),ln("M18 5.2h3",2),ln("M18 8.3h3",2),rr(2.5,14,18,6.5,2.2)]),
+ overlap=I([rr(3,4.5,11.5,8,2.5,sw=1.5),rr(9.5,11.5,11.5,8,2.5)]),
+ finish_early=I([ln("M11.5 3.4A8.6 8.6 0 1 0 20.1 12"),ln("M11.5 8v4.5l-3 1.8",2.2),ln("M16.3 2.8v5.4h5.4",2),ln("M16.3 8.2L21.5 2.8",2)]),
+ life_season=I([p("M7.5 16.4c-1.8-6.9 2.8-9.6 9.2-8.8.8 6.4-1.9 11-8.8 9.2z", close=True),ln("M4.2 8A8.8 8.8 0 0 1 20 7.2",2),ln("M19.8 16A8.8 8.8 0 0 1 4 16.8",2)],[p("M8.6 15.6L13.4 10.8")]),
+ time_budget=I([CIRCLE],[p("M12 2.75V12h9.25M12 12l-5.8 6")]),
+ time_reserved=I([p("M12 2.5l7.5 2.7v6.3c0 4.3-3.2 7.9-7.5 10-4.3-2.1-7.5-5.7-7.5-10V5.2z", d_sharp="M12 2.5l7.5 2.7v6.3c0 4.3-3.2 7.9-7.5 10-4.3-2.1-7.5-5.7-7.5-10V5.2z")],[p("M12 8v4.2l2.8 1.7")]),
+ time_flexible=I([c(12,12,4.25),ln("M4 8.2a8.5 8.5 0 0 1 14.2-3.1",2),ln("M18.2 2.3v2.8h-2.8",2),ln("M20 15.8a8.5 8.5 0 0 1-14.2 3.1",2),ln("M5.8 21.7v-2.8h2.8",2)],[p("M12 9.9v2.3l1.7 1")]),
+ time_free=I([p("M12 2.75A9.25 9.25 0 1 0 21.25 12H12z", close=True),ln("M16.8 4.5a9.25 9.25 0 0 1 2.7 2.7",2)]),
+ collapse=I([ln("M3.5 9H7A2 2 0 0 0 9 7V3.5"),ln("M20.5 9H17a2 2 0 0 1-2-2V3.5"),ln("M3.5 15H7a2 2 0 0 1 2 2v3.5"),ln("M20.5 15H17a2 2 0 0 0-2 2v3.5")]),
+ categories=I([rr(2.75,2.75,8.5,8.5,2.8),c(17,7,4.25),c(7,17,4.25),rr(12.75,12.75,8.5,8.5,2.8)]),
+ admin=I([rr(4,2.75,16,18.5,4)],[p("M8.2 7.7h7.6M8.2 12h7.6M8.2 16.3h4.6")]),
+)
+
+# ---------------- 16 Domaines de vie ----------------
+add("life",
+ sport=I([ln("M9.1 12h5.8",2.4),rr(4.5,6.4,4.6,11.2,1.6),rr(14.9,6.4,4.6,11.2,1.6),ln("M2.5 9.6v4.8",2.2),ln("M21.5 9.6v4.8",2.2)]),
+ meal=I([c(14,12,7,sw=1.5),c(14,12,3.6),ln("M3.2 2.8v4a2 2 0 0 0 4 0v-4",2),ln("M5.2 8.8V21.2",2.2)]),
+ health=I([p("M12 20.5c-.4 0-.8-.1-1.1-.4L4.6 14A5.7 5.7 0 0 1 12 5.6 5.7 5.7 0 0 1 19.4 14l-6.3 6.1c-.3.3-.7.4-1.1.4z", d_sharp="M12 20.5L4.6 13.2A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 7.4 7.2z")],[p("M5.5 12.6h3l1.6-3.2 2.5 5.2 1.5-2h4")]),
+)
+ICONS["break"] = I([p("M3.8 8h12.4v6.9c0 4-1.9 5.8-6.2 5.8s-6.2-1.8-6.2-5.8z", d_sharp="M3.8 8h12.4v12.7H3.8z"),
+                    p("M16.2 9.2h2.4a2.9 2.9 0 0 1 0 5.8h-2.4", sw=1.5),
+                    ln("M2.8 21.5h14.4",2),ln("M7.7 5.5V2.8",2),ln("M12.3 5.5V2.8",2)], [], cat="life")
+
+# ---- Alias : chaque nom de @priovely/icons résout ici ----
+# Un alias produit un vrai fichier SVG / composant / codepoint, pointant sur le
+# même dessin que son glyphe source. Le champ "alias" est exposé dans icons.json.
+ALIASES = {
+ "account":"user-circle", "add":"plus", "back":"arrow-left", "next":"arrow-right",
+ "delete":"trash", "done":"check-circle", "start":"play", "pro":"crown",
+ "digital":"smartphone", "insights":"chart-bar", "deadline":"calendar-alert",
+ "reminder":"bell", "backup":"cloud-upload", "plan-task":"calendar-check",
+ "week-template":"calendar-repeat", "time-check":"clock-check",
+ "time-balance":"balance", "time-spent":"hourglass",
+ "work":"briefcase", "study":"graduation", "creative":"palette", "reading":"book-open",
+ "family":"house-users", "social":"user-group", "spirituality":"hands-praying",
+ "wellbeing":"meditation", "leisure":"sofa", "commute":"car", "sleep":"bed",
+ "morning":"sunrise", "evening":"moon", "finance":"coins", "music":"music-note",
+}
+ALIAS_CAT = {
+ "work":"life", "study":"life", "creative":"life", "reading":"life", "family":"life",
+ "social":"life", "spirituality":"life", "wellbeing":"life", "leisure":"life",
+ "commute":"life", "sleep":"life", "morning":"life", "evening":"life",
+ "finance":"life", "music":"life", "digital":"life",
+ "deadline":"planning", "plan-task":"planning", "week-template":"planning",
+ "time-check":"planning", "time-balance":"planning", "time-spent":"planning",
+ "insights":"planning", "reminder":"planning",
+}
+for _a, _src in ALIASES.items():
+    _b = ICONS[_src]
+    ICONS[_a] = dict(outline=_b["outline"], detail=_b["detail"],
+                     cat=ALIAS_CAT.get(_a, _b["cat"]), tags=_b.get("tags",""), alias=_src)

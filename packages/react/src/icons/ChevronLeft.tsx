@@ -9,6 +9,7 @@ const bodies: Record<string, string> = {
   'solid-sharp': "<path d=\"M7.16 12L14.08 18.92L15.92 17.08L10.84 12L15.92 6.92L14.08 5.08Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
   'solid-standard': "<path d=\"M8.08 11.08L7.85 11.39L7.76 11.62L7.71 11.87L7.71 12.13L7.76 12.38L7.85 12.61L8 12.82L15 19.84L16.84 18L10.84 12L16.84 6L15 4.16Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
   'duotone-rounded': "<path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'duotone-standard': "<path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
   'twotone-rounded': "<path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"0.4\"/>",
   'bulk-rounded': "<path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2.6\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
 };

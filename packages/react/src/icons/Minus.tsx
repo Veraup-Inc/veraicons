@@ -9,6 +9,7 @@ const bodies: Record<string, string> = {
   'solid-sharp': "<path d=\"M19 13.30L19 10.70L5 10.70L5 13.30Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
   'solid-standard': "<path d=\"M19 13.30L20.30 13.30L20.30 10.70L3.70 10.70L3.70 13.30Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
   'duotone-rounded': "<path d=\"M5 12h14\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'duotone-standard': "<path d=\"M5 12h14\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
   'twotone-rounded': "<path d=\"M5 12h14\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"0.4\"/>",
   'bulk-rounded': "<path d=\"M5 12h14\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2.6\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
 };

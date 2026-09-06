@@ -6,7 +6,10 @@ class VeraUpStrokeSharp {
   static const String _family = 'VeraUpIconsStrokeSharp';
   static const String _package = 'veraicons';
 
+  static const IconData account = IconData(0xf23e, fontFamily: _family, fontPackage: _package);
   static const IconData activity = IconData(0xf23d, fontFamily: _family, fontPackage: _package);
+  static const IconData add = IconData(0xf23f, fontFamily: _family, fontPackage: _package);
+  static const IconData admin = IconData(0xf240, fontFamily: _family, fontPackage: _package);
   static const IconData agenda = IconData(0xf23c, fontFamily: _family, fontPackage: _package);
   static const IconData ai = IconData(0xf23b, fontFamily: _family, fontPackage: _package);
   static const IconData alarm = IconData(0xf23a, fontFamily: _family, fontPackage: _package);
@@ -21,6 +24,8 @@ class VeraUpStrokeSharp {
   static const IconData arrowUpRight = IconData(0xf232, fontFamily: _family, fontPackage: _package);
   static const IconData at = IconData(0xf230, fontFamily: _family, fontPackage: _package);
   static const IconData attachment = IconData(0xf22f, fontFamily: _family, fontPackage: _package);
+  static const IconData back = IconData(0xf241, fontFamily: _family, fontPackage: _package);
+  static const IconData backup = IconData(0xf242, fontFamily: _family, fontPackage: _package);
   static const IconData badgeCheck = IconData(0xf22e, fontFamily: _family, fontPackage: _package);
   static const IconData balance = IconData(0xf22d, fontFamily: _family, fontPackage: _package);
   static const IconData bank = IconData(0xf22c, fontFamily: _family, fontPackage: _package);
@@ -39,6 +44,7 @@ class VeraUpStrokeSharp {
   static const IconData bookOpen = IconData(0xf220, fontFamily: _family, fontPackage: _package);
   static const IconData bookmark = IconData(0xf21e, fontFamily: _family, fontPackage: _package);
   static const IconData bracelet = IconData(0xf21d, fontFamily: _family, fontPackage: _package);
+  static const IconData break_ = IconData(0xf243, fontFamily: _family, fontPackage: _package);
   static const IconData briefcase = IconData(0xf21c, fontFamily: _family, fontPackage: _package);
   static const IconData broom = IconData(0xf21b, fontFamily: _family, fontPackage: _package);
   static const IconData bug = IconData(0xf21a, fontFamily: _family, fontPackage: _package);
@@ -56,6 +62,7 @@ class VeraUpStrokeSharp {
   static const IconData car = IconData(0xf20e, fontFamily: _family, fontPackage: _package);
   static const IconData cart = IconData(0xf20d, fontFamily: _family, fontPackage: _package);
   static const IconData cashOut = IconData(0xf20c, fontFamily: _family, fontPackage: _package);
+  static const IconData categories = IconData(0xf244, fontFamily: _family, fontPackage: _package);
   static const IconData certificate = IconData(0xf20b, fontFamily: _family, fontPackage: _package);
   static const IconData chartBar = IconData(0xf20a, fontFamily: _family, fontPackage: _package);
   static const IconData chartLine = IconData(0xf209, fontFamily: _family, fontPackage: _package);
@@ -92,41 +99,53 @@ class VeraUpStrokeSharp {
   static const IconData cog = IconData(0xf1ea, fontFamily: _family, fontPackage: _package);
   static const IconData coin = IconData(0xf1e9, fontFamily: _family, fontPackage: _package);
   static const IconData coins = IconData(0xf1e8, fontFamily: _family, fontPackage: _package);
+  static const IconData collapse = IconData(0xf245, fontFamily: _family, fontPackage: _package);
   static const IconData commentQuestion = IconData(0xf1e7, fontFamily: _family, fontPackage: _package);
+  static const IconData commute = IconData(0xf246, fontFamily: _family, fontPackage: _package);
   static const IconData confetti = IconData(0xf1e6, fontFamily: _family, fontPackage: _package);
   static const IconData contact = IconData(0xf1e5, fontFamily: _family, fontPackage: _package);
   static const IconData contactless = IconData(0xf1e4, fontFamily: _family, fontPackage: _package);
   static const IconData copy = IconData(0xf1e3, fontFamily: _family, fontPackage: _package);
   static const IconData cornerDownRight = IconData(0xf1e2, fontFamily: _family, fontPackage: _package);
   static const IconData cpu = IconData(0xf1e1, fontFamily: _family, fontPackage: _package);
+  static const IconData creative = IconData(0xf247, fontFamily: _family, fontPackage: _package);
   static const IconData creditCard = IconData(0xf1df, fontFamily: _family, fontPackage: _package);
   static const IconData creditCardCheck = IconData(0xf1e0, fontFamily: _family, fontPackage: _package);
   static const IconData cross = IconData(0xf1de, fontFamily: _family, fontPackage: _package);
   static const IconData crown = IconData(0xf1dd, fontFamily: _family, fontPackage: _package);
   static const IconData dashboard = IconData(0xf1dc, fontFamily: _family, fontPackage: _package);
   static const IconData database = IconData(0xf1db, fontFamily: _family, fontPackage: _package);
+  static const IconData dayReview = IconData(0xf248, fontFamily: _family, fontPackage: _package);
+  static const IconData deadline = IconData(0xf249, fontFamily: _family, fontPackage: _package);
+  static const IconData delete = IconData(0xf24a, fontFamily: _family, fontPackage: _package);
   static const IconData design = IconData(0xf1da, fontFamily: _family, fontPackage: _package);
   static const IconData dice = IconData(0xf1d9, fontFamily: _family, fontPackage: _package);
+  static const IconData digital = IconData(0xf24b, fontFamily: _family, fontPackage: _package);
   static const IconData discount = IconData(0xf1d8, fontFamily: _family, fontPackage: _package);
   static const IconData dollar = IconData(0xf1d7, fontFamily: _family, fontPackage: _package);
+  static const IconData done = IconData(0xf24c, fontFamily: _family, fontPackage: _package);
   static const IconData door = IconData(0xf1d6, fontFamily: _family, fontPackage: _package);
   static const IconData download = IconData(0xf1d5, fontFamily: _family, fontPackage: _package);
   static const IconData drag = IconData(0xf1d4, fontFamily: _family, fontPackage: _package);
   static const IconData drum = IconData(0xf1d3, fontFamily: _family, fontPackage: _package);
   static const IconData duplicate = IconData(0xf1d2, fontFamily: _family, fontPackage: _package);
   static const IconData edit = IconData(0xf1d1, fontFamily: _family, fontPackage: _package);
+  static const IconData evening = IconData(0xf24d, fontFamily: _family, fontPackage: _package);
   static const IconData expand = IconData(0xf1d0, fontFamily: _family, fontPackage: _package);
   static const IconData export_ = IconData(0xf1cf, fontFamily: _family, fontPackage: _package);
   static const IconData externalLink = IconData(0xf1ce, fontFamily: _family, fontPackage: _package);
   static const IconData eye = IconData(0xf1cc, fontFamily: _family, fontPackage: _package);
   static const IconData eyeOff = IconData(0xf1cd, fontFamily: _family, fontPackage: _package);
+  static const IconData family = IconData(0xf24e, fontFamily: _family, fontPackage: _package);
   static const IconData file = IconData(0xf1c8, fontFamily: _family, fontPackage: _package);
   static const IconData filePdf = IconData(0xf1cb, fontFamily: _family, fontPackage: _package);
   static const IconData filePlus = IconData(0xf1ca, fontFamily: _family, fontPackage: _package);
   static const IconData fileText = IconData(0xf1c9, fontFamily: _family, fontPackage: _package);
   static const IconData film = IconData(0xf1c7, fontFamily: _family, fontPackage: _package);
   static const IconData filter = IconData(0xf1c6, fontFamily: _family, fontPackage: _package);
+  static const IconData finance = IconData(0xf24f, fontFamily: _family, fontPackage: _package);
   static const IconData fingerprint = IconData(0xf1c5, fontFamily: _family, fontPackage: _package);
+  static const IconData finishEarly = IconData(0xf250, fontFamily: _family, fontPackage: _package);
   static const IconData flag = IconData(0xf1c4, fontFamily: _family, fontPackage: _package);
   static const IconData folder = IconData(0xf1c2, fontFamily: _family, fontPackage: _package);
   static const IconData folderOpen = IconData(0xf1c3, fontFamily: _family, fontPackage: _package);
@@ -145,6 +164,7 @@ class VeraUpStrokeSharp {
   static const IconData handsPraying = IconData(0xf1b5, fontFamily: _family, fontPackage: _package);
   static const IconData handshake = IconData(0xf1b4, fontFamily: _family, fontPackage: _package);
   static const IconData headphones = IconData(0xf1b3, fontFamily: _family, fontPackage: _package);
+  static const IconData health = IconData(0xf251, fontFamily: _family, fontPackage: _package);
   static const IconData heart = IconData(0xf1b2, fontFamily: _family, fontPackage: _package);
   static const IconData helpCircle = IconData(0xf1b1, fontFamily: _family, fontPackage: _package);
   static const IconData history = IconData(0xf1b0, fontFamily: _family, fontPackage: _package);
@@ -157,6 +177,7 @@ class VeraUpStrokeSharp {
   static const IconData import_ = IconData(0xf1a9, fontFamily: _family, fontPackage: _package);
   static const IconData inbox = IconData(0xf1a8, fontFamily: _family, fontPackage: _package);
   static const IconData infoCircle = IconData(0xf1a7, fontFamily: _family, fontPackage: _package);
+  static const IconData insights = IconData(0xf252, fontFamily: _family, fontPackage: _package);
   static const IconData invoice = IconData(0xf1a6, fontFamily: _family, fontPackage: _package);
   static const IconData kanban = IconData(0xf1a5, fontFamily: _family, fontPackage: _package);
   static const IconData key = IconData(0xf1a4, fontFamily: _family, fontPackage: _package);
@@ -168,9 +189,11 @@ class VeraUpStrokeSharp {
   static const IconData laptop = IconData(0xf19e, fontFamily: _family, fontPackage: _package);
   static const IconData layers = IconData(0xf19d, fontFamily: _family, fontPackage: _package);
   static const IconData layout = IconData(0xf19c, fontFamily: _family, fontPackage: _package);
+  static const IconData leisure = IconData(0xf253, fontFamily: _family, fontPackage: _package);
   static const IconData lesson = IconData(0xf19b, fontFamily: _family, fontPackage: _package);
   static const IconData level = IconData(0xf19a, fontFamily: _family, fontPackage: _package);
   static const IconData library = IconData(0xf199, fontFamily: _family, fontPackage: _package);
+  static const IconData lifeSeason = IconData(0xf254, fontFamily: _family, fontPackage: _package);
   static const IconData lightbulb = IconData(0xf198, fontFamily: _family, fontPackage: _package);
   static const IconData link = IconData(0xf197, fontFamily: _family, fontPackage: _package);
   static const IconData list = IconData(0xf195, fontFamily: _family, fontPackage: _package);
@@ -181,6 +204,7 @@ class VeraUpStrokeSharp {
   static const IconData mailOpen = IconData(0xf192, fontFamily: _family, fontPackage: _package);
   static const IconData map = IconData(0xf18f, fontFamily: _family, fontPackage: _package);
   static const IconData mapPin = IconData(0xf190, fontFamily: _family, fontPackage: _package);
+  static const IconData meal = IconData(0xf255, fontFamily: _family, fontPackage: _package);
   static const IconData medal = IconData(0xf18e, fontFamily: _family, fontPackage: _package);
   static const IconData meditation = IconData(0xf18d, fontFamily: _family, fontPackage: _package);
   static const IconData megaphone = IconData(0xf18c, fontFamily: _family, fontPackage: _package);
@@ -196,14 +220,18 @@ class VeraUpStrokeSharp {
   static const IconData moon = IconData(0xf182, fontFamily: _family, fontPackage: _package);
   static const IconData moreHorizontal = IconData(0xf181, fontFamily: _family, fontPackage: _package);
   static const IconData moreVertical = IconData(0xf180, fontFamily: _family, fontPackage: _package);
+  static const IconData morning = IconData(0xf256, fontFamily: _family, fontPackage: _package);
+  static const IconData music = IconData(0xf257, fontFamily: _family, fontPackage: _package);
   static const IconData musicNote = IconData(0xf17f, fontFamily: _family, fontPackage: _package);
   static const IconData musicNotes = IconData(0xf17e, fontFamily: _family, fontPackage: _package);
   static const IconData mute = IconData(0xf17d, fontFamily: _family, fontPackage: _package);
   static const IconData navigation = IconData(0xf17c, fontFamily: _family, fontPackage: _package);
   static const IconData network = IconData(0xf17b, fontFamily: _family, fontPackage: _package);
+  static const IconData next = IconData(0xf258, fontFamily: _family, fontPackage: _package);
   static const IconData nfc = IconData(0xf17a, fontFamily: _family, fontPackage: _package);
   static const IconData notification = IconData(0xf179, fontFamily: _family, fontPackage: _package);
   static const IconData office = IconData(0xf178, fontFamily: _family, fontPackage: _package);
+  static const IconData overlap = IconData(0xf259, fontFamily: _family, fontPackage: _package);
   static const IconData palette = IconData(0xf177, fontFamily: _family, fontPackage: _package);
   static const IconData pause = IconData(0xf176, fontFamily: _family, fontPackage: _package);
   static const IconData pencil = IconData(0xf175, fontFamily: _family, fontPackage: _package);
@@ -213,6 +241,8 @@ class VeraUpStrokeSharp {
   static const IconData piano = IconData(0xf171, fontFamily: _family, fontPackage: _package);
   static const IconData pieChart = IconData(0xf170, fontFamily: _family, fontPackage: _package);
   static const IconData pin = IconData(0xf16f, fontFamily: _family, fontPackage: _package);
+  static const IconData planTask = IconData(0xf25a, fontFamily: _family, fontPackage: _package);
+  static const IconData plannedActual = IconData(0xf25b, fontFamily: _family, fontPackage: _package);
   static const IconData plant = IconData(0xf16e, fontFamily: _family, fontPackage: _package);
   static const IconData play = IconData(0xf16d, fontFamily: _family, fontPackage: _package);
   static const IconData playlist = IconData(0xf16c, fontFamily: _family, fontPackage: _package);
@@ -228,16 +258,19 @@ class VeraUpStrokeSharp {
   static const IconData printer = IconData(0xf162, fontFamily: _family, fontPackage: _package);
   static const IconData priority = IconData(0xf161, fontFamily: _family, fontPackage: _package);
   static const IconData privacy = IconData(0xf160, fontFamily: _family, fontPackage: _package);
+  static const IconData pro = IconData(0xf25c, fontFamily: _family, fontPackage: _package);
   static const IconData profileShare = IconData(0xf15f, fontFamily: _family, fontPackage: _package);
   static const IconData puzzle = IconData(0xf15e, fontFamily: _family, fontPackage: _package);
   static const IconData qrCode = IconData(0xf15d, fontFamily: _family, fontPackage: _package);
   static const IconData radio = IconData(0xf15c, fontFamily: _family, fontPackage: _package);
   static const IconData ranking = IconData(0xf15b, fontFamily: _family, fontPackage: _package);
+  static const IconData reading = IconData(0xf25d, fontFamily: _family, fontPackage: _package);
   static const IconData receipt = IconData(0xf15a, fontFamily: _family, fontPackage: _package);
   static const IconData record = IconData(0xf159, fontFamily: _family, fontPackage: _package);
   static const IconData redo = IconData(0xf158, fontFamily: _family, fontPackage: _package);
   static const IconData refresh = IconData(0xf157, fontFamily: _family, fontPackage: _package);
   static const IconData rehearsal = IconData(0xf156, fontFamily: _family, fontPackage: _package);
+  static const IconData reminder = IconData(0xf25e, fontFamily: _family, fontPackage: _package);
   static const IconData repeat = IconData(0xf155, fontFamily: _family, fontPackage: _package);
   static const IconData restore = IconData(0xf154, fontFamily: _family, fontPackage: _package);
   static const IconData reward = IconData(0xf153, fontFamily: _family, fontPackage: _package);
@@ -262,20 +295,26 @@ class VeraUpStrokeSharp {
   static const IconData signal = IconData(0xf140, fontFamily: _family, fontPackage: _package);
   static const IconData skipBack = IconData(0xf13f, fontFamily: _family, fontPackage: _package);
   static const IconData skipForward = IconData(0xf13e, fontFamily: _family, fontPackage: _package);
+  static const IconData sleep = IconData(0xf25f, fontFamily: _family, fontPackage: _package);
   static const IconData smartphone = IconData(0xf13d, fontFamily: _family, fontPackage: _package);
+  static const IconData social = IconData(0xf260, fontFamily: _family, fontPackage: _package);
   static const IconData sofa = IconData(0xf13c, fontFamily: _family, fontPackage: _package);
   static const IconData sort = IconData(0xf13b, fontFamily: _family, fontPackage: _package);
   static const IconData sparkle = IconData(0xf13a, fontFamily: _family, fontPackage: _package);
   static const IconData speaker = IconData(0xf139, fontFamily: _family, fontPackage: _package);
+  static const IconData spirituality = IconData(0xf261, fontFamily: _family, fontPackage: _package);
   static const IconData splitExpense = IconData(0xf138, fontFamily: _family, fontPackage: _package);
+  static const IconData sport = IconData(0xf262, fontFamily: _family, fontPackage: _package);
   static const IconData square = IconData(0xf137, fontFamily: _family, fontPackage: _package);
   static const IconData stand = IconData(0xf136, fontFamily: _family, fontPackage: _package);
   static const IconData star = IconData(0xf134, fontFamily: _family, fontPackage: _package);
   static const IconData starHalf = IconData(0xf135, fontFamily: _family, fontPackage: _package);
+  static const IconData start = IconData(0xf263, fontFamily: _family, fontPackage: _package);
   static const IconData steeringWheel = IconData(0xf133, fontFamily: _family, fontPackage: _package);
   static const IconData stop = IconData(0xf132, fontFamily: _family, fontPackage: _package);
   static const IconData stopwatch = IconData(0xf131, fontFamily: _family, fontPackage: _package);
   static const IconData store = IconData(0xf130, fontFamily: _family, fontPackage: _package);
+  static const IconData study = IconData(0xf264, fontFamily: _family, fontPackage: _package);
   static const IconData sunAlt = IconData(0xf12f, fontFamily: _family, fontPackage: _package);
   static const IconData sunrise = IconData(0xf12e, fontFamily: _family, fontPackage: _package);
   static const IconData swap = IconData(0xf12d, fontFamily: _family, fontPackage: _package);
@@ -292,6 +331,14 @@ class VeraUpStrokeSharp {
   static const IconData thermometer = IconData(0xf122, fontFamily: _family, fontPackage: _package);
   static const IconData thumbsUp = IconData(0xf121, fontFamily: _family, fontPackage: _package);
   static const IconData ticket = IconData(0xf120, fontFamily: _family, fontPackage: _package);
+  static const IconData timeBalance = IconData(0xf265, fontFamily: _family, fontPackage: _package);
+  static const IconData timeBudget = IconData(0xf266, fontFamily: _family, fontPackage: _package);
+  static const IconData timeCheck = IconData(0xf267, fontFamily: _family, fontPackage: _package);
+  static const IconData timeFlexible = IconData(0xf268, fontFamily: _family, fontPackage: _package);
+  static const IconData timeFree = IconData(0xf269, fontFamily: _family, fontPackage: _package);
+  static const IconData timeReserved = IconData(0xf26a, fontFamily: _family, fontPackage: _package);
+  static const IconData timeSpent = IconData(0xf26b, fontFamily: _family, fontPackage: _package);
+  static const IconData timeline = IconData(0xf26c, fontFamily: _family, fontPackage: _package);
   static const IconData timer = IconData(0xf11f, fontFamily: _family, fontPackage: _package);
   static const IconData toggleOff = IconData(0xf11e, fontFamily: _family, fontPackage: _package);
   static const IconData toggleOn = IconData(0xf11d, fontFamily: _family, fontPackage: _package);
@@ -317,15 +364,22 @@ class VeraUpStrokeSharp {
   static const IconData wallet = IconData(0xf108, fontFamily: _family, fontPackage: _package);
   static const IconData walletAlt = IconData(0xf109, fontFamily: _family, fontPackage: _package);
   static const IconData washingMachine = IconData(0xf107, fontFamily: _family, fontPackage: _package);
+  static const IconData weekReview = IconData(0xf26d, fontFamily: _family, fontPackage: _package);
+  static const IconData weekTemplate = IconData(0xf26e, fontFamily: _family, fontPackage: _package);
+  static const IconData wellbeing = IconData(0xf26f, fontFamily: _family, fontPackage: _package);
   static const IconData widget = IconData(0xf106, fontFamily: _family, fontPackage: _package);
   static const IconData wifi = IconData(0xf104, fontFamily: _family, fontPackage: _package);
   static const IconData wifiOff = IconData(0xf105, fontFamily: _family, fontPackage: _package);
   static const IconData wordGrid = IconData(0xf103, fontFamily: _family, fontPackage: _package);
+  static const IconData work = IconData(0xf270, fontFamily: _family, fontPackage: _package);
   static const IconData wrench = IconData(0xf102, fontFamily: _family, fontPackage: _package);
   static const IconData zoomIn = IconData(0xf101, fontFamily: _family, fontPackage: _package);
 
   static const Map<String, IconData> byName = {
+    'account': account,
     'activity': activity,
+    'add': add,
+    'admin': admin,
     'agenda': agenda,
     'ai': ai,
     'alarm': alarm,
@@ -340,6 +394,8 @@ class VeraUpStrokeSharp {
     'arrow-up-right': arrowUpRight,
     'at': at,
     'attachment': attachment,
+    'back': back,
+    'backup': backup,
     'badge-check': badgeCheck,
     'balance': balance,
     'bank': bank,
@@ -358,6 +414,7 @@ class VeraUpStrokeSharp {
     'book-open': bookOpen,
     'bookmark': bookmark,
     'bracelet': bracelet,
+    'break': break_,
     'briefcase': briefcase,
     'broom': broom,
     'bug': bug,
@@ -375,6 +432,7 @@ class VeraUpStrokeSharp {
     'car': car,
     'cart': cart,
     'cash-out': cashOut,
+    'categories': categories,
     'certificate': certificate,
     'chart-bar': chartBar,
     'chart-line': chartLine,
@@ -411,41 +469,53 @@ class VeraUpStrokeSharp {
     'cog': cog,
     'coin': coin,
     'coins': coins,
+    'collapse': collapse,
     'comment-question': commentQuestion,
+    'commute': commute,
     'confetti': confetti,
     'contact': contact,
     'contactless': contactless,
     'copy': copy,
     'corner-down-right': cornerDownRight,
     'cpu': cpu,
+    'creative': creative,
     'credit-card': creditCard,
     'credit-card-check': creditCardCheck,
     'cross': cross,
     'crown': crown,
     'dashboard': dashboard,
     'database': database,
+    'day-review': dayReview,
+    'deadline': deadline,
+    'delete': delete,
     'design': design,
     'dice': dice,
+    'digital': digital,
     'discount': discount,
     'dollar': dollar,
+    'done': done,
     'door': door,
     'download': download,
     'drag': drag,
     'drum': drum,
     'duplicate': duplicate,
     'edit': edit,
+    'evening': evening,
     'expand': expand,
     'export': export_,
     'external-link': externalLink,
     'eye': eye,
     'eye-off': eyeOff,
+    'family': family,
     'file': file,
     'file-pdf': filePdf,
     'file-plus': filePlus,
     'file-text': fileText,
     'film': film,
     'filter': filter,
+    'finance': finance,
     'fingerprint': fingerprint,
+    'finish-early': finishEarly,
     'flag': flag,
     'folder': folder,
     'folder-open': folderOpen,
@@ -464,6 +534,7 @@ class VeraUpStrokeSharp {
     'hands-praying': handsPraying,
     'handshake': handshake,
     'headphones': headphones,
+    'health': health,
     'heart': heart,
     'help-circle': helpCircle,
     'history': history,
@@ -476,6 +547,7 @@ class VeraUpStrokeSharp {
     'import': import_,
     'inbox': inbox,
     'info-circle': infoCircle,
+    'insights': insights,
     'invoice': invoice,
     'kanban': kanban,
     'key': key,
@@ -487,9 +559,11 @@ class VeraUpStrokeSharp {
     'laptop': laptop,
     'layers': layers,
     'layout': layout,
+    'leisure': leisure,
     'lesson': lesson,
     'level': level,
     'library': library,
+    'life-season': lifeSeason,
     'lightbulb': lightbulb,
     'link': link,
     'list': list,
@@ -500,6 +574,7 @@ class VeraUpStrokeSharp {
     'mail-open': mailOpen,
     'map': map,
     'map-pin': mapPin,
+    'meal': meal,
     'medal': medal,
     'meditation': meditation,
     'megaphone': megaphone,
@@ -515,14 +590,18 @@ class VeraUpStrokeSharp {
     'moon': moon,
     'more-horizontal': moreHorizontal,
     'more-vertical': moreVertical,
+    'morning': morning,
+    'music': music,
     'music-note': musicNote,
     'music-notes': musicNotes,
     'mute': mute,
     'navigation': navigation,
     'network': network,
+    'next': next,
     'nfc': nfc,
     'notification': notification,
     'office': office,
+    'overlap': overlap,
     'palette': palette,
     'pause': pause,
     'pencil': pencil,
@@ -532,6 +611,8 @@ class VeraUpStrokeSharp {
     'piano': piano,
     'pie-chart': pieChart,
     'pin': pin,
+    'plan-task': planTask,
+    'planned-actual': plannedActual,
     'plant': plant,
     'play': play,
     'playlist': playlist,
@@ -547,16 +628,19 @@ class VeraUpStrokeSharp {
     'printer': printer,
     'priority': priority,
     'privacy': privacy,
+    'pro': pro,
     'profile-share': profileShare,
     'puzzle': puzzle,
     'qr-code': qrCode,
     'radio': radio,
     'ranking': ranking,
+    'reading': reading,
     'receipt': receipt,
     'record': record,
     'redo': redo,
     'refresh': refresh,
     'rehearsal': rehearsal,
+    'reminder': reminder,
     'repeat': repeat,
     'restore': restore,
     'reward': reward,
@@ -581,20 +665,26 @@ class VeraUpStrokeSharp {
     'signal': signal,
     'skip-back': skipBack,
     'skip-forward': skipForward,
+    'sleep': sleep,
     'smartphone': smartphone,
+    'social': social,
     'sofa': sofa,
     'sort': sort,
     'sparkle': sparkle,
     'speaker': speaker,
+    'spirituality': spirituality,
     'split-expense': splitExpense,
+    'sport': sport,
     'square': square,
     'stand': stand,
     'star': star,
     'star-half': starHalf,
+    'start': start,
     'steering-wheel': steeringWheel,
     'stop': stop,
     'stopwatch': stopwatch,
     'store': store,
+    'study': study,
     'sun-alt': sunAlt,
     'sunrise': sunrise,
     'swap': swap,
@@ -611,6 +701,14 @@ class VeraUpStrokeSharp {
     'thermometer': thermometer,
     'thumbs-up': thumbsUp,
     'ticket': ticket,
+    'time-balance': timeBalance,
+    'time-budget': timeBudget,
+    'time-check': timeCheck,
+    'time-flexible': timeFlexible,
+    'time-free': timeFree,
+    'time-reserved': timeReserved,
+    'time-spent': timeSpent,
+    'timeline': timeline,
     'timer': timer,
     'toggle-off': toggleOff,
     'toggle-on': toggleOn,
@@ -636,10 +734,14 @@ class VeraUpStrokeSharp {
     'wallet': wallet,
     'wallet-alt': walletAlt,
     'washing-machine': washingMachine,
+    'week-review': weekReview,
+    'week-template': weekTemplate,
+    'wellbeing': wellbeing,
     'widget': widget,
     'wifi': wifi,
     'wifi-off': wifiOff,
     'word-grid': wordGrid,
+    'work': work,
     'wrench': wrench,
     'zoom-in': zoomIn,
   };

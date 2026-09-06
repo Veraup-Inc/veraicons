@@ -1,8 +1,8 @@
 # VeraUp Icons
 
-Bibliothèque d'icônes officielle de VeraUp Inc. — **317 icônes, 9 styles**, une seule source par icône.
+Bibliothèque d'icônes officielle de VeraUp Inc. — **368 icônes, 10 styles**, une seule source par icône.
 
-Styles : `stroke-rounded` · `stroke-sharp` · `stroke-standard` · `solid-rounded` · `solid-sharp` · `solid-standard` · `duotone-rounded` · `twotone-rounded` · `bulk-rounded`.
+Styles : `stroke-rounded` · `stroke-sharp` · `stroke-standard` · `solid-rounded` · `solid-sharp` · `solid-standard` · `duotone-rounded` · `duotone-standard` · `twotone-rounded` · `bulk-rounded`.
 Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) (source : `docs/index.html`, GitHub Pages).
 
 
@@ -41,19 +41,31 @@ Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 ```
 Un SVG isolé :
 ```html
-<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.0.0/svg/duotone-rounded/nfc.svg" width="24">
+<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.0/svg/duotone-rounded/nfc.svg" width="24">
 ```
+Ou un sprite, pour n'appeler qu'un seul fichier :
+```html
+<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.1.0/sprites/stroke-rounded.svg#timeline"/></svg>
+```
+
+## Noms et alias
+33 icônes sont des **alias** : un nom métier qui rend le même dessin qu'un glyphe existant
+(`add` → `plus`, `delete` → `trash`, `sleep` → `bed`, `work` → `briefcase`…). Un alias est une
+icône à part entière — son SVG, son composant React, son `IconData` Flutter et son codepoint
+existent bel et bien. `icons.json` indique le glyphe source dans le champ `alias`.
 
 ## Structure
 ```
 svg/<style>/<nom>.svg        SVG par style
+sprites/<style>.svg          sprite SVG par style (<use href="…#nom">)
 fonts/<style>/               TTF, WOFF2, codepoints (6 styles monochromes)
 packages/flutter/veraicons  package Flutter
 packages/react               package npm (TSX)
 packages/web                 CSS + polices pour le web
 docs/index.html              catalogue interactif (GitHub Pages)
 tools/                       générateur — voir CONTRIBUTING.md
-icons.json                   manifeste (noms, catégories, codepoints)
+icons.json                   manifeste (noms, catégories, codepoints, alias)
+tokens.json                  tokens de design (grille, traits, opacités, profils)
 ```
 
 ## Publier une nouvelle version
