@@ -1,0 +1,22 @@
+import * as React from 'react';
+import type { VeraIconProps } from '../types';
+
+const bodies: Record<string, string> = {
+  'stroke-rounded': "<path d=\"M12 3a9 9 0 1 1-9 9h9z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'stroke-sharp': "<path d=\"M12 3a9 9 0 1 1-9 9h9z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" opacity=\"1.0\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" opacity=\"1.0\"/>",
+  'stroke-standard': "<path d=\"M12 3a9 9 0 1 1-9 9h9z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'solid-rounded': "<path d=\"M14.53 1.75L14.31 1.77L14.17 1.83L14.04 1.91L13.93 2.01L13.84 2.14L13.75 2.42L11.93 2.25L11.71 2.31L11.52 2.42L11.38 2.58L11.28 2.78L11.25 3L11.25 11.25L2.93 11.25L2.65 11.34L2.47 11.47L2.34 11.65L2.26 11.85L2.25 12.07L2.46 13.97L2.99 15.73L3.94 17.48L5.11 18.89L6.58 20.11L8.27 21.01L10.10 21.56L12 21.75L13.90 21.56L15.73 21.01L17.42 20.11L18.89 18.89L20.11 17.42L21.01 15.73L21.56 13.90L21.75 12L21.58 10.25L21.86 10.16L21.99 10.07L22.09 9.96L22.20 9.76L22.24 9.62L22.25 9.47L22.17 8.91L21.95 7.96L21.62 7.05L21.19 6.17L20.67 5.35L20.06 4.59L19.41 3.94L19.03 3.62L18.24 3.06L17.39 2.58L16.46 2.19L15.53 1.92L15.05 1.82Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'solid-sharp': "<path d=\"M13.75 2.42L11.25 2.17L11.25 11.25L2.17 11.25L2.43 13.90L2.99 15.73L3.89 17.42L5.10 18.90L6.58 20.11L8.27 21.01L10.10 21.57L12 21.75L13.90 21.57L15.73 21.01L17.42 20.11L18.90 18.90L20.11 17.42L21.01 15.73L21.57 13.90L21.75 12L21.58 10.25L22.37 10.25L22.17 8.93L22.08 8.45L21.80 7.52L21.43 6.62L20.96 5.77L20.39 4.98L19.74 4.26L19.39 3.92L18.63 3.32L17.81 2.80L16.93 2.37L16.02 2.05L15.07 1.83L13.75 1.63Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'solid-standard': "<path d=\"M14.53 1.75L14.31 1.77L14.17 1.83L14.04 1.91L13.93 2.01L13.84 2.14L13.75 2.42L11.93 2.25L11.71 2.31L11.52 2.42L11.38 2.58L11.28 2.78L11.25 3L11.25 11.25L2.93 11.25L2.65 11.34L2.47 11.47L2.34 11.65L2.26 11.85L2.25 12.07L2.46 13.97L2.99 15.73L3.94 17.48L5.11 18.89L6.58 20.11L8.27 21.01L10.10 21.56L12 21.75L13.90 21.56L15.73 21.01L17.42 20.11L18.89 18.89L20.11 17.42L21.01 15.73L21.56 13.90L21.75 12L21.58 10.25L21.86 10.16L21.99 10.07L22.09 9.96L22.20 9.76L22.24 9.62L22.25 9.47L22.17 8.91L21.95 7.96L21.62 7.05L21.19 6.17L20.67 5.35L20.06 4.59L19.41 3.94L19.03 3.62L18.24 3.06L17.39 2.58L16.46 2.19L15.53 1.92L15.05 1.82Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'duotone-rounded': "<path d=\"M12 3a9 9 0 1 1-9 9h9zz\" fill=\"currentColor\" opacity=\"0.25\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7zz\" fill=\"currentColor\" opacity=\"0.25\"/>\n  <path d=\"M12 3a9 9 0 1 1-9 9h9z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'twotone-rounded': "<path d=\"M12 3a9 9 0 1 1-9 9h9z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"0.4\"/>",
+  'bulk-rounded': "<path d=\"M12 3a9 9 0 1 1-9 9h9zz\" fill=\"currentColor\" opacity=\"0.4\"/>\n  <path d=\"M14.5 2.5a8 8 0 0 1 7 7h-7zz\" fill=\"currentColor\" opacity=\"1.0\"/>",
+};
+
+export const ChartPie = React.forwardRef<SVGSVGElement, VeraIconProps>(
+  ({ variant = 'stroke-rounded', size = 24, color = 'currentColor', ...rest }, ref) => (
+    <svg ref={ref} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} color={color}
+         dangerouslySetInnerHTML={{ __html: bodies[variant] ?? bodies['stroke-rounded'] }} {...rest} />
+  )
+);
+ChartPie.displayName = 'ChartPie';

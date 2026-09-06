@@ -1,0 +1,35 @@
+name: veraup_icons
+description: VeraUp Icons — 317 symboles en 9 styles (stroke, solid, duotone, twotone, bulk). Bibliothèque officielle VeraUp Inc.
+version: 1.0.0
+publish_to: none
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10
+flutter:
+  assets:
+    - assets/duotone-rounded/
+    - assets/twotone-rounded/
+    - assets/bulk-rounded/
+  fonts:
+    - family: VeraUpIconsStrokeRounded
+      fonts:
+        - asset: fonts/VeraUpIconsStrokeRounded.ttf
+    - family: VeraUpIconsStrokeSharp
+      fonts:
+        - asset: fonts/VeraUpIconsStrokeSharp.ttf
+    - family: VeraUpIconsStrokeStandard
+      fonts:
+        - asset: fonts/VeraUpIconsStrokeStandard.ttf
+    - family: VeraUpIconsSolidRounded
+      fonts:
+        - asset: fonts/VeraUpIconsSolidRounded.ttf
+    - family: VeraUpIconsSolidSharp
+      fonts:
+        - asset: fonts/VeraUpIconsSolidSharp.ttf
+    - family: VeraUpIconsSolidStandard
+      fonts:
+        - asset: fonts/VeraUpIconsSolidStandard.ttf

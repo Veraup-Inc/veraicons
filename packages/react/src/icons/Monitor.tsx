@@ -1,0 +1,22 @@
+import * as React from 'react';
+import type { VeraIconProps } from '../types';
+
+const bodies: Record<string, string> = {
+  'stroke-rounded': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"3.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'stroke-sharp': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"0.0\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" opacity=\"1.0\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" opacity=\"1.0\"/>",
+  'stroke-standard': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"1.75\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'solid-rounded': "<path d=\"M6 2.75L5.34 2.80L4.69 2.96L4.07 3.21L3.50 3.56L2.99 3.99L2.56 4.50L2.21 5.07L1.96 5.69L1.80 6.34L1.75 7L1.75 13.50L1.80 14.16L1.94 14.76L2.24 15.48L2.60 16.04L2.99 16.51L3.46 16.90L4.07 17.29L4.74 17.56L5.34 17.70L6 17.75L11 17.75L11 19.50L7.90 19.50L7.71 19.54L7.53 19.62L7.29 19.79L7.12 20.03L7.04 20.21L7 20.40L7.02 20.70L7.08 20.88L7.23 21.13L7.37 21.27L7.62 21.42L7.80 21.48L8 21.50L16 21.50L16.20 21.48L16.47 21.38L16.63 21.27L16.77 21.13L16.88 20.97L16.98 20.70L17 20.50L16.96 20.21L16.88 20.03L16.71 19.79L16.47 19.62L16.29 19.54L16.10 19.50L13 19.50L13 17.75L18 17.75L18.72 17.69L19.31 17.54L19.88 17.31L20.45 16.97L21.01 16.51L21.44 16L21.79 15.43L22.04 14.81L22.20 14.16L22.25 13.50L22.25 6.94L22.20 6.34L22.06 5.74L21.76 5.02L21.44 4.50L21.05 4.04L20.50 3.56L19.88 3.19L19.31 2.96L18.66 2.80L18 2.75Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'solid-sharp': "<path d=\"M1.75 17.75L11 17.75L11 19.50L8 19.50L8 21.50L16 21.50L16 19.50L13 19.50L13 17.75L22.25 17.75L22.25 2.75L1.75 2.75Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'solid-standard': "<path d=\"M4.25 2.75L3.86 2.78L3.48 2.87L3.12 3.02L2.73 3.26L2.48 3.48L2.26 3.73L2.05 4.06L1.87 4.48L1.78 4.86L1.75 5.25L1.75 15.25L1.78 15.64L1.87 16.02L2.02 16.38L2.23 16.72L2.53 17.06L2.78 17.27L3.06 17.45L3.48 17.63L3.92 17.73L4.25 17.75L11 17.75L11 19.50L7 19.50L7 21.50L17 21.50L17 19.50L13 19.50L13 17.75L19.75 17.75L20.14 17.72L20.58 17.61L20.88 17.48L21.17 17.31L21.52 17.02L21.81 16.67L21.98 16.38L22.13 16.02L22.22 15.64L22.25 15.25L22.25 5.25L22.22 4.86L22.13 4.48L21.98 4.12L21.77 3.78L21.52 3.48L21.27 3.26L20.88 3.02L20.47 2.86L20.14 2.78L19.81 2.75Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
+  'duotone-rounded': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"3.5\" fill=\"currentColor\" opacity=\"0.25\"/>\n  <rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"3.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+  'twotone-rounded': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"3.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"0.4\"/>",
+  'bulk-rounded': "<rect x=\"2.5\" y=\"3.5\" width=\"19\" height=\"13.5\" rx=\"3.5\" fill=\"currentColor\" opacity=\"0.4\"/>\n  <path d=\"M12 17v3.5M8 20.5h8\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
+};
+
+export const Monitor = React.forwardRef<SVGSVGElement, VeraIconProps>(
+  ({ variant = 'stroke-rounded', size = 24, color = 'currentColor', ...rest }, ref) => (
+    <svg ref={ref} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} color={color}
+         dangerouslySetInnerHTML={{ __html: bodies[variant] ?? bodies['stroke-rounded'] }} {...rest} />
+  )
+);
+Monitor.displayName = 'Monitor';

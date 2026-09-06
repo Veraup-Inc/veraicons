@@ -1,0 +1,32 @@
+{
+  "name": "@veraup/icons-react",
+  "version": "1.0.0",
+  "description": "VeraUp Icons \u2014 317 ic\u00f4nes, 9 styles.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "license": "UNLICENSED",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/react": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veraup/veraup-icons",
+    "directory": "packages/react"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
