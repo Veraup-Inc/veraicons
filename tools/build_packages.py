@@ -19,7 +19,7 @@ for vn in MONO:
 shutil.rmtree(tmp)
 cp=json.load(open(f"{ROOT}/fonts/stroke-rounded/{fam['stroke-rounded']}.json"))
 # 2. flutter
-pkg=f"{ROOT}/packages/flutter/veraup_icons"
+pkg=f"{ROOT}/packages/flutter/veraicons"
 os.makedirs(f"{pkg}/lib/src",exist_ok=True); os.makedirs(f"{pkg}/fonts",exist_ok=True)
 for vn in MONO: shutil.copy(f"{ROOT}/fonts/{vn}/{fam[vn]}.ttf",f"{pkg}/fonts/{fam[vn]}.ttf")
 for vn in ["duotone-rounded","twotone-rounded","bulk-rounded"]:
@@ -29,7 +29,7 @@ def camel(n):
     return s+"_" if s in {"import","export","class","switch","new","in","is","do","for","if","default"} else s
 for vn in MONO:
     cls="VeraUp"+"".join(w.title() for w in vn.split("-"))
-    L=[f"/// {vn} — généré par tools/build_packages.py, ne pas modifier à la main.","import 'package:flutter/widgets.dart';","",f"class {cls} {{",f"  {cls}._();",f"  static const String _family = '{fam[vn]}';","  static const String _package = 'veraup_icons';",""]
+    L=[f"/// {vn} — généré par tools/build_packages.py, ne pas modifier à la main.","import 'package:flutter/widgets.dart';","",f"class {cls} {{",f"  {cls}._();",f"  static const String _family = '{fam[vn]}';","  static const String _package = 'veraicons';",""]
     L+=[f"  static const IconData {camel(n)} = IconData(0x{cp[n]:04x}, fontFamily: _family, fontPackage: _package);" for n in sorted(ICONS)]
     L+=["","  static const Map<String, IconData> byName = {"]+[f"    '{n}': {camel(n)}," for n in sorted(ICONS)]+["  };","}",""]
     open(f"{pkg}/lib/src/{vn.replace('-','_')}.dart","w").write("\n".join(L))

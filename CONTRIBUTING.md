@@ -6,4 +6,4 @@
 2. `cd tools && python3 gen.py` → régénère `svg/`, `docs/index.html` et les 9 styles.
 3. `bash tools/build.sh` → régénère polices, package Flutter, package React, `icons.json`.
 4. Vérifier visuellement : `python3 tools/review.py review.png <catégorie>`.
-5. Incrémenter la version dans `CHANGELOG.md`, `packages/flutter/veraup_icons/pubspec.yaml`, `packages/react/package.json`, puis tag `vX.Y.Z`.
+5. Incrémenter la version dans `CHANGELOG.md`, `packages/flutter/veraicons/pubspec.yaml`, `packages/react/package.json`, puis tag `vX.Y.Z`.

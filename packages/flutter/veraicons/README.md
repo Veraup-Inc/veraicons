@@ -1,17 +1,20 @@
-# veraup_icons
+# veraicons
 
 317 icônes, 9 styles, une seule source par icône. Grille 24 px, trait 1,5 px.
 
 ## Installation
 ```yaml
 dependencies:
-  veraup_icons:
-    path: ../packages/veraup_icons   # ou git
+  veraicons:
+    git:
+      url: https://github.com/Veraup-Inc/veraicons.git
+      path: packages/flutter/veraicons
+      ref: v1.0.0
 ```
 
 ## Styles monochromes (police d'icônes — `Icon()` standard)
 ```dart
-import 'package:veraup_icons/veraup_icons.dart';
+import 'package:veraicons/veraicons.dart';
 
 Icon(VeraUpStrokeRounded.home)
 Icon(VeraUpStrokeSharp.calendar)

@@ -1,10 +1,10 @@
-/// solid-rounded — généré, ne pas modifier à la main.
+/// solid-standard — généré, ne pas modifier à la main.
 import 'package:flutter/widgets.dart';
 
-class VeraUpSolidRounded {
-  VeraUpSolidRounded._();
-  static const String _family = 'VeraUpIconsSolidRounded';
-  static const String _package = 'veraup_icons';
+class VeraUpSolidStandard {
+  VeraUpSolidStandard._();
+  static const String _family = 'VeraUpIconsSolidStandard';
+  static const String _package = 'veraicons';
 
   static const IconData activity = IconData(0xf23d, fontFamily: _family, fontPackage: _package);
   static const IconData agenda = IconData(0xf23c, fontFamily: _family, fontPackage: _package);

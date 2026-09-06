@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/veraup/veraup-icons",
+    "url": "https://github.com/Veraup-Inc/veraicons",
     "directory": "packages/react"
   },
   "publishConfig": {

@@ -3,21 +3,20 @@
 Bibliothèque d'icônes officielle de VeraUp Inc. — **317 icônes, 9 styles**, une seule source par icône.
 
 Styles : `stroke-rounded` · `stroke-sharp` · `stroke-standard` · `solid-rounded` · `solid-sharp` · `solid-standard` · `duotone-rounded` · `twotone-rounded` · `bulk-rounded`.
-Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : `docs/index.html` (publié sur GitHub Pages).
+Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) (source : `docs/index.html`, GitHub Pages).
 
-> Remplace `veraup/veraup-icons` ci-dessous par le chemin réel de ton dépôt.
 
 ## Flutter
 ```yaml
 dependencies:
-  veraup_icons:
+  veraicons:
     git:
-      url: https://github.com/veraup/veraup-icons.git
-      path: packages/flutter/veraup_icons
+      url: https://github.com/Veraup-Inc/veraicons.git
+      path: packages/flutter/veraicons
       ref: v1.0.0
 ```
 ```dart
-import 'package:veraup_icons/veraup_icons.dart';
+import 'package:veraicons/veraicons.dart';
 
 Icon(VeraUpStrokeRounded.home)
 Icon(VeraUpSolidRounded.wallet, color: Colors.teal)
@@ -35,20 +34,20 @@ import { Home, Wallet } from '@veraup/icons-react';
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/veraup/veraup-icons@v1.0.0/packages/web/veraup-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.0.0/packages/web/veraup-icons.css">
 <i class="vi-stroke-rounded vi-home"></i>
 <i class="vi-solid-rounded vi-wallet" style="color:#0F766E;font-size:28px"></i>
 ```
 Un SVG isolé :
 ```html
-<img src="https://cdn.jsdelivr.net/gh/veraup/veraup-icons@v1.0.0/svg/duotone-rounded/nfc.svg" width="24">
+<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.0.0/svg/duotone-rounded/nfc.svg" width="24">
 ```
 
 ## Structure
 ```
 svg/<style>/<nom>.svg        SVG par style
 fonts/<style>/               TTF, WOFF2, codepoints (6 styles monochromes)
-packages/flutter/veraup_icons  package Flutter
+packages/flutter/veraicons  package Flutter
 packages/react               package npm (TSX)
 packages/web                 CSS + polices pour le web
 docs/index.html              catalogue interactif (GitHub Pages)

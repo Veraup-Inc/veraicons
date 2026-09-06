@@ -1,4 +1,4 @@
-library veraup_icons;
+library veraicons;
 
 export 'src/stroke_rounded.dart';
 export 'src/stroke_sharp.dart';

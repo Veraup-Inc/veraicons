@@ -1,10 +1,10 @@
-/// stroke-standard — généré, ne pas modifier à la main.
+/// stroke-sharp — généré, ne pas modifier à la main.
 import 'package:flutter/widgets.dart';
 
-class VeraUpStrokeStandard {
-  VeraUpStrokeStandard._();
-  static const String _family = 'VeraUpIconsStrokeStandard';
-  static const String _package = 'veraup_icons';
+class VeraUpStrokeSharp {
+  VeraUpStrokeSharp._();
+  static const String _family = 'VeraUpIconsStrokeSharp';
+  static const String _package = 'veraicons';
 
   static const IconData activity = IconData(0xf23d, fontFamily: _family, fontPackage: _package);
   static const IconData agenda = IconData(0xf23c, fontFamily: _family, fontPackage: _package);

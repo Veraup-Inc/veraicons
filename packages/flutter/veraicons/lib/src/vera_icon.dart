@@ -346,7 +346,7 @@ class VeraIcon extends StatelessWidget {
     final c = color ?? IconTheme.of(context).color ?? const Color(0xFF000000);
     return SvgPicture.asset(
       'assets/$dir/$name.svg',
-      package: 'veraup_icons',
+      package: 'veraicons',
       width: size,
       height: size,
       colorFilter: ColorFilter.mode(c, BlendMode.srcIn),
