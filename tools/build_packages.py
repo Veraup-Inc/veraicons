@@ -42,11 +42,11 @@ for n in sorted(ICONS):
     for vn in VARIANTS:
         b=render(n,ICONS[n],vn).split(">",1)[1].rsplit("</svg>",1)[0].strip()
         bodies[vn]=re.sub(r'\s(stroke-width|stroke-linecap|stroke-linejoin|fill-rule)="',lambda m:" "+{"stroke-width":"strokeWidth","stroke-linecap":"strokeLinecap","stroke-linejoin":"strokeLinejoin","fill-rule":"fillRule"}[m.group(1)]+'="',b)
-    src=["import * as React from 'react';","import type { VeraIconProps } from '../types';","","const bodies: Record<string, string> = {"]+[f"  '{k}': {json.dumps(v)}," for k,v in bodies.items()]+["};","",
+    src=["import * as React from 'react';","import type { VeraIconProps } from '../types.js';","","const bodies: Record<string, string> = {"]+[f"  '{k}': {json.dumps(v)}," for k,v in bodies.items()]+["};","",
          f"export const {comp} = React.forwardRef<SVGSVGElement, VeraIconProps>(","  ({ variant = 'stroke-rounded', size = 24, color = 'currentColor', ...rest }, ref) => (",
          "    <svg ref={ref} xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width={size} height={size} color={color}","         dangerouslySetInnerHTML={{ __html: bodies[variant] ?? bodies['stroke-rounded'] }} {...rest} />","  )",");",f"{comp}.displayName = '{comp}';",""]
-    open(f"{rp}/src/icons/{comp}.tsx","w").write("\n".join(src)); idx.append(f"export {{ {comp} }} from './icons/{comp}';")
-open(f"{rp}/src/index.ts","w").write("export * from './types';\n"+"\n".join(idx)+"\n")
+    open(f"{rp}/src/icons/{comp}.tsx","w").write("\n".join(src)); idx.append(f"export {{ {comp} }} from './icons/{comp}.js';")
+open(f"{rp}/src/index.ts","w").write("export * from './types.js';\n"+"\n".join(idx)+"\n")
 # 4. web css
 web=f"{ROOT}/packages/web"; os.makedirs(f"{web}/fonts",exist_ok=True)
 css=[]

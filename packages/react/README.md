@@ -1,7 +1,11 @@
-# @veraup/icons-react
+# veraicons
+
+```bash
+npm i veraicons        # ou : pnpm add veraicons · yarn add veraicons
+```
 
 ```tsx
-import { Home, Wallet, Church } from '@veraup/icons-react';
+import { Home, Wallet, Church } from 'veraicons';
 
 <Home />                                  // stroke-rounded par défaut
 <Wallet variant="solid-rounded" size={28} color="#0F766E" />

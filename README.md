@@ -25,12 +25,13 @@ VeraIcon.tone('church', tone: VeraIconTone.duotone, size: 28)
 
 ## React / Next.js
 ```bash
-npm i @veraup/icons-react            # après `npm publish` depuis packages/react
+npm i veraicons        # ou : pnpm add veraicons · yarn add veraicons
 ```
 ```tsx
-import { Home, Wallet } from '@veraup/icons-react';
+import { Home, Wallet } from 'veraicons';
 <Home /> <Wallet variant="bulk-rounded" size={28} />
 ```
+Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html

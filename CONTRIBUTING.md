@@ -7,3 +7,4 @@
 3. `bash tools/build.sh` → régénère polices, package Flutter, package React, `icons.json`.
 4. Vérifier visuellement : `python3 tools/review.py review.png <catégorie>`.
 5. Incrémenter la version dans `CHANGELOG.md`, `packages/flutter/veraicons/pubspec.yaml`, `packages/react/package.json`, puis tag `vX.Y.Z`.
+6. Publier le package npm : `cd packages/react && npm i && npm publish` (compte npm connecté).

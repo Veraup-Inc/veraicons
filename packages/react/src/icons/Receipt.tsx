@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { VeraIconProps } from '../types';
+import type { VeraIconProps } from '../types.js';
 
 const bodies: Record<string, string> = {
   'stroke-rounded': "<path d=\"M5 3.5A1 1 0 0 1 6 2.5h12a1 1 0 0 1 1 1v17.3c0 .8-.9 1.2-1.5.7L15.5 20l-2 1.5c-.9.7-2.1.7-3 0l-2-1.5-2 1.5c-.6.5-1.5.1-1.5-.7z\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>\n  <path d=\"M8.5 8h7M8.5 12h7M8.5 16h4\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
