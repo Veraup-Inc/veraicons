@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.2.2 — 2026-09-06
+Deuxième passe, cette fois sur le **style solid**, à partir d'une relecture du
+catalogue imprimé. C'est le style le plus fragile du pipeline : il transforme des
+contours en surfaces, et deux formes séparées de moins que l'épaisseur du trait
+se soudent en une seule tache.
+
+- **Correctif moteur — les points disparaissaient.** Un `dot()` est un tracé
+  dégénéré : son polygone est vide, donc `solid_path` le perdait alors que le
+  stroke le dessinait. Les six gouttes de `shower` et les deux points du `÷` de
+  `math-operations` étaient absents en solid. Tout ce qui n'a pas de surface est
+  désormais rendu comme un trait, comme les formes `sw`. `tools/audit.py` gagne
+  un contrôle `forme-fantôme` pour que ça ne revienne pas.
+- **Formes soudées** — espacements repris pour que le solid montre les mêmes
+  pièces que le stroke : `podium`, `ranking` et `barbell` (barres fondues en un
+  bloc), `hamburger` (pain, steak et pain en une seule masse), `bowl-food`
+  (garniture collée au bol), `choir` (têtes soudées).
+- **Silhouettes creusées** pour rester lisibles une fois pleines : `chef-hat`
+  (se lisait comme un champignon), `hands-clapping` (comme une moufle),
+  `tree-palm` (palmes fondues), `lighthouse` (lanterne fondue dans la tour).
+- **Traits allégés** : `nfc` et `contactless` avaient des arcs de 2,2 qui se
+  rejoignaient en nœud papillon.
+- **Redessinés** : `compass-tool` se lisait comme un « A », `drum` comme un bol
+  — ses baguettes étaient en `detail` et se perdaient hors du fût.
+
 ## 1.2.1 — 2026-09-06
 Passe de correction des dessins mal formés, guidée par un nouvel audit géométrique
 (`tools/audit.py`, lancé en CI) qui relit les 521 dessins dans les 10 styles.

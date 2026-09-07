@@ -48,9 +48,14 @@ def solid_path(icon, v, sw=1.5, cut=1.9):
     for s in icon["outline"]:
         poly, lines = geom_shapes(s, v, sw)
         w = s.get("sw", sw) / 2
-        if s.get("sw"):
+        # Un `dot` est un tracé dégénéré : son polygone est vide et la forme
+        # disparaissait du solid alors que le stroke la dessine. Tout ce qui
+        # n'a pas de surface est donc rendu comme un trait, exactement comme
+        # les formes `sw`.
+        if s.get("sw") or poly is None or poly.is_empty:
             ls = lines if isinstance(lines, list) else [lines]
-            parts += [l.buffer(w, cap_style=cap, join_style=join, mitre_limit=MITER) for l in ls]
+            c = 1 if s.get("dot") else cap
+            parts += [l.buffer(w, cap_style=c, join_style=join, mitre_limit=MITER) for l in ls]
         else:
             parts.append(poly.buffer(w, join_style=join, mitre_limit=MITER))  # silhouette out to stroke edge
     body = unary_union(parts)

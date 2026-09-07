@@ -12,6 +12,8 @@ Ce que ça cherche, par ordre de gravité :
   fusion      (--fusion) deux formes se touchent tout juste : le solid peut les
               fondre en une seule tache. Indicatif seulement — un bras qui touche
               un torse, une pointe de flèche sur sa hampe, c'est voulu.
+  forme-fantome  une forme de `outline` n'apporte aucune surface au solid : le
+              stroke la dessine, le solid la perd
   vide        le solid est quasi vide
 
 Le débordement est mesuré sur le rendu stroke de chacun des dix styles : c'est
@@ -66,7 +68,33 @@ def audit(name, icon, v):
         flags.append(("hors-cadre", f"+{over:.2f}"))
     if solid.area < 6:
         flags.append(("vide", f"aire {solid.area:.1f}"))
+    g = ghosts(icon, v)
+    if g:
+        flags.append(("forme-fantome", f"{g}/{len(icon['outline'])}"))
     return flags, (x0, y0, x1, y1)
+
+
+def ghosts(icon, v):
+    """Formes de `outline` qui n'apportent aucune surface au solid.
+
+    Le stroke les dessine, le solid les perd : les deux styles ne montrent pas
+    le même dessin.
+    """
+    cap = {"round": 1, "butt": 2, "square": 3}[v["cap"]]
+    join = {"round": 1, "miter": 2, "bevel": 3}[v["join"]]
+    n = 0
+    for s in icon["outline"]:
+        poly, lines = geom_shapes(s, v, SW)
+        w = s.get("sw", SW) / 2
+        if s.get("sw") or poly is None or poly.is_empty:
+            ls = lines if isinstance(lines, list) else [lines]
+            c = 1 if s.get("dot") else cap
+            a = unary_union([l.buffer(w, cap_style=c, join_style=join, mitre_limit=2.0) for l in ls]).area
+        else:
+            a = poly.buffer(w, join_style=join, mitre_limit=2.0).area
+        if a < 0.01:
+            n += 1
+    return n
 
 
 def merges(icon, v):
@@ -140,7 +168,7 @@ def main():
             flags = [("erreur", type(e).__name__)]
         if flags or show_all:
             rows.append((name, icon["cat"], flags))
-    order = {"vide": 0, "hors-cadre": 1, "detail-perdu": 2, "fusion": 3, "erreur": 0}
+    order = {"vide": 0, "forme-fantome": 1, "hors-cadre": 2, "detail-perdu": 3, "fusion": 4, "erreur": 0}
     rows.sort(key=lambda r: (min((order.get(f[0], 9) for f in r[2]), default=9), r[0]))
     for name, cat, flags in rows:
         print(f"{name:26} {cat:12} " + "  ".join(f"{k}({d})" for k, d in flags))

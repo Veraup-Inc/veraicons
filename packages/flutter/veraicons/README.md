@@ -5,7 +5,7 @@
 ## Installation
 ```bash
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
-  --git-path=packages/flutter/veraicons --git-ref=v1.2.1
+  --git-path=packages/flutter/veraicons --git-ref=v1.2.2
 ```
 Le package n'est pas sur pub.dev : `ref` pointe sur un tag, la version est donc figée
 et `flutter pub upgrade` ne la bougera pas. Pour monter de version, relancer la commande

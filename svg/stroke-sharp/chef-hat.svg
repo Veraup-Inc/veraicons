@@ -2,4 +2,5 @@
   <path d="M6.5 14.5a4.5 4.5 0 0 1-1-8.8 4 4 0 0 1 7.5-1.7 4 4 0 0 1 6 3.4 4.5 4.5 0 0 1-1.5 7.1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2.0" opacity="1.0"/>
   <rect x="6.5" y="14.5" width="11" height="6" rx="0.0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2.0" opacity="1.0"/>
   <path d="M6.5 18h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2.0" opacity="1.0"/>
+  <path d="M9.2 14.3V8.6M14.8 14.3V8.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2.0" opacity="1.0"/>
 </svg>
