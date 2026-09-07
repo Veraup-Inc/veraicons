@@ -1,6 +1,6 @@
 name: veraicons
 description: VeraUp Icons — 554 symboles en 10 styles (stroke, solid, duotone, twotone, bulk). Bibliothèque officielle VeraUp Inc.
-version: 1.2.0
+version: 1.2.1
 publish_to: none
 repository: https://github.com/Veraup-Inc/veraicons
 issue_tracker: https://github.com/Veraup-Inc/veraicons/issues

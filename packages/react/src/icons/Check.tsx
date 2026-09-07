@@ -3,7 +3,7 @@ import type { VeraIconProps } from '../types.js';
 
 const bodies: Record<string, string> = {
   'stroke-rounded': "<path d=\"M4 12.5l5 5L20 6.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"round\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
-  'stroke-sharp': "<path d=\"M4 12.5l5 5L20 6.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" opacity=\"1.0\"/>",
+  'stroke-sharp': "<path d=\"M4 12.5l5 5L20 6.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"butt\" strokeLinejoin=\"miter\" stroke-miterlimit=\"2.0\" opacity=\"1.0\"/>",
   'stroke-standard': "<path d=\"M4 12.5l5 5L20 6.5\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" strokeLinecap=\"square\" strokeLinejoin=\"round\" opacity=\"1.0\"/>",
   'solid-rounded': "<path d=\"M3.29 13.63L8.18 18.50L8.39 18.65L8.75 18.78L9.13 18.79L9.50 18.70L9.72 18.58L9.92 18.42L20.92 7.42L21.15 7.11L21.28 6.75L21.29 6.37L21.20 6L21.08 5.78L20.92 5.58L20.61 5.35L20.38 5.26L20 5.20L19.75 5.22L19.39 5.35L19.18 5.50L9 15.66L4.92 11.58L4.72 11.42L4.38 11.26L4 11.20L3.75 11.22L3.50 11.30L3.28 11.42L3.08 11.58L2.92 11.78L2.80 12L2.71 12.37L2.71 12.63L2.76 12.88L2.92 13.22Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",
   'solid-sharp': "<path d=\"M3.29 13.63L9 19.34L20.92 7.42L19.08 5.58L9 15.66L4.92 11.58L3.08 13.42Z\" fill=\"currentColor\" fillRule=\"evenodd\"/>",

@@ -9,7 +9,7 @@ Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [
 ## Flutter
 ```bash
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
-  --git-path=packages/flutter/veraicons --git-ref=v1.2.0
+  --git-path=packages/flutter/veraicons --git-ref=v1.2.1
 ```
 ```dart
 import 'package:veraicons/veraicons.dart';
@@ -35,17 +35,17 @@ Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/packages/web/veraup-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.1/packages/web/veraup-icons.css">
 <i class="vi-stroke-rounded vi-home"></i>
 <i class="vi-solid-rounded vi-wallet" style="color:#0F766E;font-size:28px"></i>
 ```
 Un SVG isolé :
 ```html
-<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/svg/duotone-rounded/nfc.svg" width="24">
+<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.1/svg/duotone-rounded/nfc.svg" width="24">
 ```
 Ou un sprite, pour n'appeler qu'un seul fichier :
 ```html
-<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.0/sprites/stroke-rounded.svg#timeline"/></svg>
+<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.1/sprites/stroke-rounded.svg#timeline"/></svg>
 ```
 
 ## Catalogue de catégories

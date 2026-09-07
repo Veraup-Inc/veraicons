@@ -11,6 +11,8 @@ jobs:
         with: { node-version: "20" }
       - run: pip install "shapely==2.0.7" svgpathtools cairosvg && npm i -g fantasticon
       - run: cd tools && python3 gen.py && python3 build_packages.py
+      - name: Aucun dessin mal formé
+        run: cd tools && python3 audit.py | tail -1 | grep -q "^0 signalées"
       # Les styles solid sortent d'opérations géométriques GEOS dont les arrondis
       # varient selon l'OS : on ne compare que les sorties déterministes
       # (styles stroke/duotone/twotone/bulk, manifeste, package Flutter).

@@ -31,16 +31,24 @@ def geom(s, v):
     d = s.get("d_sharp", s["d"]) if v["rr"] == 0 and "d_sharp" in s else s["d"]
     return f'<path d="{d}"'
 
+# Les raccords en pointe (profil sharp) produisent des piques qui sortent du
+# viewBox sur les angles aigus. La limite SVG par défaut (4) est trop permissive
+# pour une grille de 24 : on la borne à MITER.
+MITER = 2.0
+
+def miter_attr(v):
+    return f' stroke-miterlimit="{MITER}"' if v["join"] == "miter" else ""
+
 def stroke(s, v, color="currentColor", w=SW, op=1.0, extra=""):
     cap = "round" if s.get("dot") else v["cap"]
-    return f'{geom(s,v)} fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="{cap}" stroke-linejoin="{v["join"]}" opacity="{op}"{extra}/>'
+    return f'{geom(s,v)} fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="{cap}" stroke-linejoin="{v["join"]}"{miter_attr(v)} opacity="{op}"{extra}/>'
 
 def fill(s, v, color="currentColor", op=1.0):
     g = geom(s, v)
     if s.get("close") and s["k"] == "path":
         g = g[:-1] + 'z"'
     if s.get("sw"):  # rendered as thick stroke in filled contexts
-        return f'{g} fill="none" stroke="{color}" stroke-width="{s["sw"]}" stroke-linecap="{v["cap"]}" stroke-linejoin="{v["join"]}" opacity="{op}"/>'
+        return f'{g} fill="none" stroke="{color}" stroke-width="{s["sw"]}" stroke-linecap="{v["cap"]}" stroke-linejoin="{v["join"]}"{miter_attr(v)} opacity="{op}"/>'
     return f'{g} fill="{color}" opacity="{op}"/>'
 
 def render(name, icon, vname):

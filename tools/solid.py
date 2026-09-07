@@ -4,6 +4,8 @@ from shapely.geometry import Polygon, LineString, Point
 from shapely.ops import unary_union
 from svgpathtools import parse_path
 
+MITER = 2.0  # doit rester aligné sur gen.MITER
+
 def sample(d, n=24):
     p = parse_path(d); subs = []
     cur = []
@@ -48,16 +50,16 @@ def solid_path(icon, v, sw=1.5, cut=1.9):
         w = s.get("sw", sw) / 2
         if s.get("sw"):
             ls = lines if isinstance(lines, list) else [lines]
-            parts += [l.buffer(w, cap_style=cap, join_style=join) for l in ls]
+            parts += [l.buffer(w, cap_style=cap, join_style=join, mitre_limit=MITER) for l in ls]
         else:
-            parts.append(poly.buffer(w, join_style=join))  # silhouette out to stroke edge
+            parts.append(poly.buffer(w, join_style=join, mitre_limit=MITER))  # silhouette out to stroke edge
     body = unary_union(parts)
     cuts = []
     for s in icon["detail"]:
         poly, lines = geom_shapes(s, v, sw)
         ls = lines if isinstance(lines, list) else [lines]
         c = 1 if s.get("dot") else cap
-        cuts += [l.buffer(cut / 2, cap_style=c, join_style=join) for l in ls]
+        cuts += [l.buffer(cut / 2, cap_style=c, join_style=join, mitre_limit=MITER) for l in ls]
     if cuts: body = body.difference(unary_union(cuts))
     body = body.simplify(0.015)
     polys = list(body.geoms) if body.geom_type == "MultiPolygon" else [body]
@@ -75,7 +77,7 @@ def outline_path(icon, v, sw=1.5):
         poly, lines = geom_shapes(s, v, sw)
         ls = lines if isinstance(lines, list) else [lines]
         c = 1 if s.get("dot") else cap
-        parts += [l.buffer(sw / 2, cap_style=c, join_style=join) for l in ls]
+        parts += [l.buffer(sw / 2, cap_style=c, join_style=join, mitre_limit=MITER) for l in ls]
     body = unary_union(parts).simplify(0.015)
     polys = list(body.geoms) if body.geom_type == "MultiPolygon" else [body]
     def ring(r):

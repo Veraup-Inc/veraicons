@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.2.1 — 2026-09-06
+Passe de correction des dessins mal formés, guidée par un nouvel audit géométrique
+(`tools/audit.py`, lancé en CI) qui relit les 521 dessins dans les 10 styles.
+
+- **Pointes de raccord bornées** (`stroke-miterlimit` 2, aligné entre `gen.py` et
+  `solid.py`). Les angles aigus des profils `sharp` produisaient des piques qui
+  sortaient du viewBox : `sparkle` dépassait de 1,25 unité et se retrouvait rognée.
+- **Traits invisibles en solid** — un trait de `detail` qui ne touche pas la
+  silhouette ne creuse rien et disparaît, les deux styles ne montraient donc pas le
+  même dessin : `zoom-in` (perdait son `+`), `goal` (son point central),
+  `history` et `restore` (leurs aiguilles), `choir` (sa note), `boat` (ses hublots).
+- **Débordements du cadre** : `sneaker`, `sneaker-move`, `motorcycle`, `wind`, `edit`.
+- **Formes qui fusionnaient en solid** : les colonnes de `kanban` étaient espacées
+  d'exactement l'épaisseur du trait et se fondaient en une seule tache ; les deux
+  pièces de `coins` n'en formaient plus qu'une.
+- **Redessinés** parce qu'ils ne se lisaient pas :
+  - `handshake` — le tracé ne montrait aucune main reconnaissable.
+  - `hands-praying` (et son alias `spirituality`) — se lisait comme une fusée.
+    Les doigts sont maintenant creusés en `detail`, donc visibles aussi en solid.
+  - `broom` — se lisait comme une truelle, les brins manquaient.
+  - `notification` — la pastille était un trou et le solid se lisait comme une
+    bouchée ; c'est désormais un anneau ouvert avec une pastille pleine.
+
 ## 1.2.0 — 2026-09-06
 - 186 icônes de plus (554 au total) : le catalogue de catégories de Priovely, pour
   qu'une application n'ait plus besoin d'une seconde police d'icônes.
