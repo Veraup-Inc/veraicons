@@ -31,9 +31,17 @@ volet développeur.
   défaut : rien à héberger.
 - 47 ko compressés à 9,6 ko. Le composant charge le sprite du style affiché
   (~300 Ko, mis en cache) au lieu d'embarquer 4 Mo d'icônes.
-- Props `spriteBase`, `defaultVariant`, `hideHeader`, `onSelect`, `className`.
-  Avec `onSelect`, le catalogue devient un sélecteur d'icônes.
+- Props `spriteBase`, `defaultVariant`, `hideHeader`, `theme`, `onSelect`,
+  `className`. Avec `onSelect`, le catalogue devient un sélecteur d'icônes ;
+  `theme` évite qu'un volet inséré dans un site clair s'affiche en sombre parce
+  que le système l'est.
 - Styles préfixés `vig-`, palette en variables CSS, thème clair/sombre.
+
+Vérifié de bout en bout : les deux paquets ont été empaquetés avec `npm pack`,
+installés dans une application Vite + React 19 neuve, puis relus dans un
+navigateur — trait à 1,5 px, `fill-rule` à `evenodd`, 554 tuiles, `onSelect`
+fonctionnel, et tree-shaking confirmé (une icône non importée reste hors du
+bundle).
 - `ICONS`, `CATEGORIES`, `VARIANTS` et les sous-composants sont exportés.
 
 L'ancien `docs/index.html` — 4,5 Mo de HTML généré — disparaît. Le site n'est

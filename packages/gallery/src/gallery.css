@@ -32,6 +32,14 @@
     --vig-accent: #4fd1c5;
   }
 }
+.vig[data-theme='light'] {
+  --vig-ink: #0f1d2e;
+  --vig-mute: #5a6472;
+  --vig-line: #e7e4dd;
+  --vig-bg: #fbfaf7;
+  --vig-card: #ffffff;
+  --vig-accent: #0f766e;
+}
 .vig[data-theme='dark'] {
   --vig-ink: #eef2f6;
   --vig-mute: #97a3b2;

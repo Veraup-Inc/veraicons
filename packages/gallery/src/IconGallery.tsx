@@ -20,6 +20,12 @@ export interface IconGalleryProps {
   defaultVariant?: Variant
   /** Masque le titre et le compteur quand la page hôte a déjà les siens. */
   hideHeader?: boolean
+  /**
+   * Thème. `'system'` suit la préférence du navigateur — c'est le bon choix
+   * pour une page autonome, mais pas pour un volet inséré dans un site qui a
+   * déjà son thème : passez alors explicitement `'light'` ou `'dark'`.
+   */
+  theme?: 'light' | 'dark' | 'system'
   /** Remplace le panneau de détails par votre propre traitement du clic. */
   onSelect?: (name: string, variant: Variant) => void
   className?: string
@@ -42,6 +48,7 @@ export function IconGallery({
   spriteBase = CDN_SPRITE_BASE,
   defaultVariant = 'stroke-rounded',
   hideHeader = false,
+  theme = 'system',
   onSelect,
   className,
 }: IconGalleryProps) {
@@ -70,7 +77,11 @@ export function IconGallery({
   }
 
   return (
-    <div className={className ? `vig ${className}` : 'vig'} data-ready={ready || undefined}>
+    <div
+      className={className ? `vig ${className}` : 'vig'}
+      data-theme={theme === 'system' ? undefined : theme}
+      data-ready={ready || undefined}
+    >
       <header className="vig-head">
         {hideHeader ? null : (
           <h2 className="vig-title">

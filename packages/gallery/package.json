@@ -26,8 +26,7 @@
     "build": "npm run build:lib && npm run build:site",
     "build:lib": "vite build --mode lib",
     "build:site": "vite build --mode site",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
-    "prepare": "npm run build:lib"
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "keywords": [
     "icons",

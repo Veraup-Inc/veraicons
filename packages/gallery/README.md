@@ -32,6 +32,7 @@ paquet : rien à héberger, rien à copier.
 | `spriteBase` | CDN jsDelivr figé sur la version | Où chercher les sprites. Mettez un chemin local si vous préférez les servir vous-même. |
 | `defaultVariant` | `'stroke-rounded'` | Style affiché à l'ouverture. |
 | `hideHeader` | `false` | Masque le titre et le compteur quand votre page a déjà les siens. |
+| `theme` | `'system'` | `'light'` / `'dark'` / `'system'`. Par défaut le catalogue suit la préférence du navigateur — bien pour une page autonome, mais pas pour un volet inséré dans un site qui a déjà son thème : forcez-le alors. |
 | `onSelect` | — | Reçoit `(nom, style)` au clic. Fourni, il remplace le panneau de détails : à vous de décider quoi faire. |
 | `className` | — | Ajouté à la racine, pour vos propres règles. |
 
@@ -48,11 +49,10 @@ paquet : rien à héberger, rien à copier.
 ## Apparence
 
 Tout est préfixé `vig-` et passe par des variables CSS : le composant ne déborde
-pas sur la page qui l'accueille. Il suit le thème clair/sombre du système, et
-vous pouvez forcer l'un ou l'autre avec `data-theme` :
+pas sur la page qui l'accueille.
 
 ```tsx
-<div data-theme="dark"><IconGallery /></div>
+<IconGallery theme="light" />
 ```
 
 Pour réaccorder la palette à votre charte, redéfinissez les variables :
@@ -95,6 +95,24 @@ catalogue d'un seul coup. La CI vérifie que ce fichier est à jour et refuse un
 commit où il serait en retard.
 
 Ne le modifiez pas à la main.
+
+## Installer sans passer par npm
+
+Le paquet n'est pas encore publié. En attendant :
+
+```bash
+git clone https://github.com/Veraup-Inc/veraicons.git
+cd veraicons/packages/gallery && npm install && npm pack
+# puis, dans votre projet :
+npm i /chemin/vers/veraicons-gallery-1.3.0.tgz
+```
+
+`npm pack` produit exactement l'archive que `npm publish` enverrait : ce que vous
+installez est donc identique au futur paquet publié.
+
+Une précision, parce que c'est une erreur courante : **`npm i github:Veraup-Inc/veraicons`
+ne marche pas**. npm ne sait pas installer un sous-dossier d'un dépôt, et il n'y a
+pas de `package.json` à la racine. Passez par l'archive, ou attendez la publication.
 
 ## Développer
 
