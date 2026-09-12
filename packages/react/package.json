@@ -30,7 +30,7 @@
   "homepage": "https://veraup-inc.github.io/veraicons/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Veraup-Inc/veraicons",
+    "url": "git+https://github.com/Veraup-Inc/veraicons.git",
     "directory": "packages/react"
   },
   "bugs": {
