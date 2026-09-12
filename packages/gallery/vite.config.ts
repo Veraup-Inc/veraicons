@@ -1,8 +1,8 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
-import { cpSync, existsSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { createReadStream, cpSync, existsSync } from 'node:fs'
+import { basename, resolve } from 'node:path'
 
 const here = import.meta.dirname
 const repo = resolve(here, '../..')
@@ -23,6 +23,28 @@ function copySprites(outDir: string): Plugin {
   }
 }
 
+/**
+ * En développement, les sprites ne sont copiés nulle part : sans ce middleware
+ * Vite répondait son index.html à `/sprites/<style>.svg`, avec un 200. Le
+ * catalogue croyait avoir chargé un sprite et affichait des cases vides.
+ */
+function serveSprites(): Plugin {
+  return {
+    name: 'veraicons-serve-sprites',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url ?? ''
+        if (!url.startsWith('/sprites/')) return next()
+        const file = resolve(repo, 'sprites', basename(url.split('?')[0]))
+        if (!existsSync(file)) return next()
+        res.setHeader('Content-Type', 'image/svg+xml')
+        createReadStream(file).pipe(res)
+      })
+    },
+  }
+}
+
 export default defineConfig(({ mode }) => {
   if (mode === 'lib') {
     return {
@@ -36,7 +58,7 @@ export default defineConfig(({ mode }) => {
   }
   const outDir = resolve(repo, 'docs')
   return {
-    plugins: [react(), copySprites(outDir)],
+    plugins: [react(), serveSprites(), copySprites(outDir)],
     base: './',
     build: { outDir, emptyOutDir: true },
   }

@@ -57,6 +57,12 @@ export function useSprite(base: string, variant: Variant, prefix: string): Sprit
         return r.text()
       })
       .then((text) => {
+        // Un serveur de développement peut répondre son index.html en 200 pour
+        // une ressource absente. Sans ce contrôle, le catalogue croit avoir
+        // chargé un sprite et affiche des cases vides, sans rien signaler.
+        if (!text.trimStart().startsWith('<svg')) {
+          throw new Error(`réponse non-SVG depuis ${url}`)
+        }
         cache.set(url, text)
         inject(text)
       })
