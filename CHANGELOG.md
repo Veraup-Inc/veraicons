@@ -1,5 +1,52 @@
 # Changelog
 
+## 1.3.0 — 2026-09-12
+
+### Correction — les icônes React rendaient faux
+`build_packages.py` convertissait les attributs SVG en camelCase (`strokeWidth`,
+`fillRule`). C'est correct pour des props JSX, mais ces chaînes partent dans
+`dangerouslySetInnerHTML`, donc par le **parseur HTML**, qui met les noms
+d'attributs en minuscules : `strokeWidth` devenait `strokewidth`, que le SVG
+ignore.
+
+Conséquences, mesurées dans un navigateur :
+
+| Attribut | Rendu obtenu | Attendu |
+|---|---|---|
+| `stroke-width` | `1px` | `1.5px` |
+| `fill-rule` | `nonzero` | `evenodd` |
+| `stroke-linecap` | par défaut | `round` / `butt` / `square` |
+
+Le `fill-rule` est le plus visible : **tous les trous des icônes solid se
+remplissaient**. Les chaînes restent désormais en kebab-case. Aucun changement
+d'API, mais toute application React sur une version antérieure affiche des
+icônes fausses — mettez à jour.
+
+### Catalogue web — vrai composant React
+Nouveau package `packages/gallery` (`veraicons-gallery`). Le catalogue du site
+**est** ce composant : un seul code rend la page publique et s'intègre dans un
+volet développeur.
+
+- `<IconGallery />` s'installe en deux lignes, sprites servis par jsDelivr par
+  défaut : rien à héberger.
+- 47 ko compressés à 9,6 ko. Le composant charge le sprite du style affiché
+  (~300 Ko, mis en cache) au lieu d'embarquer 4 Mo d'icônes.
+- Props `spriteBase`, `defaultVariant`, `hideHeader`, `onSelect`, `className`.
+  Avec `onSelect`, le catalogue devient un sélecteur d'icônes.
+- Styles préfixés `vig-`, palette en variables CSS, thème clair/sombre.
+- `ICONS`, `CATEGORIES`, `VARIANTS` et les sous-composants sont exportés.
+
+L'ancien `docs/index.html` — 4,5 Mo de HTML généré — disparaît. Le site n'est
+plus versionné : la CI le reconstruit à chaque déploiement, il ne peut donc plus
+être en retard sur les icônes.
+
+### Aussi
+- `icons.json` porte maintenant `version` et `categories` (clé, libellé, compte) :
+  le manifeste se suffit à lui-même, les libellés ne sont plus enfermés dans le
+  script Python.
+- `packages/gallery/src/generated.ts` est écrit par `tools/build_packages.py` et
+  vérifié en CI : le catalogue ne peut pas se désynchroniser des icônes.
+
 ## 1.2.2 — 2026-09-06
 Deuxième passe, cette fois sur le **style solid**, à partir d'une relecture du
 catalogue imprimé. C'est le style le plus fragile du pipeline : il transforme des

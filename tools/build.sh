@@ -12,3 +12,10 @@ VENV=../.venv-build
 npm ls -g fantasticon >/dev/null 2>&1 || npm i -g fantasticon
 "$VENV/bin/python" gen.py
 "$VENV/bin/python" build_packages.py
+
+# Catalogue du site : composant React (packages/gallery) construit vers docs/.
+# build_packages.py vient d'y réécrire src/generated.ts, le site ne peut donc
+# pas être en retard sur les icônes.
+GAL=../packages/gallery
+[ -d "$GAL/node_modules" ] || (cd "$GAL" && npm install --no-fund --no-audit)
+(cd "$GAL" && npm run build)

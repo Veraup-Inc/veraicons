@@ -81,6 +81,7 @@ V+=["    };","    final c = color ?? IconTheme.of(context).color ?? const Color(
     "      'assets/$dir/$name.svg',","      package: 'veraicons',","      width: size,","      height: size,",
     "      colorFilter: ColorFilter.mode(c, BlendMode.srcIn),","    );","  }","}",""]
 open(f"{pkg}/lib/src/vera_icon.dart","w").write("\n".join(V))
+RVER=json.load(open(f"{ROOT}/packages/react/package.json"))["version"]
 old=open(f"{pkg}/pubspec.yaml").read()
 ver=re.search(r"^version:\s*(\S+)",old,re.M).group(1)
 # `publish_to: none` verrouille la publication sur pub.dev. Le retirer ouvre
@@ -141,14 +142,16 @@ Catalogue : https://veraup-inc.github.io/veraicons/
 # 3. react
 rp=f"{ROOT}/packages/react"; shutil.rmtree(f"{rp}/src/icons",ignore_errors=True); os.makedirs(f"{rp}/src/icons")
 def pascal(n): return "".join(p.title() for p in n.split("-"))
-BODIES={}
 idx=[]
 for n in sorted(ICONS):
     comp=pascal(n); bodies={}
     for vn in VARIANTS:
-        b=render(n,ICONS[n],vn).split(">",1)[1].rsplit("</svg>",1)[0].strip()
-        bodies[vn]=re.sub(r'\s(stroke-width|stroke-linecap|stroke-linejoin|fill-rule)="',lambda m:" "+{"stroke-width":"strokeWidth","stroke-linecap":"strokeLinecap","stroke-linejoin":"strokeLinejoin","fill-rule":"fillRule"}[m.group(1)]+'="',b)
-    BODIES[n]=bodies
+        # Surtout pas de camelCase ici. Ces chaînes partent dans
+        # dangerouslySetInnerHTML, donc par le parseur HTML, qui met les noms
+        # d'attributs en minuscules : `strokeWidth` devient `strokewidth`, que
+        # le SVG ignore. Le trait retombait à 1 px et `fillRule` à `nonzero`,
+        # ce qui rebouchait les trous de toutes les icônes solid.
+        bodies[vn]=render(n,ICONS[n],vn).split(">",1)[1].rsplit("</svg>",1)[0].strip()
     src=["import * as React from 'react';","import type { VeraIconProps } from '../types.js';","","const bodies: Record<string, string> = {"]+[f"  '{k}': {json.dumps(v)}," for k,v in bodies.items()]+["};","",
          f"export const {comp} = React.forwardRef<SVGSVGElement, VeraIconProps>(","  ({ variant = 'stroke-rounded', size = 24, color = 'currentColor', ...rest }, ref) => (",
          "    <svg ref={ref} xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width={size} height={size} color={color}","         dangerouslySetInnerHTML={{ __html: bodies[variant] ?? bodies['stroke-rounded'] }} {...rest} />","  )",");",f"{comp}.displayName = '{comp}';",""]
@@ -207,53 +210,35 @@ json.dump({"grid":24,"viewBox":[0,0,24,24],"stroke":1.5,"bold_stroke":2.6,"secon
            "modes":["stroke","solid","duotone","twotone","bulk"]},
           open(f"{ROOT}/tokens.json","w"),indent=1,ensure_ascii=False)
 # 7. manifeste
-json.dump({"name":"VeraUp Icons","grid":24,"stroke":1.5,"variants":list(VARIANTS),"count":len(ICONS),
+missing=[c for c in {ic["cat"] for ic in ICONS.values()} if c not in dict(CATS)]
+assert not missing, f"catégories sans libellé : {missing}"
+USED=[{"key":k,"label":l,"count":sum(1 for i in ICONS.values() if i["cat"]==k)} for k,l in CATS
+      if any(i["cat"]==k for i in ICONS.values())]
+json.dump({"name":"VeraUp Icons","version":RVER,"grid":24,"stroke":1.5,"variants":list(VARIANTS),
+           "count":len(ICONS),"categories":USED,
            "icons":{n:{"category":ic["cat"],"codepoint":cp[n],**({"alias":ic["alias"]} if ic.get("alias") else {})}
                     for n,ic in sorted(ICONS.items())}},
           open(f"{ROOT}/icons.json","w"),indent=1,ensure_ascii=False)
-# 8. catalogue GitHub Pages
-btn=lambda vn,i: f'<button aria-pressed="{"true" if i==0 else "false"}" data-v="{vn}">{vn.replace("-rounded","").replace("-"," ")}</button>'
-secs=[]
-for key,label in CATS:
-    names=sorted(n for n,ic in ICONS.items() if ic["cat"]==key)
-    if not names: continue
-    def fig(n):
-        al=ICONS[n].get("alias")
-        at=' data-alias="%s"'%al if al else ""
-        return f'<figure class="i" data-name="{n}"{at} title="Copier « {n} »"><svg viewBox="0 0 24 24"></svg><figcaption>{n}</figcaption></figure>'
-    figs="".join(fig(n) for n in names)
-    secs.append(f'<section data-cat="{key}"><h2>{html.escape(label)} <small>{len(names)}</small></h2><div class="grid">{figs}</div></section>')
-data=json.dumps({n:BODIES[n] for n in sorted(ICONS)},ensure_ascii=False)
-open(f"{ROOT}/docs/index.html","w").write(
-f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VeraUp Icons — catalogue</title>
-<style>
-:root{{--ink:#0F1D2E;--mute:#5A6472;--line:#E7E4DD;--bg:#FBFAF7;--accent:#0F766E}}
-*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,sans-serif}}
-header{{position:sticky;top:0;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:18px 40px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;z-index:2}}
-h1{{font-size:20px;margin:0;letter-spacing:-.02em}}h1 span{{color:var(--mute);font-weight:400;margin-left:8px}}
-input{{flex:1;min-width:220px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit}}
-.styles{{display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px;flex-wrap:wrap}}
-.styles button{{border:0;background:transparent;padding:6px 10px;border-radius:7px;font:inherit;font-size:13px;color:var(--mute);cursor:pointer}}
-.styles button[aria-pressed=true]{{background:var(--ink);color:#fff}}
-main{{padding:12px 40px 60px}}h2{{font-size:16px;margin:34px 0 12px}}h2 small{{color:var(--mute);font-weight:400;font-size:13px;margin-left:6px}}
-.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}}
-.i{{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 8px 10px;text-align:center;cursor:pointer;transition:border-color .12s;position:relative}}.i:hover{{border-color:var(--accent)}}
-.i svg{{width:28px;height:28px;color:var(--ink);display:block;margin:0 auto 8px}}figcaption{{font-size:11px;color:var(--mute);word-break:break-all}}
-.i[data-alias]::after{{content:'alias';position:absolute;top:6px;right:6px;font-size:9px;color:var(--mute);background:var(--bg);border-radius:4px;padding:1px 4px}}
-.i.copied{{border-color:var(--accent)}}.i.copied figcaption{{color:var(--accent)}}
-.hide{{display:none}}
-</style>
-<header><h1>VeraUp Icons<span>{len(ICONS)} icônes · {len(VARIANTS)} styles · grille 24 · trait 1,5</span></h1>
-<input id="q" placeholder="Rechercher (home, wallet, sport, timeline…)" autofocus>
-<div class="styles" id="styles">{''.join(btn(vn,i) for i,vn in enumerate(VARIANTS))}</div></header>
-<main>{''.join(secs)}</main>
-<script>const DATA={data};let variant='stroke-rounded';
-function paint(){{document.querySelectorAll('.i').forEach(f=>{{f.querySelector('svg').innerHTML=DATA[f.dataset.name][variant]}})}}
-document.getElementById('styles').addEventListener('click',e=>{{const b=e.target.closest('button');if(!b)return;variant=b.dataset.v;document.querySelectorAll('#styles button').forEach(x=>x.setAttribute('aria-pressed',x===b));paint()}});
-document.getElementById('q').addEventListener('input',e=>{{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.i').forEach(f=>f.classList.toggle('hide',q&&!(f.dataset.name+' '+(f.dataset.alias||'')).includes(q)));document.querySelectorAll('section').forEach(s=>s.classList.toggle('hide',!s.querySelector('.i:not(.hide)')))}});
-document.querySelectorAll('.i').forEach(f=>f.addEventListener('click',()=>{{navigator.clipboard&&navigator.clipboard.writeText(f.dataset.name);f.classList.add('copied');setTimeout(()=>f.classList.remove('copied'),700)}}));
-paint();
-</script></html>""")
-missing=[c for c in {ic["cat"] for ic in ICONS.values()} if c not in dict(CATS)]
-assert not missing, f"catégories sans libellé : {missing}"
+
+# 8. données du catalogue React — le package gallery ne duplique rien, il lit ceci
+gal=f"{ROOT}/packages/gallery/src"; os.makedirs(gal,exist_ok=True)
+G=["// Généré par tools/build_packages.py — ne pas modifier à la main.",
+   "// Ce fichier est la seule source de vérité du catalogue : il est réécrit à",
+   "// chaque build, le site et le composant ne peuvent donc pas se désynchroniser.",
+   "",
+   'export type Variant =',
+   *[f"  | '{vn}'" for vn in VARIANTS], "",
+   "export interface IconMeta {", "  category: string", "  codepoint: number",
+   "  /** Nom du glyphe source quand cette icône est un alias. */", "  alias?: string", "}", "",
+   "export interface Category {", "  key: string", "  label: string", "  count: number", "}", "",
+   f"export const VERSION = {json.dumps(RVER)}", "",
+   f"export const VARIANTS: readonly Variant[] = {json.dumps(list(VARIANTS))} as const", "",
+   f"export const CATEGORIES: readonly Category[] = {json.dumps(USED, ensure_ascii=False)}", "",
+   "export const ICONS: Readonly<Record<string, IconMeta>> = " +
+   json.dumps({n:{"category":ic["cat"],"codepoint":cp[n],**({"alias":ic["alias"]} if ic.get("alias") else {})}
+               for n,ic in sorted(ICONS.items())}, ensure_ascii=False, indent=2), "",
+   "export const ICON_NAMES: readonly string[] = Object.keys(ICONS)", ""]
+open(f"{gal}/generated.ts","w").write("\n".join(G))
+# Le catalogue du site est désormais un vrai composant React :
+# packages/gallery, construit par tools/build.sh vers docs/.
 print("ok",len(ICONS),"icônes ·",len(VARIANTS),"styles ·",len(ALIASES),"alias")

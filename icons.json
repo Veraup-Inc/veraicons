@@ -1,5 +1,6 @@
 {
  "name": "VeraUp Icons",
+ "version": "1.3.0",
  "grid": 24,
  "stroke": 1.5,
  "variants": [
@@ -15,6 +16,143 @@
   "bulk-rounded"
  ],
  "count": 554,
+ "categories": [
+  {
+   "key": "navigation",
+   "label": "Navigation",
+   "count": 20
+  },
+  {
+   "key": "actions",
+   "label": "Actions",
+   "count": 46
+  },
+  {
+   "key": "arrows",
+   "label": "Flèches",
+   "count": 24
+  },
+  {
+   "key": "planning",
+   "label": "Planification et suivi",
+   "count": 22
+  },
+  {
+   "key": "time",
+   "label": "Temps et planification",
+   "count": 43
+  },
+  {
+   "key": "life",
+   "label": "Domaines de vie",
+   "count": 20
+  },
+  {
+   "key": "communication",
+   "label": "Communication",
+   "count": 15
+  },
+  {
+   "key": "people",
+   "label": "Personnes",
+   "count": 18
+  },
+  {
+   "key": "files",
+   "label": "Fichiers et médias",
+   "count": 15
+  },
+  {
+   "key": "status",
+   "label": "États",
+   "count": 17
+  },
+  {
+   "key": "finance",
+   "label": "Finance et paiements",
+   "count": 22
+  },
+  {
+   "key": "learning",
+   "label": "Apprentissage et tech",
+   "count": 37
+  },
+  {
+   "key": "music",
+   "label": "Musique et louange",
+   "count": 21
+  },
+  {
+   "key": "networking",
+   "label": "Réseau et NFC",
+   "count": 21
+  },
+  {
+   "key": "home",
+   "label": "Habitat et colocation",
+   "count": 16
+  },
+  {
+   "key": "games",
+   "label": "Jeux",
+   "count": 17
+  },
+  {
+   "key": "work",
+   "label": "Métiers et travail",
+   "count": 8
+  },
+  {
+   "key": "science",
+   "label": "Études et savoir",
+   "count": 13
+  },
+  {
+   "key": "care",
+   "label": "Santé et bien-être",
+   "count": 21
+  },
+  {
+   "key": "sport",
+   "label": "Sport et mouvement",
+   "count": 26
+  },
+  {
+   "key": "household",
+   "label": "Maison et quotidien",
+   "count": 24
+  },
+  {
+   "key": "food",
+   "label": "Repas et cuisine",
+   "count": 23
+  },
+  {
+   "key": "bonds",
+   "label": "Proches et liens",
+   "count": 8
+  },
+  {
+   "key": "spirit",
+   "label": "Esprit et foi",
+   "count": 16
+  },
+  {
+   "key": "hobbies",
+   "label": "Loisirs et création",
+   "count": 11
+  },
+  {
+   "key": "travel",
+   "label": "Transport et voyage",
+   "count": 22
+  },
+  {
+   "key": "paperwork",
+   "label": "Argent et administratif",
+   "count": 8
+  }
+ ],
  "icons": {
   "account": {
    "category": "people",

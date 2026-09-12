@@ -1,0 +1,2288 @@
+// Généré par tools/build_packages.py — ne pas modifier à la main.
+// Ce fichier est la seule source de vérité du catalogue : il est réécrit à
+// chaque build, le site et le composant ne peuvent donc pas se désynchroniser.
+
+export type Variant =
+  | 'stroke-rounded'
+  | 'stroke-sharp'
+  | 'stroke-standard'
+  | 'solid-rounded'
+  | 'solid-sharp'
+  | 'solid-standard'
+  | 'duotone-rounded'
+  | 'duotone-standard'
+  | 'twotone-rounded'
+  | 'bulk-rounded'
+
+export interface IconMeta {
+  category: string
+  codepoint: number
+  /** Nom du glyphe source quand cette icône est un alias. */
+  alias?: string
+}
+
+export interface Category {
+  key: string
+  label: string
+  count: number
+}
+
+export const VERSION = "1.3.0"
+
+export const VARIANTS: readonly Variant[] = ["stroke-rounded", "stroke-sharp", "stroke-standard", "solid-rounded", "solid-sharp", "solid-standard", "duotone-rounded", "duotone-standard", "twotone-rounded", "bulk-rounded"] as const
+
+export const CATEGORIES: readonly Category[] = [{"key": "navigation", "label": "Navigation", "count": 20}, {"key": "actions", "label": "Actions", "count": 46}, {"key": "arrows", "label": "Flèches", "count": 24}, {"key": "planning", "label": "Planification et suivi", "count": 22}, {"key": "time", "label": "Temps et planification", "count": 43}, {"key": "life", "label": "Domaines de vie", "count": 20}, {"key": "communication", "label": "Communication", "count": 15}, {"key": "people", "label": "Personnes", "count": 18}, {"key": "files", "label": "Fichiers et médias", "count": 15}, {"key": "status", "label": "États", "count": 17}, {"key": "finance", "label": "Finance et paiements", "count": 22}, {"key": "learning", "label": "Apprentissage et tech", "count": 37}, {"key": "music", "label": "Musique et louange", "count": 21}, {"key": "networking", "label": "Réseau et NFC", "count": 21}, {"key": "home", "label": "Habitat et colocation", "count": 16}, {"key": "games", "label": "Jeux", "count": 17}, {"key": "work", "label": "Métiers et travail", "count": 8}, {"key": "science", "label": "Études et savoir", "count": 13}, {"key": "care", "label": "Santé et bien-être", "count": 21}, {"key": "sport", "label": "Sport et mouvement", "count": 26}, {"key": "household", "label": "Maison et quotidien", "count": 24}, {"key": "food", "label": "Repas et cuisine", "count": 23}, {"key": "bonds", "label": "Proches et liens", "count": 8}, {"key": "spirit", "label": "Esprit et foi", "count": 16}, {"key": "hobbies", "label": "Loisirs et création", "count": 11}, {"key": "travel", "label": "Transport et voyage", "count": 22}, {"key": "paperwork", "label": "Argent et administratif", "count": 8}]
+
+export const ICONS: Readonly<Record<string, IconMeta>> = {
+  "account": {
+    "category": "people",
+    "codepoint": 62014,
+    "alias": "user-circle"
+  },
+  "activity": {
+    "category": "time",
+    "codepoint": 62013
+  },
+  "add": {
+    "category": "actions",
+    "codepoint": 62015,
+    "alias": "plus"
+  },
+  "admin": {
+    "category": "planning",
+    "codepoint": 62016
+  },
+  "agenda": {
+    "category": "time",
+    "codepoint": 62012
+  },
+  "ai": {
+    "category": "learning",
+    "codepoint": 62011
+  },
+  "airplane": {
+    "category": "travel",
+    "codepoint": 62065
+  },
+  "airplane-takeoff": {
+    "category": "travel",
+    "codepoint": 62066
+  },
+  "alarm": {
+    "category": "time",
+    "codepoint": 62010
+  },
+  "alert-circle": {
+    "category": "status",
+    "codepoint": 62009
+  },
+  "alert-triangle": {
+    "category": "status",
+    "codepoint": 62008
+  },
+  "ambulance": {
+    "category": "travel",
+    "codepoint": 62067
+  },
+  "anchor": {
+    "category": "travel",
+    "codepoint": 62068
+  },
+  "archive": {
+    "category": "actions",
+    "codepoint": 62007
+  },
+  "arrow-down": {
+    "category": "arrows",
+    "codepoint": 62005
+  },
+  "arrow-down-left": {
+    "category": "arrows",
+    "codepoint": 62006
+  },
+  "arrow-left": {
+    "category": "arrows",
+    "codepoint": 62004
+  },
+  "arrow-right": {
+    "category": "arrows",
+    "codepoint": 62003
+  },
+  "arrow-to-line-down": {
+    "category": "arrows",
+    "codepoint": 62069
+  },
+  "arrow-to-line-up": {
+    "category": "arrows",
+    "codepoint": 62070
+  },
+  "arrow-up": {
+    "category": "arrows",
+    "codepoint": 62001
+  },
+  "arrow-up-right": {
+    "category": "arrows",
+    "codepoint": 62002
+  },
+  "at": {
+    "category": "communication",
+    "codepoint": 62000
+  },
+  "atom": {
+    "category": "science",
+    "codepoint": 62071
+  },
+  "attachment": {
+    "category": "actions",
+    "codepoint": 61999
+  },
+  "baby": {
+    "category": "bonds",
+    "codepoint": 62072
+  },
+  "baby-carriage": {
+    "category": "bonds",
+    "codepoint": 62073
+  },
+  "back": {
+    "category": "arrows",
+    "codepoint": 62017,
+    "alias": "arrow-left"
+  },
+  "backup": {
+    "category": "learning",
+    "codepoint": 62018,
+    "alias": "cloud-upload"
+  },
+  "badge-check": {
+    "category": "status",
+    "codepoint": 61998
+  },
+  "balance": {
+    "category": "time",
+    "codepoint": 61997
+  },
+  "balloon": {
+    "category": "bonds",
+    "codepoint": 62074
+  },
+  "bandaids": {
+    "category": "care",
+    "codepoint": 62075
+  },
+  "bank": {
+    "category": "finance",
+    "codepoint": 61996
+  },
+  "banknote": {
+    "category": "finance",
+    "codepoint": 61995
+  },
+  "barbell": {
+    "category": "sport",
+    "codepoint": 62076
+  },
+  "barcode": {
+    "category": "paperwork",
+    "codepoint": 62077
+  },
+  "baseball": {
+    "category": "sport",
+    "codepoint": 62078
+  },
+  "basket": {
+    "category": "household",
+    "codepoint": 62079
+  },
+  "basketball": {
+    "category": "sport",
+    "codepoint": 62080
+  },
+  "bathtub": {
+    "category": "care",
+    "codepoint": 62081
+  },
+  "battery": {
+    "category": "status",
+    "codepoint": 61993
+  },
+  "battery-full": {
+    "category": "status",
+    "codepoint": 61994
+  },
+  "battle-pass": {
+    "category": "games",
+    "codepoint": 61992
+  },
+  "beach-ball": {
+    "category": "sport",
+    "codepoint": 62082
+  },
+  "bed": {
+    "category": "home",
+    "codepoint": 61991
+  },
+  "beer": {
+    "category": "food",
+    "codepoint": 62083
+  },
+  "bell": {
+    "category": "time",
+    "codepoint": 61988
+  },
+  "bell-off": {
+    "category": "time",
+    "codepoint": 61990
+  },
+  "bell-ring": {
+    "category": "time",
+    "codepoint": 61989
+  },
+  "bible": {
+    "category": "music",
+    "codepoint": 61987
+  },
+  "bicycle": {
+    "category": "sport",
+    "codepoint": 62084
+  },
+  "bike": {
+    "category": "sport",
+    "codepoint": 62085
+  },
+  "binoculars": {
+    "category": "hobbies",
+    "codepoint": 62086
+  },
+  "bird": {
+    "category": "household",
+    "codepoint": 62087
+  },
+  "bluetooth": {
+    "category": "networking",
+    "codepoint": 61986
+  },
+  "boat": {
+    "category": "travel",
+    "codepoint": 62088
+  },
+  "bolt": {
+    "category": "games",
+    "codepoint": 61985
+  },
+  "bone": {
+    "category": "care",
+    "codepoint": 62089
+  },
+  "book": {
+    "category": "learning",
+    "codepoint": 61983
+  },
+  "book-open": {
+    "category": "learning",
+    "codepoint": 61984
+  },
+  "bookmark": {
+    "category": "actions",
+    "codepoint": 61982
+  },
+  "boules": {
+    "category": "sport",
+    "codepoint": 62090
+  },
+  "bowl-food": {
+    "category": "food",
+    "codepoint": 62091
+  },
+  "boxing-glove": {
+    "category": "sport",
+    "codepoint": 62092
+  },
+  "bracelet": {
+    "category": "networking",
+    "codepoint": 61981
+  },
+  "brain": {
+    "category": "science",
+    "codepoint": 62093
+  },
+  "brandy": {
+    "category": "food",
+    "codepoint": 62094
+  },
+  "bread": {
+    "category": "food",
+    "codepoint": 62095
+  },
+  "break": {
+    "category": "life",
+    "codepoint": 62019
+  },
+  "briefcase": {
+    "category": "people",
+    "codepoint": 61980
+  },
+  "broom": {
+    "category": "actions",
+    "codepoint": 61979
+  },
+  "bug": {
+    "category": "learning",
+    "codepoint": 61978
+  },
+  "building": {
+    "category": "people",
+    "codepoint": 61977
+  },
+  "bus": {
+    "category": "travel",
+    "codepoint": 62096
+  },
+  "business-card": {
+    "category": "networking",
+    "codepoint": 61976
+  },
+  "butterfly": {
+    "category": "spirit",
+    "codepoint": 62097
+  },
+  "cactus": {
+    "category": "household",
+    "codepoint": 62098
+  },
+  "cake": {
+    "category": "food",
+    "codepoint": 62099
+  },
+  "calculator": {
+    "category": "science",
+    "codepoint": 62100
+  },
+  "calendar": {
+    "category": "time",
+    "codepoint": 61968
+  },
+  "calendar-alert": {
+    "category": "time",
+    "codepoint": 61975
+  },
+  "calendar-check": {
+    "category": "time",
+    "codepoint": 61974
+  },
+  "calendar-day": {
+    "category": "time",
+    "codepoint": 61973
+  },
+  "calendar-plus": {
+    "category": "time",
+    "codepoint": 61972
+  },
+  "calendar-repeat": {
+    "category": "time",
+    "codepoint": 61971
+  },
+  "calendar-user": {
+    "category": "time",
+    "codepoint": 61970
+  },
+  "calendar-week": {
+    "category": "time",
+    "codepoint": 61969
+  },
+  "camera": {
+    "category": "files",
+    "codepoint": 61967
+  },
+  "campfire": {
+    "category": "bonds",
+    "codepoint": 62101
+  },
+  "car": {
+    "category": "networking",
+    "codepoint": 61966
+  },
+  "cards": {
+    "category": "hobbies",
+    "codepoint": 62102
+  },
+  "carrot": {
+    "category": "food",
+    "codepoint": 62103
+  },
+  "cart": {
+    "category": "finance",
+    "codepoint": 61965
+  },
+  "cash-out": {
+    "category": "finance",
+    "codepoint": 61964
+  },
+  "cat": {
+    "category": "household",
+    "codepoint": 62104
+  },
+  "categories": {
+    "category": "planning",
+    "codepoint": 62020
+  },
+  "certificate": {
+    "category": "learning",
+    "codepoint": 61963
+  },
+  "chalkboard-teacher": {
+    "category": "work",
+    "codepoint": 62105
+  },
+  "chart-bar": {
+    "category": "time",
+    "codepoint": 61962
+  },
+  "chart-line": {
+    "category": "time",
+    "codepoint": 61961
+  },
+  "chart-line-up": {
+    "category": "paperwork",
+    "codepoint": 62106
+  },
+  "chart-pie": {
+    "category": "finance",
+    "codepoint": 61960
+  },
+  "chat": {
+    "category": "communication",
+    "codepoint": 61958
+  },
+  "chat-lines": {
+    "category": "communication",
+    "codepoint": 61959
+  },
+  "chats": {
+    "category": "communication",
+    "codepoint": 61957
+  },
+  "check": {
+    "category": "actions",
+    "codepoint": 61953
+  },
+  "check-circle": {
+    "category": "actions",
+    "codepoint": 61956
+  },
+  "check-double": {
+    "category": "actions",
+    "codepoint": 61955
+  },
+  "check-square": {
+    "category": "actions",
+    "codepoint": 61954
+  },
+  "cheese": {
+    "category": "food",
+    "codepoint": 62107
+  },
+  "chef-hat": {
+    "category": "food",
+    "codepoint": 62108
+  },
+  "cherries": {
+    "category": "food",
+    "codepoint": 62109
+  },
+  "chest": {
+    "category": "games",
+    "codepoint": 61952
+  },
+  "chevron-down": {
+    "category": "arrows",
+    "codepoint": 61951
+  },
+  "chevron-left": {
+    "category": "arrows",
+    "codepoint": 61950
+  },
+  "chevron-right": {
+    "category": "arrows",
+    "codepoint": 61949
+  },
+  "chevron-up": {
+    "category": "arrows",
+    "codepoint": 61948
+  },
+  "chevrons-left": {
+    "category": "arrows",
+    "codepoint": 61947
+  },
+  "chevrons-right": {
+    "category": "arrows",
+    "codepoint": 61946
+  },
+  "choir": {
+    "category": "music",
+    "codepoint": 61945
+  },
+  "chores": {
+    "category": "home",
+    "codepoint": 61944
+  },
+  "church": {
+    "category": "music",
+    "codepoint": 61943
+  },
+  "circle": {
+    "category": "actions",
+    "codepoint": 61942
+  },
+  "circle-dashed": {
+    "category": "status",
+    "codepoint": 62110
+  },
+  "clipboard": {
+    "category": "actions",
+    "codepoint": 61940
+  },
+  "clipboard-check": {
+    "category": "actions",
+    "codepoint": 61941
+  },
+  "clock": {
+    "category": "time",
+    "codepoint": 61938
+  },
+  "clock-check": {
+    "category": "time",
+    "codepoint": 61939
+  },
+  "close": {
+    "category": "actions",
+    "codepoint": 61936
+  },
+  "close-circle": {
+    "category": "actions",
+    "codepoint": 61937
+  },
+  "cloud": {
+    "category": "learning",
+    "codepoint": 61933
+  },
+  "cloud-download": {
+    "category": "learning",
+    "codepoint": 61935
+  },
+  "cloud-off": {
+    "category": "networking",
+    "codepoint": 62111
+  },
+  "cloud-rain": {
+    "category": "spirit",
+    "codepoint": 62112
+  },
+  "cloud-upload": {
+    "category": "learning",
+    "codepoint": 61934
+  },
+  "code": {
+    "category": "learning",
+    "codepoint": 61931
+  },
+  "code-square": {
+    "category": "learning",
+    "codepoint": 61932
+  },
+  "cog": {
+    "category": "navigation",
+    "codepoint": 61930
+  },
+  "coin": {
+    "category": "finance",
+    "codepoint": 61929
+  },
+  "coins": {
+    "category": "finance",
+    "codepoint": 61928
+  },
+  "collapse": {
+    "category": "planning",
+    "codepoint": 62021
+  },
+  "comment-question": {
+    "category": "communication",
+    "codepoint": 61927
+  },
+  "commute": {
+    "category": "life",
+    "codepoint": 62022,
+    "alias": "car"
+  },
+  "compass-tool": {
+    "category": "science",
+    "codepoint": 62113
+  },
+  "confetti": {
+    "category": "games",
+    "codepoint": 61926
+  },
+  "contact": {
+    "category": "people",
+    "codepoint": 61925
+  },
+  "contactless": {
+    "category": "networking",
+    "codepoint": 61924
+  },
+  "cookie": {
+    "category": "food",
+    "codepoint": 62114
+  },
+  "cooking-pot": {
+    "category": "food",
+    "codepoint": 62115
+  },
+  "copy": {
+    "category": "actions",
+    "codepoint": 61923
+  },
+  "corner-down-right": {
+    "category": "arrows",
+    "codepoint": 61922
+  },
+  "couch": {
+    "category": "household",
+    "codepoint": 62116
+  },
+  "cpu": {
+    "category": "learning",
+    "codepoint": 61921
+  },
+  "creative": {
+    "category": "life",
+    "codepoint": 62023,
+    "alias": "palette"
+  },
+  "credit-card": {
+    "category": "finance",
+    "codepoint": 61919
+  },
+  "credit-card-check": {
+    "category": "finance",
+    "codepoint": 61920
+  },
+  "cross": {
+    "category": "music",
+    "codepoint": 61918
+  },
+  "crosshair": {
+    "category": "actions",
+    "codepoint": 62117
+  },
+  "crown": {
+    "category": "people",
+    "codepoint": 61917
+  },
+  "currency-eur": {
+    "category": "paperwork",
+    "codepoint": 62118
+  },
+  "dashboard": {
+    "category": "navigation",
+    "codepoint": 61916
+  },
+  "database": {
+    "category": "learning",
+    "codepoint": 61915
+  },
+  "day-review": {
+    "category": "planning",
+    "codepoint": 62024
+  },
+  "deadline": {
+    "category": "planning",
+    "codepoint": 62025,
+    "alias": "calendar-alert"
+  },
+  "delete": {
+    "category": "actions",
+    "codepoint": 62026,
+    "alias": "trash"
+  },
+  "design": {
+    "category": "files",
+    "codepoint": 61914
+  },
+  "dice": {
+    "category": "games",
+    "codepoint": 61913
+  },
+  "digital": {
+    "category": "life",
+    "codepoint": 62027,
+    "alias": "smartphone"
+  },
+  "discount": {
+    "category": "finance",
+    "codepoint": 61912
+  },
+  "dna": {
+    "category": "science",
+    "codepoint": 62119
+  },
+  "dog": {
+    "category": "household",
+    "codepoint": 62120
+  },
+  "dollar": {
+    "category": "finance",
+    "codepoint": 61911
+  },
+  "done": {
+    "category": "actions",
+    "codepoint": 62028,
+    "alias": "check-circle"
+  },
+  "door": {
+    "category": "home",
+    "codepoint": 61910
+  },
+  "download": {
+    "category": "actions",
+    "codepoint": 61909
+  },
+  "drag": {
+    "category": "navigation",
+    "codepoint": 61908
+  },
+  "drop": {
+    "category": "care",
+    "codepoint": 62121
+  },
+  "drum": {
+    "category": "music",
+    "codepoint": 61907
+  },
+  "duplicate": {
+    "category": "actions",
+    "codepoint": 61906
+  },
+  "ear": {
+    "category": "care",
+    "codepoint": 62122
+  },
+  "edit": {
+    "category": "actions",
+    "codepoint": 61905
+  },
+  "egg": {
+    "category": "food",
+    "codepoint": 62123
+  },
+  "evening": {
+    "category": "life",
+    "codepoint": 62029,
+    "alias": "moon"
+  },
+  "expand": {
+    "category": "navigation",
+    "codepoint": 61904
+  },
+  "export": {
+    "category": "actions",
+    "codepoint": 61903
+  },
+  "external-link": {
+    "category": "arrows",
+    "codepoint": 61902
+  },
+  "eye": {
+    "category": "actions",
+    "codepoint": 61900
+  },
+  "eye-off": {
+    "category": "actions",
+    "codepoint": 61901
+  },
+  "eyeglasses": {
+    "category": "care",
+    "codepoint": 62124
+  },
+  "face-mask": {
+    "category": "care",
+    "codepoint": 62125
+  },
+  "family": {
+    "category": "life",
+    "codepoint": 62030,
+    "alias": "house-users"
+  },
+  "fan": {
+    "category": "household",
+    "codepoint": 62126
+  },
+  "feather": {
+    "category": "spirit",
+    "codepoint": 62127
+  },
+  "file": {
+    "category": "files",
+    "codepoint": 61896
+  },
+  "file-pdf": {
+    "category": "files",
+    "codepoint": 61899
+  },
+  "file-plus": {
+    "category": "files",
+    "codepoint": 61898
+  },
+  "file-text": {
+    "category": "files",
+    "codepoint": 61897
+  },
+  "film": {
+    "category": "files",
+    "codepoint": 61895
+  },
+  "filter": {
+    "category": "navigation",
+    "codepoint": 61894
+  },
+  "finance": {
+    "category": "life",
+    "codepoint": 62031,
+    "alias": "coins"
+  },
+  "fingerprint": {
+    "category": "status",
+    "codepoint": 61893
+  },
+  "finish-early": {
+    "category": "planning",
+    "codepoint": 62032
+  },
+  "first-aid": {
+    "category": "care",
+    "codepoint": 62128
+  },
+  "first-aid-kit": {
+    "category": "care",
+    "codepoint": 62129
+  },
+  "fish-simple": {
+    "category": "household",
+    "codepoint": 62130
+  },
+  "flag": {
+    "category": "actions",
+    "codepoint": 61892
+  },
+  "flame": {
+    "category": "spirit",
+    "codepoint": 62131
+  },
+  "flask": {
+    "category": "science",
+    "codepoint": 62132
+  },
+  "flower": {
+    "category": "spirit",
+    "codepoint": 62133
+  },
+  "flower-tulip": {
+    "category": "household",
+    "codepoint": 62134
+  },
+  "folder": {
+    "category": "files",
+    "codepoint": 61890
+  },
+  "folder-open": {
+    "category": "files",
+    "codepoint": 61891
+  },
+  "folders": {
+    "category": "paperwork",
+    "codepoint": 62135
+  },
+  "football": {
+    "category": "sport",
+    "codepoint": 62136
+  },
+  "footprints": {
+    "category": "sport",
+    "codepoint": 62137
+  },
+  "friends": {
+    "category": "games",
+    "codepoint": 61889
+  },
+  "fullscreen": {
+    "category": "navigation",
+    "codepoint": 61888
+  },
+  "gamepad": {
+    "category": "games",
+    "codepoint": 61887
+  },
+  "garage": {
+    "category": "household",
+    "codepoint": 62138
+  },
+  "gas-pump": {
+    "category": "travel",
+    "codepoint": 62139
+  },
+  "gavel": {
+    "category": "paperwork",
+    "codepoint": 62140
+  },
+  "gem": {
+    "category": "games",
+    "codepoint": 61886
+  },
+  "gift": {
+    "category": "finance",
+    "codepoint": 61885
+  },
+  "git-branch": {
+    "category": "learning",
+    "codepoint": 61884
+  },
+  "globe": {
+    "category": "networking",
+    "codepoint": 61883
+  },
+  "globe-hemisphere-west": {
+    "category": "travel",
+    "codepoint": 62141
+  },
+  "goal": {
+    "category": "time",
+    "codepoint": 61882
+  },
+  "golf": {
+    "category": "sport",
+    "codepoint": 62142
+  },
+  "graduation": {
+    "category": "learning",
+    "codepoint": 61881
+  },
+  "grains": {
+    "category": "food",
+    "codepoint": 62143
+  },
+  "grid": {
+    "category": "navigation",
+    "codepoint": 61879
+  },
+  "grid-game": {
+    "category": "games",
+    "codepoint": 61880
+  },
+  "guitar": {
+    "category": "music",
+    "codepoint": 61878
+  },
+  "hair-dryer": {
+    "category": "care",
+    "codepoint": 62144
+  },
+  "hamburger": {
+    "category": "food",
+    "codepoint": 62145
+  },
+  "hammer": {
+    "category": "household",
+    "codepoint": 62146
+  },
+  "hand-heart": {
+    "category": "bonds",
+    "codepoint": 62147
+  },
+  "hand-soap": {
+    "category": "care",
+    "codepoint": 62148
+  },
+  "handbag": {
+    "category": "household",
+    "codepoint": 62149
+  },
+  "hands-clapping": {
+    "category": "bonds",
+    "codepoint": 62150
+  },
+  "hands-praying": {
+    "category": "music",
+    "codepoint": 61877
+  },
+  "handshake": {
+    "category": "people",
+    "codepoint": 61876
+  },
+  "hard-hat": {
+    "category": "work",
+    "codepoint": 62151
+  },
+  "headphones": {
+    "category": "music",
+    "codepoint": 61875
+  },
+  "headset": {
+    "category": "work",
+    "codepoint": 62152
+  },
+  "health": {
+    "category": "life",
+    "codepoint": 62033
+  },
+  "heart": {
+    "category": "actions",
+    "codepoint": 61874
+  },
+  "help-circle": {
+    "category": "status",
+    "codepoint": 61873
+  },
+  "highlighter": {
+    "category": "science",
+    "codepoint": 62153
+  },
+  "hike": {
+    "category": "sport",
+    "codepoint": 62154
+  },
+  "history": {
+    "category": "time",
+    "codepoint": 61872
+  },
+  "home": {
+    "category": "navigation",
+    "codepoint": 61871
+  },
+  "horse": {
+    "category": "sport",
+    "codepoint": 62155
+  },
+  "hospital": {
+    "category": "care",
+    "codepoint": 62156
+  },
+  "hourglass": {
+    "category": "time",
+    "codepoint": 61870
+  },
+  "house-users": {
+    "category": "home",
+    "codepoint": 61869
+  },
+  "ice-cream": {
+    "category": "food",
+    "codepoint": 62157
+  },
+  "id-card": {
+    "category": "people",
+    "codepoint": 61868
+  },
+  "idea": {
+    "category": "learning",
+    "codepoint": 61867
+  },
+  "image": {
+    "category": "files",
+    "codepoint": 61866
+  },
+  "import": {
+    "category": "actions",
+    "codepoint": 61865
+  },
+  "inbox": {
+    "category": "communication",
+    "codepoint": 61864
+  },
+  "infinity": {
+    "category": "spirit",
+    "codepoint": 62158
+  },
+  "info-circle": {
+    "category": "status",
+    "codepoint": 61863
+  },
+  "insights": {
+    "category": "planning",
+    "codepoint": 62034,
+    "alias": "chart-bar"
+  },
+  "invoice": {
+    "category": "finance",
+    "codepoint": 61862
+  },
+  "jar": {
+    "category": "food",
+    "codepoint": 62159
+  },
+  "kanban": {
+    "category": "files",
+    "codepoint": 61861
+  },
+  "key": {
+    "category": "home",
+    "codepoint": 61860
+  },
+  "keyboard": {
+    "category": "learning",
+    "codepoint": 61859
+  },
+  "keychain": {
+    "category": "networking",
+    "codepoint": 61858
+  },
+  "kitchen": {
+    "category": "home",
+    "codepoint": 61857
+  },
+  "knife": {
+    "category": "food",
+    "codepoint": 62160
+  },
+  "ladder": {
+    "category": "household",
+    "codepoint": 62161
+  },
+  "lamp": {
+    "category": "home",
+    "codepoint": 61856
+  },
+  "languages": {
+    "category": "status",
+    "codepoint": 61855
+  },
+  "laptop": {
+    "category": "learning",
+    "codepoint": 61854
+  },
+  "layers": {
+    "category": "learning",
+    "codepoint": 61853
+  },
+  "layout": {
+    "category": "navigation",
+    "codepoint": 61852
+  },
+  "leisure": {
+    "category": "life",
+    "codepoint": 62035,
+    "alias": "sofa"
+  },
+  "lesson": {
+    "category": "learning",
+    "codepoint": 61851
+  },
+  "level": {
+    "category": "games",
+    "codepoint": 61850
+  },
+  "library": {
+    "category": "learning",
+    "codepoint": 61849
+  },
+  "life-season": {
+    "category": "planning",
+    "codepoint": 62036
+  },
+  "lightbulb": {
+    "category": "learning",
+    "codepoint": 61848
+  },
+  "lightbulb-filament": {
+    "category": "household",
+    "codepoint": 62162
+  },
+  "lighthouse": {
+    "category": "travel",
+    "codepoint": 62163
+  },
+  "link": {
+    "category": "actions",
+    "codepoint": 61847
+  },
+  "list": {
+    "category": "navigation",
+    "codepoint": 61845
+  },
+  "list-check": {
+    "category": "navigation",
+    "codepoint": 61846
+  },
+  "loading": {
+    "category": "status",
+    "codepoint": 61844
+  },
+  "lock": {
+    "category": "actions",
+    "codepoint": 61843
+  },
+  "logout": {
+    "category": "actions",
+    "codepoint": 62164
+  },
+  "magic-wand": {
+    "category": "hobbies",
+    "codepoint": 62165
+  },
+  "mail": {
+    "category": "communication",
+    "codepoint": 61841
+  },
+  "mail-open": {
+    "category": "communication",
+    "codepoint": 61842
+  },
+  "map": {
+    "category": "networking",
+    "codepoint": 61839
+  },
+  "map-pin": {
+    "category": "networking",
+    "codepoint": 61840
+  },
+  "martini": {
+    "category": "food",
+    "codepoint": 62166
+  },
+  "mask-happy": {
+    "category": "hobbies",
+    "codepoint": 62167
+  },
+  "math-operations": {
+    "category": "science",
+    "codepoint": 62168
+  },
+  "meal": {
+    "category": "life",
+    "codepoint": 62037
+  },
+  "medal": {
+    "category": "learning",
+    "codepoint": 61838
+  },
+  "meditation": {
+    "category": "music",
+    "codepoint": 61837
+  },
+  "megaphone": {
+    "category": "communication",
+    "codepoint": 61836
+  },
+  "menu": {
+    "category": "navigation",
+    "codepoint": 61834
+  },
+  "menu-compact": {
+    "category": "navigation",
+    "codepoint": 61835
+  },
+  "metronome": {
+    "category": "music",
+    "codepoint": 61833
+  },
+  "mic": {
+    "category": "communication",
+    "codepoint": 61831
+  },
+  "mic-off": {
+    "category": "communication",
+    "codepoint": 61832
+  },
+  "microscope": {
+    "category": "science",
+    "codepoint": 62169
+  },
+  "minus": {
+    "category": "actions",
+    "codepoint": 61829
+  },
+  "minus-circle": {
+    "category": "actions",
+    "codepoint": 61830
+  },
+  "mobile-money": {
+    "category": "finance",
+    "codepoint": 61828
+  },
+  "monitor": {
+    "category": "learning",
+    "codepoint": 61827
+  },
+  "moon": {
+    "category": "time",
+    "codepoint": 61826
+  },
+  "more-horizontal": {
+    "category": "navigation",
+    "codepoint": 61825
+  },
+  "more-vertical": {
+    "category": "navigation",
+    "codepoint": 61824
+  },
+  "morning": {
+    "category": "life",
+    "codepoint": 62038,
+    "alias": "sunrise"
+  },
+  "mosque": {
+    "category": "spirit",
+    "codepoint": 62170
+  },
+  "motorcycle": {
+    "category": "travel",
+    "codepoint": 62171
+  },
+  "mountains": {
+    "category": "sport",
+    "codepoint": 62172
+  },
+  "music": {
+    "category": "life",
+    "codepoint": 62039,
+    "alias": "music-note"
+  },
+  "music-note": {
+    "category": "music",
+    "codepoint": 61823
+  },
+  "music-notes": {
+    "category": "music",
+    "codepoint": 61822
+  },
+  "mute": {
+    "category": "music",
+    "codepoint": 61821
+  },
+  "navigation": {
+    "category": "networking",
+    "codepoint": 61820
+  },
+  "navigation-arrow": {
+    "category": "travel",
+    "codepoint": 62173
+  },
+  "network": {
+    "category": "networking",
+    "codepoint": 61819
+  },
+  "newspaper": {
+    "category": "science",
+    "codepoint": 62174
+  },
+  "next": {
+    "category": "arrows",
+    "codepoint": 62040,
+    "alias": "arrow-right"
+  },
+  "nfc": {
+    "category": "networking",
+    "codepoint": 61818
+  },
+  "notification": {
+    "category": "communication",
+    "codepoint": 61817
+  },
+  "office": {
+    "category": "people",
+    "codepoint": 61816
+  },
+  "orange": {
+    "category": "food",
+    "codepoint": 62175
+  },
+  "overlap": {
+    "category": "planning",
+    "codepoint": 62041
+  },
+  "package": {
+    "category": "work",
+    "codepoint": 62176
+  },
+  "paint-roller": {
+    "category": "household",
+    "codepoint": 62177
+  },
+  "palette": {
+    "category": "files",
+    "codepoint": 61815
+  },
+  "pause": {
+    "category": "time",
+    "codepoint": 61814
+  },
+  "paw-print": {
+    "category": "household",
+    "codepoint": 62178
+  },
+  "pen-nib": {
+    "category": "work",
+    "codepoint": 62179
+  },
+  "pencil": {
+    "category": "actions",
+    "codepoint": 61813
+  },
+  "percent": {
+    "category": "finance",
+    "codepoint": 61812
+  },
+  "phone": {
+    "category": "communication",
+    "codepoint": 61810
+  },
+  "phone-call": {
+    "category": "bonds",
+    "codepoint": 62180
+  },
+  "phone-off": {
+    "category": "communication",
+    "codepoint": 61811
+  },
+  "piano": {
+    "category": "music",
+    "codepoint": 61809
+  },
+  "pie-chart": {
+    "category": "time",
+    "codepoint": 61808
+  },
+  "piggy-bank": {
+    "category": "paperwork",
+    "codepoint": 62181
+  },
+  "pill": {
+    "category": "care",
+    "codepoint": 62182
+  },
+  "pin": {
+    "category": "actions",
+    "codepoint": 61807
+  },
+  "ping-pong": {
+    "category": "sport",
+    "codepoint": 62183
+  },
+  "pizza": {
+    "category": "food",
+    "codepoint": 62184
+  },
+  "plan-task": {
+    "category": "planning",
+    "codepoint": 62042,
+    "alias": "calendar-check"
+  },
+  "planet": {
+    "category": "science",
+    "codepoint": 62185
+  },
+  "planned-actual": {
+    "category": "planning",
+    "codepoint": 62043
+  },
+  "plant": {
+    "category": "home",
+    "codepoint": 61806
+  },
+  "play": {
+    "category": "time",
+    "codepoint": 61805
+  },
+  "playlist": {
+    "category": "music",
+    "codepoint": 61804
+  },
+  "plug": {
+    "category": "learning",
+    "codepoint": 61803
+  },
+  "plus": {
+    "category": "actions",
+    "codepoint": 61800
+  },
+  "plus-circle": {
+    "category": "actions",
+    "codepoint": 61802
+  },
+  "plus-square": {
+    "category": "actions",
+    "codepoint": 61801
+  },
+  "podcast": {
+    "category": "music",
+    "codepoint": 61799
+  },
+  "podium": {
+    "category": "games",
+    "codepoint": 61798
+  },
+  "poker-chip": {
+    "category": "hobbies",
+    "codepoint": 62186
+  },
+  "popcorn": {
+    "category": "hobbies",
+    "codepoint": 62187
+  },
+  "postpone": {
+    "category": "time",
+    "codepoint": 61797
+  },
+  "potted-plant": {
+    "category": "household",
+    "codepoint": 62188
+  },
+  "power": {
+    "category": "status",
+    "codepoint": 61796
+  },
+  "prescription": {
+    "category": "care",
+    "codepoint": 62189
+  },
+  "presentation": {
+    "category": "learning",
+    "codepoint": 61795
+  },
+  "printer": {
+    "category": "actions",
+    "codepoint": 61794
+  },
+  "priority": {
+    "category": "time",
+    "codepoint": 61793
+  },
+  "privacy": {
+    "category": "status",
+    "codepoint": 61792
+  },
+  "pro": {
+    "category": "people",
+    "codepoint": 62044,
+    "alias": "crown"
+  },
+  "profile-share": {
+    "category": "networking",
+    "codepoint": 61791
+  },
+  "projector-screen": {
+    "category": "hobbies",
+    "codepoint": 62190
+  },
+  "puzzle": {
+    "category": "learning",
+    "codepoint": 61790
+  },
+  "qr-code": {
+    "category": "networking",
+    "codepoint": 61789
+  },
+  "rabbit": {
+    "category": "household",
+    "codepoint": 62191
+  },
+  "racquet": {
+    "category": "sport",
+    "codepoint": 62192
+  },
+  "radio": {
+    "category": "music",
+    "codepoint": 61788
+  },
+  "rainbow": {
+    "category": "spirit",
+    "codepoint": 62193
+  },
+  "ranking": {
+    "category": "games",
+    "codepoint": 61787
+  },
+  "reading": {
+    "category": "life",
+    "codepoint": 62045,
+    "alias": "book-open"
+  },
+  "receipt": {
+    "category": "finance",
+    "codepoint": 61786
+  },
+  "record": {
+    "category": "time",
+    "codepoint": 61785
+  },
+  "recycle": {
+    "category": "household",
+    "codepoint": 62194
+  },
+  "redo": {
+    "category": "arrows",
+    "codepoint": 61784
+  },
+  "refresh": {
+    "category": "arrows",
+    "codepoint": 61783
+  },
+  "rehearsal": {
+    "category": "music",
+    "codepoint": 61782
+  },
+  "reminder": {
+    "category": "planning",
+    "codepoint": 62046,
+    "alias": "bell"
+  },
+  "repeat": {
+    "category": "arrows",
+    "codepoint": 61781
+  },
+  "restore": {
+    "category": "learning",
+    "codepoint": 61780
+  },
+  "reward": {
+    "category": "games",
+    "codepoint": 61779
+  },
+  "ring": {
+    "category": "networking",
+    "codepoint": 61778
+  },
+  "robot": {
+    "category": "learning",
+    "codepoint": 61777
+  },
+  "rocket": {
+    "category": "learning",
+    "codepoint": 61776
+  },
+  "ruler": {
+    "category": "science",
+    "codepoint": 62195
+  },
+  "rules": {
+    "category": "home",
+    "codepoint": 61775
+  },
+  "safe": {
+    "category": "finance",
+    "codepoint": 61774
+  },
+  "sailboat": {
+    "category": "travel",
+    "codepoint": 62196
+  },
+  "scan": {
+    "category": "networking",
+    "codepoint": 61773
+  },
+  "scissors": {
+    "category": "hobbies",
+    "codepoint": 62197
+  },
+  "scooter": {
+    "category": "travel",
+    "codepoint": 62198
+  },
+  "screwdriver": {
+    "category": "household",
+    "codepoint": 62199
+  },
+  "search": {
+    "category": "navigation",
+    "codepoint": 61772
+  },
+  "send": {
+    "category": "actions",
+    "codepoint": 61771
+  },
+  "server": {
+    "category": "learning",
+    "codepoint": 61770
+  },
+  "settings": {
+    "category": "navigation",
+    "codepoint": 61769
+  },
+  "share": {
+    "category": "actions",
+    "codepoint": 61768
+  },
+  "sheet-music": {
+    "category": "music",
+    "codepoint": 61767
+  },
+  "shield": {
+    "category": "games",
+    "codepoint": 61765
+  },
+  "shield-check": {
+    "category": "games",
+    "codepoint": 61766
+  },
+  "shooting-star": {
+    "category": "spirit",
+    "codepoint": 62200
+  },
+  "shopping-bag": {
+    "category": "finance",
+    "codepoint": 61764
+  },
+  "shopping-list": {
+    "category": "home",
+    "codepoint": 61763
+  },
+  "shower": {
+    "category": "care",
+    "codepoint": 62201
+  },
+  "shrimp": {
+    "category": "food",
+    "codepoint": 62202
+  },
+  "shuffle": {
+    "category": "arrows",
+    "codepoint": 61762
+  },
+  "sidebar": {
+    "category": "navigation",
+    "codepoint": 61761
+  },
+  "signal": {
+    "category": "networking",
+    "codepoint": 61760
+  },
+  "signature": {
+    "category": "paperwork",
+    "codepoint": 62203
+  },
+  "signpost": {
+    "category": "travel",
+    "codepoint": 62204
+  },
+  "ski": {
+    "category": "sport",
+    "codepoint": 62205
+  },
+  "skip-back": {
+    "category": "time",
+    "codepoint": 61759
+  },
+  "skip-forward": {
+    "category": "time",
+    "codepoint": 61758
+  },
+  "sleep": {
+    "category": "life",
+    "codepoint": 62047,
+    "alias": "bed"
+  },
+  "smartphone": {
+    "category": "learning",
+    "codepoint": 61757
+  },
+  "smiley": {
+    "category": "bonds",
+    "codepoint": 62206
+  },
+  "sneaker": {
+    "category": "sport",
+    "codepoint": 62207
+  },
+  "sneaker-move": {
+    "category": "sport",
+    "codepoint": 62208
+  },
+  "snowboard": {
+    "category": "sport",
+    "codepoint": 62209
+  },
+  "snowflake": {
+    "category": "spirit",
+    "codepoint": 62210
+  },
+  "soccer-ball": {
+    "category": "sport",
+    "codepoint": 62211
+  },
+  "social": {
+    "category": "life",
+    "codepoint": 62048,
+    "alias": "user-group"
+  },
+  "sofa": {
+    "category": "home",
+    "codepoint": 61756
+  },
+  "sort": {
+    "category": "navigation",
+    "codepoint": 61755
+  },
+  "sparkle": {
+    "category": "learning",
+    "codepoint": 61754
+  },
+  "speaker": {
+    "category": "music",
+    "codepoint": 61753
+  },
+  "spirituality": {
+    "category": "life",
+    "codepoint": 62049,
+    "alias": "hands-praying"
+  },
+  "split-expense": {
+    "category": "home",
+    "codepoint": 61752
+  },
+  "sport": {
+    "category": "life",
+    "codepoint": 62050
+  },
+  "spray-bottle": {
+    "category": "household",
+    "codepoint": 62212
+  },
+  "square": {
+    "category": "actions",
+    "codepoint": 61751
+  },
+  "stairs": {
+    "category": "household",
+    "codepoint": 62213
+  },
+  "stamp": {
+    "category": "paperwork",
+    "codepoint": 62214
+  },
+  "stand": {
+    "category": "networking",
+    "codepoint": 61750
+  },
+  "star": {
+    "category": "actions",
+    "codepoint": 61748
+  },
+  "star-half": {
+    "category": "status",
+    "codepoint": 61749
+  },
+  "star-of-david": {
+    "category": "spirit",
+    "codepoint": 62215
+  },
+  "start": {
+    "category": "time",
+    "codepoint": 62051,
+    "alias": "play"
+  },
+  "steering-wheel": {
+    "category": "networking",
+    "codepoint": 61747
+  },
+  "stethoscope": {
+    "category": "care",
+    "codepoint": 62216
+  },
+  "stop": {
+    "category": "time",
+    "codepoint": 61746
+  },
+  "stopwatch": {
+    "category": "time",
+    "codepoint": 61745
+  },
+  "store": {
+    "category": "people",
+    "codepoint": 61744
+  },
+  "study": {
+    "category": "life",
+    "codepoint": 62052,
+    "alias": "graduation"
+  },
+  "suitcase": {
+    "category": "travel",
+    "codepoint": 62217
+  },
+  "suitcase-simple": {
+    "category": "work",
+    "codepoint": 62218
+  },
+  "sun-alt": {
+    "category": "time",
+    "codepoint": 61743
+  },
+  "sunrise": {
+    "category": "time",
+    "codepoint": 61742
+  },
+  "swap": {
+    "category": "arrows",
+    "codepoint": 61741
+  },
+  "swim": {
+    "category": "sport",
+    "codepoint": 62219
+  },
+  "sword": {
+    "category": "games",
+    "codepoint": 61740
+  },
+  "synagogue": {
+    "category": "spirit",
+    "codepoint": 62220
+  },
+  "syringe": {
+    "category": "care",
+    "codepoint": 62221
+  },
+  "t-shirt": {
+    "category": "household",
+    "codepoint": 62222
+  },
+  "table": {
+    "category": "files",
+    "codepoint": 61739
+  },
+  "tablet": {
+    "category": "learning",
+    "codepoint": 61738
+  },
+  "tag": {
+    "category": "actions",
+    "codepoint": 61737
+  },
+  "tap": {
+    "category": "networking",
+    "codepoint": 61736
+  },
+  "target": {
+    "category": "time",
+    "codepoint": 61735
+  },
+  "task": {
+    "category": "time",
+    "codepoint": 61732
+  },
+  "task-add": {
+    "category": "time",
+    "codepoint": 61734
+  },
+  "task-list": {
+    "category": "time",
+    "codepoint": 61733
+  },
+  "taxi": {
+    "category": "travel",
+    "codepoint": 62223
+  },
+  "tea-bag": {
+    "category": "food",
+    "codepoint": 62224
+  },
+  "television": {
+    "category": "hobbies",
+    "codepoint": 62225
+  },
+  "tennis-ball": {
+    "category": "sport",
+    "codepoint": 62226
+  },
+  "tent": {
+    "category": "travel",
+    "codepoint": 62227
+  },
+  "terminal": {
+    "category": "learning",
+    "codepoint": 61731
+  },
+  "test-tube": {
+    "category": "science",
+    "codepoint": 62228
+  },
+  "thermometer": {
+    "category": "home",
+    "codepoint": 61730
+  },
+  "throw": {
+    "category": "sport",
+    "codepoint": 62229
+  },
+  "thumbs-up": {
+    "category": "status",
+    "codepoint": 61729
+  },
+  "ticket": {
+    "category": "finance",
+    "codepoint": 61728
+  },
+  "time-balance": {
+    "category": "planning",
+    "codepoint": 62053,
+    "alias": "balance"
+  },
+  "time-budget": {
+    "category": "planning",
+    "codepoint": 62054
+  },
+  "time-check": {
+    "category": "planning",
+    "codepoint": 62055,
+    "alias": "clock-check"
+  },
+  "time-flexible": {
+    "category": "planning",
+    "codepoint": 62056
+  },
+  "time-free": {
+    "category": "planning",
+    "codepoint": 62057
+  },
+  "time-reserved": {
+    "category": "planning",
+    "codepoint": 62058
+  },
+  "time-spent": {
+    "category": "planning",
+    "codepoint": 62059,
+    "alias": "hourglass"
+  },
+  "timeline": {
+    "category": "planning",
+    "codepoint": 62060
+  },
+  "timer": {
+    "category": "time",
+    "codepoint": 61727
+  },
+  "toggle-off": {
+    "category": "status",
+    "codepoint": 61726
+  },
+  "toggle-on": {
+    "category": "status",
+    "codepoint": 61725
+  },
+  "toilet": {
+    "category": "care",
+    "codepoint": 62230
+  },
+  "toolbox": {
+    "category": "household",
+    "codepoint": 62231
+  },
+  "tooth": {
+    "category": "care",
+    "codepoint": 62232
+  },
+  "tractor": {
+    "category": "work",
+    "codepoint": 62233
+  },
+  "train": {
+    "category": "travel",
+    "codepoint": 62234
+  },
+  "transfer": {
+    "category": "finance",
+    "codepoint": 61724
+  },
+  "trash": {
+    "category": "actions",
+    "codepoint": 61723
+  },
+  "tree": {
+    "category": "spirit",
+    "codepoint": 62235
+  },
+  "tree-palm": {
+    "category": "travel",
+    "codepoint": 62236
+  },
+  "trend": {
+    "category": "time",
+    "codepoint": 61721
+  },
+  "trend-down": {
+    "category": "time",
+    "codepoint": 61722
+  },
+  "trolley": {
+    "category": "travel",
+    "codepoint": 62237
+  },
+  "trophy": {
+    "category": "learning",
+    "codepoint": 61720
+  },
+  "truck": {
+    "category": "work",
+    "codepoint": 62238
+  },
+  "umbrella": {
+    "category": "travel",
+    "codepoint": 62239
+  },
+  "undo": {
+    "category": "arrows",
+    "codepoint": 61719
+  },
+  "unlock": {
+    "category": "actions",
+    "codepoint": 61718
+  },
+  "upload": {
+    "category": "actions",
+    "codepoint": 61717
+  },
+  "user": {
+    "category": "people",
+    "codepoint": 61710
+  },
+  "user-check": {
+    "category": "people",
+    "codepoint": 61716
+  },
+  "user-circle": {
+    "category": "people",
+    "codepoint": 61715
+  },
+  "user-group": {
+    "category": "people",
+    "codepoint": 61714
+  },
+  "user-plus": {
+    "category": "people",
+    "codepoint": 61713
+  },
+  "user-remove": {
+    "category": "people",
+    "codepoint": 61712
+  },
+  "user-square": {
+    "category": "people",
+    "codepoint": 61711
+  },
+  "users": {
+    "category": "people",
+    "codepoint": 61709
+  },
+  "van": {
+    "category": "travel",
+    "codepoint": 62240
+  },
+  "video": {
+    "category": "communication",
+    "codepoint": 61707
+  },
+  "video-camera": {
+    "category": "files",
+    "codepoint": 61708
+  },
+  "vinyl-record": {
+    "category": "hobbies",
+    "codepoint": 62241
+  },
+  "virtual-reality": {
+    "category": "hobbies",
+    "codepoint": 62242
+  },
+  "virus": {
+    "category": "care",
+    "codepoint": 62243
+  },
+  "volleyball": {
+    "category": "sport",
+    "codepoint": 62244
+  },
+  "volume": {
+    "category": "music",
+    "codepoint": 61706
+  },
+  "walk": {
+    "category": "sport",
+    "codepoint": 62245
+  },
+  "wallet": {
+    "category": "finance",
+    "codepoint": 61704
+  },
+  "wallet-alt": {
+    "category": "finance",
+    "codepoint": 61705
+  },
+  "washing-machine": {
+    "category": "home",
+    "codepoint": 61703
+  },
+  "waves": {
+    "category": "spirit",
+    "codepoint": 62246
+  },
+  "week-review": {
+    "category": "planning",
+    "codepoint": 62061
+  },
+  "week-template": {
+    "category": "planning",
+    "codepoint": 62062,
+    "alias": "calendar-repeat"
+  },
+  "wellbeing": {
+    "category": "life",
+    "codepoint": 62063,
+    "alias": "meditation"
+  },
+  "wheelchair": {
+    "category": "care",
+    "codepoint": 62247
+  },
+  "widget": {
+    "category": "files",
+    "codepoint": 61702
+  },
+  "wifi": {
+    "category": "home",
+    "codepoint": 61700
+  },
+  "wifi-off": {
+    "category": "home",
+    "codepoint": 61701
+  },
+  "wind": {
+    "category": "spirit",
+    "codepoint": 62248
+  },
+  "wine": {
+    "category": "food",
+    "codepoint": 62249
+  },
+  "word-grid": {
+    "category": "games",
+    "codepoint": 61699
+  },
+  "work": {
+    "category": "life",
+    "codepoint": 62064,
+    "alias": "briefcase"
+  },
+  "wrench": {
+    "category": "learning",
+    "codepoint": 61698
+  },
+  "yin-yang": {
+    "category": "spirit",
+    "codepoint": 62250
+  },
+  "zoom-in": {
+    "category": "navigation",
+    "codepoint": 61697
+  }
+}
+
+export const ICON_NAMES: readonly string[] = Object.keys(ICONS)

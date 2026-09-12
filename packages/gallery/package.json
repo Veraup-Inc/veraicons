@@ -1,0 +1,63 @@
+{
+  "name": "veraicons-gallery",
+  "version": "1.3.0",
+  "description": "Catalogue VeraUp Icons — composant React réutilisable et site statique.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/veraicons-gallery.js",
+  "module": "./dist/veraicons-gallery.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/veraicons-gallery.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:lib && npm run build:site",
+    "build:lib": "vite build --mode lib",
+    "build:site": "vite build --mode site",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepare": "npm run build:lib"
+  },
+  "keywords": [
+    "icons",
+    "react",
+    "gallery",
+    "veraup",
+    "veraicons"
+  ],
+  "homepage": "https://veraup-inc.github.io/veraicons/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Veraup-Inc/veraicons",
+    "directory": "packages/gallery"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.0",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.2.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

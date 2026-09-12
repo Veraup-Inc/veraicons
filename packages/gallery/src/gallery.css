@@ -1,0 +1,290 @@
+/* Catalogue VeraUp Icons.
+   Tout est préfixé `vig-` et les couleurs passent par des variables : le
+   composant peut être posé dans une page existante sans déborder sur elle,
+   et l'hôte peut réécrire la palette sans toucher à ce fichier. */
+
+.vig {
+  --vig-ink: #0f1d2e;
+  --vig-mute: #5a6472;
+  --vig-line: #e7e4dd;
+  --vig-bg: #fbfaf7;
+  --vig-card: #ffffff;
+  --vig-accent: #0f766e;
+
+  color: var(--vig-ink);
+  background: var(--vig-bg);
+  font: 15px/1.45 Inter, system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+.vig *,
+.vig *::before,
+.vig *::after {
+  box-sizing: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vig:not([data-theme='light']) {
+    --vig-ink: #eef2f6;
+    --vig-mute: #97a3b2;
+    --vig-line: #2a3442;
+    --vig-bg: #0e1520;
+    --vig-card: #151e2b;
+    --vig-accent: #4fd1c5;
+  }
+}
+.vig[data-theme='dark'] {
+  --vig-ink: #eef2f6;
+  --vig-mute: #97a3b2;
+  --vig-line: #2a3442;
+  --vig-bg: #0e1520;
+  --vig-card: #151e2b;
+  --vig-accent: #4fd1c5;
+}
+
+/* ---------- en-tête ---------- */
+.vig-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  padding: 16px 24px;
+  background: color-mix(in srgb, var(--vig-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--vig-line);
+}
+.vig-title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.vig-title span {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--vig-mute);
+}
+.vig-search {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 9px 14px;
+  font: inherit;
+  color: inherit;
+  background: var(--vig-card);
+  border: 1px solid var(--vig-line);
+  border-radius: 10px;
+}
+.vig-search:focus-visible {
+  outline: 2px solid var(--vig-accent);
+  outline-offset: 1px;
+}
+
+.vig-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 3px;
+  background: var(--vig-card);
+  border: 1px solid var(--vig-line);
+  border-radius: 10px;
+}
+.vig-tabs button {
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--vig-mute);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+}
+.vig-tabs button[aria-pressed='true'] {
+  color: var(--vig-bg);
+  background: var(--vig-ink);
+}
+
+/* ---------- corps ---------- */
+.vig-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 4px 24px 56px;
+}
+.vig-sections {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.vig-cat {
+  margin: 30px 0 12px;
+  font-size: 16px;
+  font-weight: 650;
+}
+.vig-cat small {
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--vig-mute);
+}
+.vig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 8px;
+}
+
+.vig-tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 8px 10px;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  background: var(--vig-card);
+  border: 1px solid var(--vig-line);
+  border-radius: 12px;
+  transition: border-color 0.12s;
+}
+.vig-tile:hover {
+  border-color: var(--vig-accent);
+}
+.vig-tile.is-selected {
+  border-color: var(--vig-accent);
+  box-shadow: 0 0 0 1px var(--vig-accent);
+}
+.vig-glyph {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 8px;
+  color: var(--vig-ink);
+}
+.vig-tile-name {
+  display: block;
+  font-size: 11px;
+  color: var(--vig-mute);
+  word-break: break-all;
+}
+.vig-tile-alias {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 1px 4px;
+  font-size: 9px;
+  color: var(--vig-mute);
+  background: var(--vig-bg);
+  border-radius: 4px;
+}
+
+.vig-state {
+  padding: 40px 24px;
+  color: var(--vig-mute);
+}
+.vig-error {
+  color: #b4443a;
+}
+
+/* ---------- panneau de détails ---------- */
+.vig-panel {
+  position: sticky;
+  top: 84px;
+  flex: 0 0 300px;
+  padding: 18px;
+  background: var(--vig-card);
+  border: 1px solid var(--vig-line);
+  border-radius: 14px;
+}
+.vig-panel-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.vig-panel-head h3 {
+  margin: 0;
+  font-size: 15px;
+  word-break: break-all;
+}
+.vig-panel-glyph {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  color: var(--vig-ink);
+}
+.vig-panel-meta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--vig-mute);
+}
+.vig-close {
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--vig-mute);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.vig-snippets {
+  margin: 18px 0 0;
+}
+.vig-snippets div + div {
+  margin-top: 12px;
+}
+.vig-snippets dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vig-mute);
+}
+.vig-snippets dd {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  margin: 4px 0 0;
+}
+.vig-snippets code {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 6px 8px;
+  overflow-x: auto;
+  font-size: 11.5px;
+  white-space: pre;
+  background: var(--vig-bg);
+  border: 1px solid var(--vig-line);
+  border-radius: 7px;
+}
+.vig-snippets dd button {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 11.5px;
+  color: var(--vig-mute);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--vig-line);
+  border-radius: 7px;
+}
+.vig-snippets dd button:hover {
+  color: var(--vig-accent);
+  border-color: var(--vig-accent);
+}
+
+@media (max-width: 860px) {
+  .vig-body {
+    flex-direction: column;
+    padding-inline: 16px;
+  }
+  .vig-panel {
+    position: static;
+    flex: 1 1 auto;
+    width: 100%;
+    order: -1;
+  }
+  .vig-head {
+    padding-inline: 16px;
+  }
+}

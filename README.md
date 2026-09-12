@@ -9,7 +9,7 @@ Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [
 ## Flutter
 ```bash
 flutter pub add veraicons --git-url=https://github.com/Veraup-Inc/veraicons.git \
-  --git-path=packages/flutter/veraicons --git-ref=v1.2.2
+  --git-path=packages/flutter/veraicons --git-ref=v1.3.0
 ```
 ```dart
 import 'package:veraicons/veraicons.dart';
@@ -23,6 +23,21 @@ et `flutter pub upgrade` ne la bougera pas. Pour passer à une nouvelle version,
 relancer la commande ci-dessus avec le nouveau tag — ou éditer `ref:` dans
 `pubspec.yaml` puis `flutter pub get`.
 
+## Catalogue web — composant React réutilisable
+Le catalogue du site **est** un composant : `packages/gallery`. Le même code rend
+[veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) et
+s'intègre dans un volet développeur, sans version dupliquée à maintenir.
+```bash
+npm i veraicons-gallery
+```
+```tsx
+import { IconGallery } from 'veraicons-gallery';
+import 'veraicons-gallery/style.css';
+<IconGallery />
+```
+Voir [packages/gallery/README.md](packages/gallery/README.md) pour les props,
+le thème et l'usage en sélecteur d'icônes.
+
 ## React / Next.js
 ```bash
 npm i veraicons        # ou : pnpm add veraicons · yarn add veraicons
@@ -35,17 +50,17 @@ Package ESM avec types TypeScript, `react >= 17` en peer dependency.
 
 ## Site web (HTML/CSS, Laravel, WordPress…) — via jsDelivr, sans build
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.2/packages/web/veraup-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.3.0/packages/web/veraup-icons.css">
 <i class="vi-stroke-rounded vi-home"></i>
 <i class="vi-solid-rounded vi-wallet" style="color:#0F766E;font-size:28px"></i>
 ```
 Un SVG isolé :
 ```html
-<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.2/svg/duotone-rounded/nfc.svg" width="24">
+<img src="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.3.0/svg/duotone-rounded/nfc.svg" width="24">
 ```
 Ou un sprite, pour n'appeler qu'un seul fichier :
 ```html
-<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.2.2/sprites/stroke-rounded.svg#timeline"/></svg>
+<svg width="24" height="24"><use href="https://cdn.jsdelivr.net/gh/Veraup-Inc/veraicons@v1.3.0/sprites/stroke-rounded.svg#timeline"/></svg>
 ```
 
 ## Catalogue de catégories
@@ -68,7 +83,7 @@ fonts/<style>/               TTF, WOFF2, codepoints (6 styles monochromes)
 packages/flutter/veraicons  package Flutter
 packages/react               package npm (TSX)
 packages/web                 CSS + polices pour le web
-docs/index.html              catalogue interactif (GitHub Pages)
+packages/gallery             catalogue web (composant React + site)
 tools/                       générateur — voir CONTRIBUTING.md
 icons.json                   manifeste (noms, catégories, codepoints, alias)
 tokens.json                  tokens de design (grille, traits, opacités, profils)
