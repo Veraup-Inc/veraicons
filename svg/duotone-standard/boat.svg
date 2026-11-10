@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M2.5 14.5h19l-2 5.5a2 2 0 0 1-1.9 1.3H6.4a2 2 0 0 1-1.9-1.3zz" fill="currentColor" opacity="0.25"/>
-  <path d="M6 9h12v5.5H6zz" fill="currentColor" opacity="0.25"/>
-  <path d="M2.5 14.5h19l-2 5.5a2 2 0 0 1-1.9 1.3H6.4a2 2 0 0 1-1.9-1.3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M6 9h12v5.5H6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M12 9V5.5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M9 11.5h2M14 11.5h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2 14.63h20l-2.1 5.79a2.11 2.11 0 0 1 -2 1.37h-11.8a2.11 2.11 0 0 1 -2-1.37zz" fill="currentColor" opacity="0.25"/>
+  <path d="M5.68 8.84h12.64v5.79h-12.64zz" fill="currentColor" opacity="0.25"/>
+  <path d="M2 14.63h20l-2.1 5.79a2.11 2.11 0 0 1 -2 1.37h-11.8a2.11 2.11 0 0 1 -2-1.37z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M5.68 8.84h12.64v5.79h-12.64z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M12 8.84v-3.68h5.27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M8.84 11.47h2.11M14.11 11.47h2.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
 </svg>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M4 21V5.5A2.5 2.5 0 0 1 6.5 3h5A2.5 2.5 0 0 1 14 5.5V21z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M3 21.5h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M14 8h2.5A1.5 1.5 0 0 1 18 9.5v7a1.5 1.5 0 0 0 3 0V10l-2.5-2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="6.5" y="6" width="5" height="4" rx="1.0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M3.35 21.46v-15.95c0-2.49 1.02-3.51 3.52-3.51h3.78c2.49 0 3.51 1.02 3.51 3.51v15.95z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2.27 22h12.97" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M14.16 7.41h2.22c1.49 0 2.11 .61 2.11 2.1v7.08a1.62 1.62 0 0 0 3.24 0v-7.02l-2.7-2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M7.45 5.24h2.6c.99 0 1.4 .41 1.4 1.4v1.52c0 .99-.41 1.4-1.4 1.4h-2.6c-.99 0-1.4-.41-1.4-1.4v-1.52c0-.99 .41-1.4 1.4-1.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

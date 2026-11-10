@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <circle cx="15" cy="4" r="2" fill="currentColor" opacity="0.25"/>
-  <circle cx="15" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M15 6.5l-2.5 4 3 2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M12.5 10.5L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M15.5 13l-1.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M19.5 5.5l-4.5 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M3 19.5l16.5-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <circle cx="15.5" cy="4" r="2" fill="currentColor" opacity="0.25"/>
+  <circle cx="15.5" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M14.7 7.2l-2.18 3.3c-.53 .82-.47 1.34 .25 2l1.02 .94c.63 .58 .71 .99 .37 1.77l-.96 2.19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M11.8 11.6l-2.12 1.66c-.54 .43-.66 .71-.59 1.39l.31 3.15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M14 8.4l2.93 1.2c.39 .16 .51 .27 .73 .62l1.34 2.18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2.5 19.2l18.5-3.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <rect x="3" y="3" width="7" height="7" rx="1.5" fill="currentColor" opacity="0.4"/>
-  <rect x="14" y="3" width="7" height="7" rx="1.5" fill="currentColor" opacity="0.4"/>
-  <rect x="3" y="14" width="7" height="7" rx="1.5" fill="currentColor" opacity="0.4"/>
-  <rect x="14" y="14" width="3" height="3" rx="0.8" fill="currentColor" opacity="0.4"/>
-  <rect x="18" y="18" width="3" height="3" rx="0.8" fill="currentColor" opacity="0.4"/>
-  <rect x="18" y="14" width="3" height="3" rx="0.8" fill="currentColor" opacity="0.4"/>
-  <rect x="14" y="18" width="3" height="3" rx="0.8" fill="currentColor" opacity="0.4"/>
-  <path d="M6.5 6.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M17.5 6.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M6.5 17.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M4.17 2h3.44c1.54 0 2.17 .63 2.17 2.17v3.44c0 1.54-.63 2.17-2.17 2.17h-3.44c-1.54 0-2.17-.63-2.17-2.17v-3.44c0-1.54 .63-2.17 2.17-2.17z" fill="currentColor" opacity="0.4"/>
+  <path d="M16.39 2h3.44c1.54 0 2.17 .63 2.17 2.17v3.44c0 1.54-.63 2.17-2.17 2.17h-3.44c-1.54 0-2.17-.63-2.17-2.17v-3.44c0-1.54 .63-2.17 2.17-2.17z" fill="currentColor" opacity="0.4"/>
+  <path d="M4.17 14.22h3.44c1.54 0 2.17 .63 2.17 2.17v3.44c0 1.54-.63 2.17-2.17 2.17h-3.44c-1.54 0-2.17-.63-2.17-2.17v-3.44c0-1.54 .63-2.17 2.17-2.17z" fill="currentColor" opacity="0.4"/>
+  <path d="M15.38 14.22h1.01c.82 0 1.16 .34 1.16 1.16v1.01c0 .82-.34 1.16-1.16 1.16h-1.01c-.82 0-1.16-.34-1.16-1.16v-1.01c0-.82 .34-1.16 1.16-1.16z" fill="currentColor" opacity="0.4"/>
+  <path d="M19.83 18.67h1.01c.82 0 1.16 .34 1.16 1.16v1.01c0 .82-.34 1.16-1.16 1.16h-1.01c-.82 0-1.16-.34-1.16-1.16v-1.01c0-.82 .34-1.16 1.16-1.16z" fill="currentColor" opacity="0.4"/>
+  <path d="M19.83 14.22h1.01c.82 0 1.16 .34 1.16 1.16v1.01c0 .82-.34 1.16-1.16 1.16h-1.01c-.82 0-1.16-.34-1.16-1.16v-1.01c0-.82 .34-1.16 1.16-1.16z" fill="currentColor" opacity="0.4"/>
+  <path d="M15.38 18.67h1.01c.82 0 1.16 .34 1.16 1.16v1.01c0 .82-.34 1.16-1.16 1.16h-1.01c-.82 0-1.16-.34-1.16-1.16v-1.01c0-.82 .34-1.16 1.16-1.16z" fill="currentColor" opacity="0.4"/>
+  <path d="M5.89 5.89h.01" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M18.11 5.89h.01" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M5.89 18.11h.01" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

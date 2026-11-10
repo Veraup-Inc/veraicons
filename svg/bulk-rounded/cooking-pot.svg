@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M3.5 9h17v6.5a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4zz" fill="currentColor" opacity="0.4"/>
-  <path d="M2 9h20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-  <path d="M3.5 11H2v2.5h1.5M20.5 11H22v2.5h-1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M9 6V3.5M12 6V3M15 6V3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M4.65 10h14.7c.46 0 .65 .19 .65 .65v5.95c0 2.77-1.13 3.9-3.9 3.9h-8.2c-2.77 0-3.9-1.13-3.9-3.9v-5.95c0-.46 .19-.65 .65-.65z" fill="currentColor" opacity="0.4"/>
+  <path d="M2.5 10h19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M4 13h-1.5M20 13h1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M8.5 2.5c-.8 .8-.8 1.7 0 2.5c.8 .8 .8 1.7 0 2.5M12 2.5c-.8 .8-.8 1.7 0 2.5c.8 .8 .8 1.7 0 2.5M15.5 2.5c-.8 .8-.8 1.7 0 2.5c.8 .8 .8 1.7 0 2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M4 15h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

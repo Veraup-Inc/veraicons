@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <rect x="8.5" y="2.5" width="7" height="7.5" rx="2.0" fill="currentColor" opacity="0.4"/>
-  <path d="M12 10v7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-  <path d="M10.4 17.5h3.2l-1.6 4zz" fill="currentColor" opacity="0.4"/>
-  <path d="M10.2 4.8h3.6M10.2 7h3.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M3.52 16.8l3.89-3.89c.29-.29 .43-.35 .83-.38l1.28-.08c.29-.02 .4 .02 .6 .22l1.21 1.21c.2 .2 .24 .31 .22 .6l-.08 1.28c-.03 .4-.09 .54-.38 .83l-3.89 3.9c-1.31 1.3-2.38 1.3-3.68-.01c-1.31-1.3-1.31-2.37 0-3.68z" fill="currentColor" opacity="0.4"/>
+  <path d="M10.73 13.27l7.21-7.21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M17.94 6.06l2.12-2.12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M3.51 16.81l3.68 3.68M5.64 14.69l3.67 3.67" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

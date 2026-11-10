@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <rect x="2.5" y="3" width="5" height="18" rx="1.0" fill="currentColor" opacity="0.25"/>
-  <rect x="9.5" y="3" width="5" height="12" rx="1.0" fill="currentColor" opacity="0.25"/>
-  <rect x="16.5" y="3" width="5" height="15" rx="1.0" fill="currentColor" opacity="0.25"/>
-  <rect x="2.5" y="3" width="5" height="18" rx="1.0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="9.5" y="3" width="5" height="12" rx="1.0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="16.5" y="3" width="5" height="15" rx="1.0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <rect x="2" y="2.52" width="5.26" height="18.95" rx="1.05" fill="currentColor" opacity="0.25"/>
+  <rect x="9.37" y="2.52" width="5.26" height="12.64" rx="1.05" fill="currentColor" opacity="0.25"/>
+  <rect x="16.74" y="2.52" width="5.26" height="15.79" rx="1.05" fill="currentColor" opacity="0.25"/>
+  <rect x="2" y="2.52" width="5.26" height="18.95" rx="1.05" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <rect x="9.37" y="2.52" width="5.26" height="12.64" rx="1.05" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <rect x="16.74" y="2.52" width="5.26" height="15.79" rx="1.05" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
 </svg>

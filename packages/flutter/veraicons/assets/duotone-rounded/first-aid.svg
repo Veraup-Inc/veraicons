@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M9.5 2.5h5v7h7v5h-7v7h-5v-7h-7v-5h7zz" fill="currentColor" opacity="0.25"/>
-  <path d="M9.5 2.5h5v7h7v5h-7v7h-5v-7h-7v-5h7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M10.95 2.5h2.1c1.38 0 1.95 .57 1.95 1.95v3.51c0 .74 .3 1.04 1.04 1.04h3.51c1.38 0 1.95 .57 1.95 1.95v2.1c0 1.38-.57 1.95-1.95 1.95h-3.51c-.74 0-1.04 .3-1.04 1.04v3.51c0 1.38-.57 1.95-1.95 1.95h-2.1c-1.38 0-1.95-.57-1.95-1.95v-3.51c0-.74-.3-1.04-1.04-1.04h-3.51c-1.38 0-1.95-.57-1.95-1.95v-2.1c0-1.38 .57-1.95 1.95-1.95h3.51c.74 0 1.04-.3 1.04-1.04v-3.51c0-1.38 .57-1.95 1.95-1.95z" fill="currentColor" opacity="0.25"/>
+  <path d="M10.95 2.5h2.1c1.38 0 1.95 .57 1.95 1.95v3.51c0 .74 .3 1.04 1.04 1.04h3.51c1.38 0 1.95 .57 1.95 1.95v2.1c0 1.38-.57 1.95-1.95 1.95h-3.51c-.74 0-1.04 .3-1.04 1.04v3.51c0 1.38-.57 1.95-1.95 1.95h-2.1c-1.38 0-1.95-.57-1.95-1.95v-3.51c0-.74-.3-1.04-1.04-1.04h-3.51c-1.38 0-1.95-.57-1.95-1.95v-2.1c0-1.38 .57-1.95 1.95-1.95h3.51c.74 0 1.04-.3 1.04-1.04v-3.51c0-1.38 .57-1.95 1.95-1.95z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

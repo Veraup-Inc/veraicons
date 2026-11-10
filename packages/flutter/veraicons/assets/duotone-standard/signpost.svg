@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M12 5.5h6.5l2 3-2 3H12zz" fill="currentColor" opacity="0.25"/>
-  <path d="M12 13h-6.5l-2 3 2 3H12zz" fill="currentColor" opacity="0.25"/>
-  <path d="M12 2.5v19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M12 5.5h6.5l2 3-2 3H12z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M12 13h-6.5l-2 3 2 3H12z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M12 5.16h6.84l2.11 3.15l-2.11 3.16h-6.84zz" fill="currentColor" opacity="0.25"/>
+  <path d="M12 13.05h-6.84l-2.11 3.16l2.11 3.16h6.84zz" fill="currentColor" opacity="0.25"/>
+  <path d="M12 2v20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M12 5.16h6.84l2.11 3.15l-2.11 3.16h-6.84z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M12 13.05h-6.84l-2.11 3.16l2.11 3.16h6.84z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" opacity="1.0"/>
 </svg>

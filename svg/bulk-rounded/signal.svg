@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <rect x="3" y="15" width="3" height="6" rx="1.2" fill="currentColor" opacity="0.4"/>
-  <rect x="8" y="11" width="3" height="10" rx="1.2" fill="currentColor" opacity="0.4"/>
-  <rect x="13" y="7" width="3" height="14" rx="1.2" fill="currentColor" opacity="1.0"/>
-  <rect x="18" y="3" width="3" height="18" rx="1.2" fill="currentColor" opacity="1.0"/>
+  <path d="M3.5 15.33h.33c1.07 0 1.5 .43 1.5 1.5v3.67c0 1.07-.43 1.5-1.5 1.5h-.33c-1.07 0-1.5-.43-1.5-1.5v-3.67c0-1.07 .43-1.5 1.5-1.5z" fill="currentColor" opacity="0.4"/>
+  <path d="M9.06 10.89h.33c1.07 0 1.5 .43 1.5 1.5v8.11c0 1.07-.43 1.5-1.5 1.5h-.33c-1.07 0-1.5-.43-1.5-1.5v-8.11c0-1.07 .43-1.5 1.5-1.5z" fill="currentColor" opacity="0.4"/>
+  <path d="M14.61 6.45h.33c1.07 0 1.5 .43 1.5 1.5v12.55c0 1.07-.43 1.5-1.5 1.5h-.33c-1.07 0-1.5-.43-1.5-1.5v-12.55c0-1.07 .43-1.5 1.5-1.5z" fill="currentColor" opacity="1.0"/>
+  <path d="M20.17 2h.33c1.07 0 1.5 .43 1.5 1.5v17c0 1.07-.43 1.5-1.5 1.5h-.33c-1.07 0-1.5-.43-1.5-1.5v-17c0-1.07 .43-1.5 1.5-1.5z" fill="currentColor" opacity="1.0"/>
 </svg>

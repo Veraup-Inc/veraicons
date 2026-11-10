@@ -3,7 +3,7 @@
 Bibliothèque d'icônes officielle de VeraUp Inc. — **554 icônes, 10 styles**, une seule source par icône.
 
 Styles : `stroke-rounded` · `stroke-sharp` · `stroke-standard` · `solid-rounded` · `solid-sharp` · `solid-standard` · `duotone-rounded` · `duotone-standard` · `twotone-rounded` · `bulk-rounded`.
-Grille 24 px, trait 1,5 px, couleur via `currentColor`. Catalogue interactif : [veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) (source : `docs/index.html`, GitHub Pages).
+Grille 24 px, zone utile 20 px, trait 1,5 px, angles adoucis (« squircle ») en profil rounded, couleur via `currentColor`. Catalogue interactif : [veraup-inc.github.io/veraicons](https://veraup-inc.github.io/veraicons/) (source : `docs/index.html`, GitHub Pages).
 
 
 ## Flutter

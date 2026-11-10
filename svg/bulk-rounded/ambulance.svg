@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M2.5 16V8.5a2 2 0 0 1 2-2h9V16zz" fill="currentColor" opacity="0.4"/>
-  <path d="M13.5 10h3.6a2 2 0 0 1 1.7 1l2.2 3.5V16h-7.5zz" fill="currentColor" opacity="0.4"/>
-  <circle cx="7" cy="18.5" r="2.1" fill="currentColor" opacity="0.4"/>
-  <circle cx="17.5" cy="18.5" r="2.1" fill="currentColor" opacity="0.4"/>
-  <path d="M8 10v4M6 12h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <circle cx="7" cy="18.5" r="0.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <circle cx="17.5" cy="18.5" r="0.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2 16.32v-7.45c0-2 .81-2.82 2.81-2.82h9.08v10.27zz" fill="currentColor" opacity="0.4"/>
+  <path d="M13.89 9.84h3.47c1.26 0 1.75 .27 2.42 1.34l2.22 3.52v1.62h-8.11zz" fill="currentColor" opacity="0.4"/>
+  <circle cx="6.86" cy="19.03" r="2.27" fill="currentColor" opacity="0.4"/>
+  <circle cx="18.21" cy="19.03" r="2.27" fill="currentColor" opacity="0.4"/>
+  <path d="M7.95 9.84v4.32M5.78 12h4.33" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <circle cx="6.86" cy="19.03" r="0.76" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <circle cx="18.21" cy="19.03" r="0.76" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

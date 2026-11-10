@@ -2,16 +2,16 @@ import * as React from 'react';
 import type { VeraIconProps } from '../types.js';
 
 const bodies: Record<string, string> = {
-  'stroke-rounded': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
-  'stroke-sharp': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"2.0\" opacity=\"1.0\"/>",
-  'stroke-standard': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
-  'solid-rounded': "<path d=\"M11.08 15.92L11.28 16.08L11.50 16.20L11.75 16.28L12 16.30L12.25 16.28L12.50 16.20L12.82 16L18.92 9.92L19.08 9.72L19.20 9.50L19.28 9.25L19.30 9L19.28 8.75L19.20 8.50L19.08 8.28L18.92 8.08L18.61 7.85L18.38 7.76L18.13 7.71L17.87 7.71L17.62 7.76L17.28 7.92L17.08 8.08L12 13.16L6.92 8.08L6.72 7.92L6.50 7.80L6.25 7.72L5.87 7.71L5.62 7.76L5.39 7.85L5.08 8.08L4.92 8.28L4.80 8.50L4.72 8.75L4.70 9L4.72 9.25L4.80 9.50L5 9.82Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
-  'solid-sharp': "<path d=\"M12 13.16L6.92 8.08L5.08 9.92L12 16.84L18.92 9.92L17.08 8.08Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
-  'solid-standard': "<path d=\"M11.08 15.92L11.28 16.08L11.50 16.20L11.75 16.28L12 16.30L12.25 16.28L12.50 16.20L12.82 16L19.84 9L18 7.16L12 13.16L6 7.16L4.16 9Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
-  'duotone-rounded': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
-  'duotone-standard': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
-  'twotone-rounded': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.4\"/>",
-  'bulk-rounded': "<path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
+  'stroke-rounded': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
+  'stroke-sharp': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"2.0\" opacity=\"1.0\"/>",
+  'stroke-standard': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
+  'solid-rounded': "<path d=\"M4.69 9.87L11.08 16.25L11.28 16.41L11.62 16.57L11.87 16.62L12.13 16.62L12.50 16.53L12.72 16.41L12.92 16.25L19.59 9.59L19.75 9.39L19.87 9.17L19.94 8.92L19.96 8.54L19.91 8.29L19.75 7.95L19.59 7.75L19.28 7.52L18.92 7.40L18.67 7.37L18.29 7.43L17.95 7.59L17.75 7.75L12 13.49L6.25 7.75L5.94 7.52L5.71 7.43L5.46 7.38L5.20 7.38L4.95 7.43L4.72 7.52L4.50 7.67L4.32 7.85L4.18 8.06L4.09 8.29L4.04 8.54L4.04 8.80L4.09 9.05L4.25 9.39L4.41 9.59Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
+  'solid-sharp': "<path d=\"M4.69 9.87L12 17.17L19.59 9.59L17.75 7.75L12 13.49L6.25 7.75L4.41 9.59Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
+  'solid-standard': "<path d=\"M4.69 9.87L11.08 16.25L11.28 16.41L11.62 16.57L11.87 16.62L12.13 16.62L12.50 16.53L12.72 16.41L12.92 16.25L20.51 8.67L18.67 6.83L12 13.49L5.33 6.83L3.49 8.67Z\" fill=\"currentColor\" fill-rule=\"evenodd\"/>",
+  'duotone-rounded': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
+  'duotone-standard': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
+  'twotone-rounded': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.4\"/>",
+  'bulk-rounded': "<path d=\"M5.33 8.67l6.67 6.66l6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"1.0\"/>",
 };
 
 export const ChevronDown = React.forwardRef<SVGSVGElement, VeraIconProps>(

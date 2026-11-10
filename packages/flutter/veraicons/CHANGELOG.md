@@ -1,5 +1,59 @@
 # Changelog
 
+## 2.0.0 — en préparation
+Première passe de la refonte visuelle : les 554 icônes prennent un rendu plus
+ample et plus doux, sur le modèle des bibliothèques à angles « squircle ».
+Aucun nom, codepoint ni API ne change, mais **toutes les icônes changent
+d'aspect** : d'où la version majeure. Les numéros de version des paquets seront
+montés au moment de la publication.
+
+### Ce qui change
+- **Zone utile de 20 px** (de 2 à 22) au lieu de 18. Une icône qui contient une
+  vraie forme fermée (cadre, cercle, silhouette) est agrandie jusqu'à la remplir,
+  ×1,3 au plus ; un glyphe fait seulement de traits (flèche, plus, coche) grandit
+  comme la grille, ×1,111. 490 dessins sur 521 grandissent (médiane ×1,111) ;
+  les 31 autres occupaient déjà 20 px. L'épaisseur des traits ne change pas.
+- **Angles adoucis en profil rounded** : rayons ×1,3 et raccords dont les
+  poignées de Bézier valent 0,71 du rayon au lieu des 0,552 d'un quart de cercle.
+  Concerne les 186 rectangles `rr()` et les 332 raccords en arc des tracés
+  (119 icônes). Les profils standard et sharp gardent leurs angles.
+- **Points de 2 px** au lieu de 1,5, pour qu'ils ne se perdent pas à côté des traits.
+- **Bulk revu** : les formes fermées forment un fond à 40 %, les traits et les
+  détails sont des accents pleins de 1,5 px (au lieu de 1,8 à 2,6). Un anneau
+  qui sert de fond devient un disque à 40 % ; en accent, il reste un anneau.
+  Les 39 icônes faites d'une seule forme sans détail
+  (`heart`, `check`, `folder`…) restent pleines en attendant un accent dessiné.
+
+### Dessins refaits
+84 icônes illustratives, dessinées à main levée en 1.x (courbes qui se croisent,
+pas de symétrie), sont redessinées par construction géométrique : arcs de
+cercle, polygones aux angles arrondis, pilules, ellipses.
+- **Sport** (les 26) : ballons aux coutures symétriques (`volleyball`,
+  `basketball`, `tennis-ball`, `baseball`, `soccer-ball`, `beach-ball`),
+  bonshommes aux mêmes proportions (`walk`, `hike`, `throw`, `ski`, `bike`),
+  `horse`, `boxing-glove`, `racquet`, `ping-pong`, `sneaker`…
+- **Santé** (16) : `stethoscope`, `toilet`, `hair-dryer`, `wheelchair`, `virus`,
+  `bone`, `ear`, `face-mask`, `syringe`…
+- **Maison** (10) : `dog`, `cat`, `bird`, `rabbit`, `recycle`, `screwdriver`…
+- **Repas** (11) : `carrot`, `cheese`, `bread`, `grains`, `shrimp`, `chef-hat`…
+- **Ailleurs** (21) : `hands-clapping`, `campfire`, `feather`, `guitar`,
+  `microscope`, `tractor`, `piggy-bank`, `sword`, `mosque`, `synagogue`…
+
+`handshake` et `hands-praying` restent à refaire : les essais n'étaient pas
+plus lisibles que les dessins actuels.
+
+### Outillage
+- Nouveau `tools/geo.py` : les constructions qui servent aux dessins refaits.
+- Nouveau `tools/refine.py`, appliqué à la fin de `tools/icons.py` : les dessins
+  restent sur leur grille d'origine et la passe s'applique au build. Une icône
+  dessinée directement à sa taille finale s'en exclut avec `I(..., fit=False)`.
+- `tokens.json` décrit la zone utile, la taille des points, la mise à l'échelle et
+  le lissage des angles de chaque profil.
+- Le build tourne sous Windows (Git Bash) : `tools/build.sh` trouve un vrai
+  Python et le dossier `Scripts/` du venv, force l'UTF-8, et `build_packages.py`
+  contourne le motif de recherche de fantasticon 4, qui ne trouvait aucun SVG
+  sous Windows.
+
 ## 1.3.0 — 2026-09-12
 
 ### Correction — les icônes React rendaient faux

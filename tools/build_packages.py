@@ -1,8 +1,9 @@
 """Régénère polices, packages Flutter/React, CSS web, sprites, catalogue et manifeste. Lancer après gen.py."""
-import os, json, re, shutil, subprocess, html
+import os, json, re, shutil, subprocess, html, time
 from icons import ICONS, ALIASES
 from gen import VARIANTS, render
 from solid import outline_path, solid_path
+import refine
 ROOT=os.path.join(os.path.dirname(os.path.abspath(__file__)),"..")
 HERE=os.path.dirname(os.path.abspath(__file__))
 MONO=["stroke-rounded","stroke-sharp","stroke-standard","solid-rounded","solid-sharp","solid-standard"]
@@ -28,7 +29,37 @@ for n in sorted(ICONS):
     if n not in cp: cp[n]=nxt; nxt+=1
 json.dump(dict(sorted(cp.items())), open(CPF,"w"), indent=1, ensure_ascii=False)
 
+def retry(action, what):
+    """Relance une écriture que Windows refuse un court instant.
+
+    Juste après un build, un autre programme (antivirus, indexeur, outil qui
+    calcule un diff) lit souvent les gros fichiers régénérés, parfois en les
+    projetant en mémoire : l'ouverture en écriture échoue alors (errno 22 ou 13)
+    et tout le build tombait. Ailleurs, la première tentative passe.
+    """
+    for k in range(6):
+        try:
+            return action()
+        except (OSError, subprocess.CalledProcessError) as e:
+            if k == 5 or (isinstance(e, OSError) and e.errno not in (13, 22)):
+                raise
+            print(f"  {what} : nouvel essai ({e})")
+            time.sleep(0.5 * (k + 1))
+
 # 1. fonts
+def fantasticon(rc):
+    """Commande fantasticon pour cette plateforme.
+
+    Sous Windows, fantasticon 4 assemble son motif de recherche avec path.join,
+    donc avec des « \\ » que glob lit comme des échappements : il ne trouve
+    aucun SVG. On lance alors sa CLI avec la jointure POSIX, que Windows
+    accepte aussi. (La commande npm globale y est `fantasticon.cmd`, d'où which.)
+    """
+    exe=shutil.which("fantasticon") or "fantasticon"
+    if os.name!="nt":
+        return [exe,"-c",rc]
+    cli=os.path.join(os.path.dirname(exe),"node_modules","fantasticon","dist","cli","index.cjs")
+    return ["node","-e","const p=require('path');p.join=p.posix.join;require(process.argv[1])",cli,"-c",rc]
 tmp=os.path.join(ROOT,".font-src"); shutil.rmtree(tmp,ignore_errors=True)
 for vn in MONO:
     v=VARIANTS[vn]; d=f"{tmp}/{vn}"; os.makedirs(d)
@@ -37,9 +68,16 @@ for vn in MONO:
         open(f"{d}/{n}.svg","w").write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="{dp}" fill-rule="evenodd"/></svg>')
     out=f"{ROOT}/fonts/{vn}"; os.makedirs(out,exist_ok=True)
     rc=f"{tmp}/{vn}.rc.json"
-    json.dump({"inputDir":d,"outputDir":out,"name":fam[vn],"fontTypes":["ttf","woff2"],"assetTypes":["json"],
+    # fantasticon cherche les SVG par glob : il lui faut des « / », même sous Windows.
+    posix=lambda p: os.path.normpath(p).replace(os.sep,"/")
+    json.dump({"inputDir":posix(d),"outputDir":posix(out),"name":fam[vn],"fontTypes":["ttf","woff2"],"assetTypes":["json"],
                "normalize":True,"fontHeight":1024,"descent":0,"codepoints":cp},open(rc,"w"))
-    subprocess.run(["fantasticon","-c",rc],check=True,capture_output=True)
+    def font():
+        r=subprocess.run(fantasticon(rc),capture_output=True,text=True,encoding="utf-8",errors="replace")
+        if r.returncode:
+            print(r.stdout[-2000:]+r.stderr[-2000:])
+            raise subprocess.CalledProcessError(r.returncode,"fantasticon")
+    retry(font,f"police {vn}")
 shutil.rmtree(tmp)
 assert json.load(open(f"{ROOT}/fonts/stroke-rounded/{fam['stroke-rounded']}.json"))==cp, "codepoints désynchronisés"
 # 2. flutter
@@ -199,13 +237,19 @@ os.makedirs(f"{ROOT}/fonts/css",exist_ok=True); open(f"{ROOT}/fonts/css/veraup-i
 sp=f"{ROOT}/sprites"; os.makedirs(sp,exist_ok=True)
 for vn in VARIANTS:
     sym="".join(f'<symbol id="{n}" viewBox="0 0 24 24">{render(n,ICONS[n],vn).split(">",1)[1].rsplit("</svg>",1)[0].strip()}</symbol>' for n in sorted(ICONS))
-    open(f"{sp}/{vn}.svg","w").write(f'<svg xmlns="http://www.w3.org/2000/svg" style="display:none">{sym}</svg>')
+    def sprite():
+        with open(f"{sp}/{vn}.svg","w") as f: f.write(f'<svg xmlns="http://www.w3.org/2000/svg" style="display:none">{sym}</svg>')
+    retry(sprite,f"sprite {vn}")
 # 6. tokens de design
-json.dump({"grid":24,"viewBox":[0,0,24,24],"stroke":1.5,"bold_stroke":2.6,"secondary_opacity":0.4,
+json.dump({"grid":24,"viewBox":[0,0,24,24],"live_area":[round(v) for v in refine.FRAME],"stroke":1.5,"dot":refine.DOT,
+           "bold_stroke":2.6,"secondary_opacity":0.4,
            "duotone_fill_opacity":0.25,"default_variant":"stroke-rounded","recommended_sizes":[16,20,24,28,32],
            "color":"currentColor",
-           "profiles":{"rounded":{"cap":"round","join":"round","corner_scale":1.0},
-                       "standard":{"cap":"square","join":"round","corner_scale":0.5},
+           "fit":{"container":round(refine.FRAME[1]-refine.FRAME[0]),"line_growth":round(refine.LINE_GROWTH,3),
+                  "max_scale":refine.MAX_SCALE},
+           "profiles":{"rounded":{"cap":"round","join":"round","corner_scale":refine.CORNER_SCALE,
+                                  "corner_smoothing":refine.SMOOTH},
+                       "standard":{"cap":"square","join":"round","corner_scale":0.5,"corner_smoothing":refine.CIRCLE_K},
                        "sharp":{"cap":"butt","join":"miter","corner_scale":0.0}},
            "modes":["stroke","solid","duotone","twotone","bulk"]},
           open(f"{ROOT}/tokens.json","w"),indent=1,ensure_ascii=False)

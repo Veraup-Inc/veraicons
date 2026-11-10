@@ -1,5 +1,6 @@
 import os, json
 from solid import solid_path
+from refine import rect_d, rect_radius, pick_d, fmt, is_closed, DOT
 
 # ---------- Icon definitions (24x24 grid, stroke 1.5) ----------
 # outline: shapes that form the silhouette (filled in solid/duotone/bulk)
@@ -25,11 +26,13 @@ SW = 1.5
 def geom(s, v):
     k = s["k"]
     if k == "rect":
-        return f'<rect x="{s["x"]}" y="{s["y"]}" width="{s["w"]}" height="{s["h"]}" rx="{s["r"]*v["rr"]}"'
+        # Profil rounded : angles adoucis, donc un tracé plutôt qu'un <rect rx>.
+        if v["rr"] >= 1 and s["r"] > 0:
+            return f'<path d="{rect_d(s)}"'
+        return f'<rect x="{fmt(s["x"])}" y="{fmt(s["y"])}" width="{fmt(s["w"])}" height="{fmt(s["h"])}" rx="{fmt(rect_radius(s, v["rr"]))}"'
     if k == "circle":
-        return f'<circle cx="{s["cx"]}" cy="{s["cy"]}" r="{s["r"]}"'
-    d = s.get("d_sharp", s["d"]) if v["rr"] == 0 and "d_sharp" in s else s["d"]
-    return f'<path d="{d}"'
+        return f'<circle cx="{fmt(s["cx"])}" cy="{fmt(s["cy"])}" r="{fmt(s["r"])}"'
+    return f'<path d="{pick_d(s, v["rr"])}"'
 
 # Les raccords en pointe (profil sharp) produisent des piques qui sortent du
 # viewBox sur les angles aigus. La limite SVG par défaut (4) est trop permissive
@@ -41,6 +44,8 @@ def miter_attr(v):
 
 def stroke(s, v, color="currentColor", w=SW, op=1.0, extra=""):
     cap = "round" if s.get("dot") else v["cap"]
+    if s.get("dot"):  # un point de 1,5 px se perd à côté des traits : 2 px
+        w = DOT
     return f'{geom(s,v)} fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="{cap}" stroke-linejoin="{v["join"]}"{miter_attr(v)} opacity="{op}"{extra}/>'
 
 def fill(s, v, color="currentColor", op=1.0):
@@ -50,6 +55,36 @@ def fill(s, v, color="currentColor", op=1.0):
     if s.get("sw"):  # rendered as thick stroke in filled contexts
         return f'{g} fill="none" stroke="{color}" stroke-width="{s["sw"]}" stroke-linecap="{v["cap"]}" stroke-linejoin="{v["join"]}"{miter_attr(v)} opacity="{op}"/>'
     return f'{g} fill="{color}" opacity="{op}"/>'
+
+def area(s, v, op=1.0):
+    """Surface pleine d'une forme fermée, même marquée `sw` (un anneau devient un disque)."""
+    g = geom(s, v)
+    if s.get("close") and s["k"] == "path":
+        g = g[:-1] + 'z"'
+    return f'{g} fill="currentColor" opacity="{op}"/>'
+
+def bulk(icon, v):
+    """Bulk : un fond à 40 % et des accents pleins, comme une seule pièce.
+
+    - forme fermée de la silhouette → fond (surface à 40 %) ; en accent, un anneau reste un anneau
+    - trait de la silhouette → accent plein, sauf si l'icône n'a que des traits
+    - détail → accent plein, en trait de 1,5 (points à 2)
+    - sans détail : moitié fond, moitié accent
+    - une forme unique sans détail reste pleine : seule à 40 %, elle aurait
+      l'air désactivée. Elle attend un accent dessiné à la main.
+    """
+    outline, detail = icon["outline"], icon["detail"]
+    closed = [s for s in outline if is_closed(s)]
+    lines = [s for s in outline if not is_closed(s)]
+    # Un anneau (cercle ou cadre marqué `sw`) fait un bon fond en disque, mais
+    # comme accent il doit rester un anneau : `goal` deviendrait un bouton « rec ».
+    ring = lambda s: s["k"] in ("rect", "circle") and s.get("sw")
+    base = lambda s: area(s, v, op=0.4) if is_closed(s) else stroke(s, v, op=0.4)
+    accent = lambda s: area(s, v) if is_closed(s) and not ring(s) else stroke(s, v)
+    if detail or (closed and lines):
+        return [base(s) if is_closed(s) or not closed else accent(s) for s in outline] + [stroke(s, v) for s in detail]
+    half = len(outline) // 2
+    return [base(s) for s in outline[:half]] + [accent(s) for s in outline[half:]]
 
 def render(name, icon, vname):
     v = VARIANTS[vname]; m = v["mode"]; out = []
@@ -67,11 +102,7 @@ def render(name, icon, vname):
             half = len(icon["outline"]) // 2
             out = [stroke(s, v) for s in icon["outline"][:half]] + [stroke(s, v, op=0.4) for s in icon["outline"][half:]]
     elif m == "bulk":
-        out += [fill(s, v, op=0.4) for s in icon["outline"]]
-        out += [stroke(s, v, w=1.8) for s in icon["detail"]]
-        if not icon["detail"]:
-            half = len(icon["outline"]) // 2
-            out = [fill(s, v, op=0.4) for s in icon["outline"][:half]] + [fill(s, v) for s in icon["outline"][half:]]
+        out += bulk(icon, v)
     body = "\n  ".join(out)
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">\n  {body}\n</svg>'
 

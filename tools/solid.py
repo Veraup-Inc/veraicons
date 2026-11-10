@@ -3,6 +3,7 @@ import re, math
 from shapely.geometry import Polygon, LineString, Point
 from shapely.ops import unary_union
 from svgpathtools import parse_path
+from refine import rect_d, rect_radius, pick_d, DOT
 
 MITER = 2.0  # doit rester aligné sur gen.MITER
 
@@ -32,12 +33,14 @@ def geom_shapes(s, v, sw):
     join = {"round": 1, "miter": 2, "bevel": 3}[v["join"]]
     k = s["k"]
     if k == "rect":
-        poly = Polygon(rect_pts(s["x"], s["y"], s["w"], s["h"], s["r"] * v["rr"]))
+        if v["rr"] >= 1 and s["r"] > 0:  # angles adoucis du profil rounded
+            poly = Polygon(sample(rect_d(s), 12)[0])
+        else:
+            poly = Polygon(rect_pts(s["x"], s["y"], s["w"], s["h"], rect_radius(s, v["rr"])))
         return poly, poly.exterior
     if k == "circle":
         poly = Point(s["cx"], s["cy"]).buffer(s["r"], 64); return poly, poly.exterior
-    d = s.get("d_sharp", s["d"]) if v["rr"] == 0 and "d_sharp" in s else s["d"]
-    subs = sample(d)
+    subs = sample(pick_d(s, v["rr"]))
     lines = [LineString(pts) if len(pts) > 1 else Point(pts[0]) for pts in subs]
     poly = unary_union([Polygon(pts).buffer(0) for pts in subs if len(pts) > 2]) if not s.get("sw") else None
     return poly, lines
@@ -47,7 +50,7 @@ def solid_path(icon, v, sw=1.5, cut=1.9):
     parts = []
     for s in icon["outline"]:
         poly, lines = geom_shapes(s, v, sw)
-        w = s.get("sw", sw) / 2
+        w = s.get("sw", DOT if s.get("dot") else sw) / 2
         # Un `dot` est un tracé dégénéré : son polygone est vide et la forme
         # disparaissait du solid alors que le stroke la dessine. Tout ce qui
         # n'a pas de surface est donc rendu comme un trait, exactement comme
@@ -82,7 +85,8 @@ def outline_path(icon, v, sw=1.5):
         poly, lines = geom_shapes(s, v, sw)
         ls = lines if isinstance(lines, list) else [lines]
         c = 1 if s.get("dot") else cap
-        parts += [l.buffer(sw / 2, cap_style=c, join_style=join, mitre_limit=MITER) for l in ls]
+        w = (DOT if s.get("dot") else sw) / 2
+        parts += [l.buffer(w, cap_style=c, join_style=join, mitre_limit=MITER) for l in ls]
     body = unary_union(parts).simplify(0.015)
     polys = list(body.geoms) if body.geom_type == "MultiPolygon" else [body]
     def ring(r):

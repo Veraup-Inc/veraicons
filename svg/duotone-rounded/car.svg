@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M4 13l1.8-5.3A2.5 2.5 0 0 1 8.2 6h7.6a2.5 2.5 0 0 1 2.4 1.7L20 13v5a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18z" fill="currentColor" opacity="0.25"/>
-  <path d="M4 13l1.8-5.3A2.5 2.5 0 0 1 8.2 6h7.6a2.5 2.5 0 0 1 2.4 1.7L20 13v5a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M6 19.5V21M18 19.5V21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M4 13h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M7.5 16h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M16.5 16h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2 12l2.03-5.97c.72-2.14 1.62-2.78 3.88-2.78h8.18c2.26 0 3.16 .64 3.88 2.78l2.03 5.97v5.69c0 1.73-.71 2.43-2.44 2.43h-15.12c-1.73 0-2.44-.7-2.44-2.43z" fill="currentColor" opacity="0.25"/>
+  <path d="M2 12l2.03-5.97c.72-2.14 1.62-2.78 3.88-2.78h8.18c2.26 0 3.16 .64 3.88 2.78l2.03 5.97v5.69c0 1.73-.71 2.43-2.44 2.43h-15.12c-1.73 0-2.44-.7-2.44-2.43z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M4.5 20.12v1.88M19.5 20.12v1.88" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2 12h20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M6.38 15.75h.01" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M17.62 15.75h.02" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

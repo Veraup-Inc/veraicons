@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M3 10v4a2 2 0 0 0 2 2h2l8.5 4.3c.7.3 1.5-.2 1.5-.9V4.6c0-.7-.8-1.2-1.5-.9L7 8H5a2 2 0 0 0-2 2z" fill="currentColor" opacity="0.25"/>
-  <path d="M3 10v4a2 2 0 0 0 2 2h2l8.5 4.3c.7.3 1.5-.2 1.5-.9V4.6c0-.7-.8-1.2-1.5-.9L7 8H5a2 2 0 0 0-2 2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M7 16l1.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <path d="M20.5 10v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M1.71 10.4v3.2c0 2.11 .86 2.97 2.97 2.97h1.61l9.71 4.92c.8 .34 1.71-.23 1.71-1.03v-16.92c0-.8-.91-1.37-1.71-1.03l-9.71 4.92h-1.61c-2.11 0-2.97 .86-2.97 2.97z" fill="currentColor" opacity="0.25"/>
+  <path d="M1.71 10.4v3.2c0 2.11 .86 2.97 2.97 2.97h1.61l9.71 4.92c.8 .34 1.71-.23 1.71-1.03v-16.92c0-.8-.91-1.37-1.71-1.03l-9.71 4.92h-1.61c-2.11 0-2.97 .86-2.97 2.97z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M6.29 16.57l1.71 5.15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M21.72 9.71v4.58" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>

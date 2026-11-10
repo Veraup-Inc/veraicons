@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor">
-  <path d="M4 20h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="6" y="10" width="3.5" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="12" y="5" width="3.5" height="12" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
-  <rect x="18" y="13" width="3.5" height="4" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M2.09 21.1h18.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M6.14 9.72h.42c1.26 0 1.78 .52 1.78 1.78v4.41c0 1.26-.52 1.78-1.78 1.78h-.42c-1.26 0-1.78-.52-1.78-1.78v-4.41c0-1.26 .52-1.78 1.78-1.78z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M12.97 4.03h.42c1.26 0 1.78 .52 1.78 1.78v10.1c0 1.26-.52 1.78-1.78 1.78h-.42c-1.26 0-1.78-.52-1.78-1.78v-10.1c0-1.26 .52-1.78 1.78-1.78z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+  <path d="M19.8 13.14h.42c1.26 0 1.78 .52 1.78 1.78v.99c0 1.26-.52 1.78-1.78 1.78h-.42c-1.26 0-1.78-.52-1.78-1.78v-.99c0-1.26 .52-1.78 1.78-1.78z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
 </svg>
